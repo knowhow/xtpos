@@ -1,0 +1,7 @@
+-- Group: retailsite
+-- Name: getbankaccnt
+-- Notes:
+
+SELECT *
+FROM bankaccnt
+WHERE (bankaccnt_name=<? value("name") ?>);

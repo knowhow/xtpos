@@ -1,0 +1,139 @@
+-- Group: display
+-- Name:  detailedRegisterHistory
+-- Notes: Show all sales, open, close, and adjustment transactions for a
+--        single or all cash register Terminals during a range of dates.
+SELECT *,
+         formatdatetime(timestamp) AS f_timestamp,
+         CASE WHEN tendered IS NULL THEN NULL
+              ELSE formatmoney(tendered) END AS f_tendered,
+         CASE WHEN linetax IS NULL THEN NULL
+              ELSE formatmoney(linetax) END AS f_linetax,
+         CASE WHEN regdetail_cashslsamt IS NULL THEN NULL
+              ELSE formatmoney(regdetail_cashslsamt) END AS f_cashslsamt,
+         CASE WHEN regdetail_transferamt IS NULL THEN NULL
+              ELSE formatmoney(regdetail_transferamt) END AS f_transferamt,
+         CASE WHEN regdetail_adjustamt IS NULL THEN NULL
+              ELSE formatmoney(regdetail_adjustamt) END AS f_adjustamt,
+         CASE WHEN (xtindentrole = 1) THEN 2
+              ELSE 1 END AS type_qttextalignmentrole,
+         CASE WHEN (type = <? value("sale") ?>)      THEN 2
+              WHEN (type = <? value("saleitem") ?>)  THEN 2
+              WHEN (type = <? value("linecount") ?>) THEN 2
+              ELSE 1 END AS salehead_number_qttextalignmentrole,
+         CASE WHEN ccard_type='M' THEN <? value("mastercard") ?>
+              WHEN ccard_type='V' THEN <? value("visa") ?>
+              WHEN ccard_type='A' THEN <? value("amex" ?>
+              WHEN ccard_type='D' THEN <? value("discover") ?>
+              ELSE ccard_type END AS qtyNCard_qtdisplayrole, 
+         CASE WHEN ccard_type='M' THEN <? value("mastercard") ?>
+              WHEN ccard_type='V' THEN <? value("visa") ?>
+              WHEN ccard_type='A' THEN <? value("amex" ?>
+              WHEN ccard_type='D' THEN <? value("discover") ?>
+              WHEN ccard_type IS NULL AND qtyNcard IS NOT NULL THEN formatqty(qtyNcard)
+              ELSE ccard_type END AS f_qtyNCard, 
+         'curr' AS tendered_xtnumericrole,
+         'curr' AS check_xtnumericrole,
+         'curr' AS linetax_xtnumericrole,
+         'qty'  AS qtyNCard_xtnumericrole,
+         'curr' AS regdetail_cashslsamt_xtnumericrole,
+         'curr' AS regdetail_transferamt_xtnumericrole,
+         'curr' AS regdetail_adjustamt_xtnumericrole
+FROM (
+  SELECT salehead_id, terminal_id, <? value("sale") ?> AS type,
+         warehous_code, terminal_number, salehead_time AS timestamp, cust_number AS descrip,
+         salehead_number AS transaction, salesrep_number AS usrrepitem,
+         salehead_cashamt + salehead_checkamt +
+                     CAST(COALESCE(ccpay_amount, '0') AS NUMERIC) AS tendered,
+         CAST(NULL AS NUMERIC) AS linetax,
+         CAST(NULL AS NUMERIC) AS checkunit, salehead_checknumber AS checkunit_qtdisplayrole,
+         CAST(NULL AS NUMERIC) AS qtyNcard, ccard_type,
+         CAST(NULL AS NUMERIC) AS regdetail_cashslsamt,
+         CAST(NULL AS NUMERIC) AS regdetail_transferamt,
+         CAST(NULL AS NUMERIC) AS regdetail_adjustamt,
+         0 AS xtindentrole, 0 AS seq,
+         warehous_id
+  FROM xtpos.salehead JOIN
+       xtpos.terminal ON (salehead_terminal_id=terminal_id) JOIN
+             custinfo ON (salehead_cust_id=cust_id)         JOIN
+             whsinfo  ON (salehead_warehous_id=warehous_id) JOIN
+             salesrep ON (salehead_salesrep_id=salesrep_id) LEFT OUTER JOIN
+             ccpay    ON (salehead_ccpay_id=ccpay_id)       LEFT OUTER JOIN
+             ccard    ON (ccpay_ccard_id=ccard_id)
+
+  UNION
+  SELECT salehead_id, terminal_id, <? value("saleitem") ?> AS type,
+         warehous_code, terminal_number, salehead_time, item_descrip1 || ' ' || item_descrip2,
+         CAST(saleitem_linenumber AS TEXT), item_number,
+         saleitem_unitprice * saleitem_qty +
+                 COALESCE(sum(taxhist_tax),0) AS tendered,
+         COALESCE(sum(taxhist_tax),0) AS linetax,
+         saleitem_unitprice, formatsalesprice(saleitem_unitprice) AS checkunit_qtdisplayrole,
+         saleitem_qty, NULL AS ccard_type,
+         NULL, NULL, NULL,
+         1 AS xtindentrole, 1 + saleitem_linenumber AS seq,
+         warehous_id
+  FROM xtpos.saleitem JOIN
+             itemsite ON (saleitem_itemsite_id=itemsite_id) JOIN
+             item     ON (itemsite_item_id=item_id)         JOIN
+       xtpos.salehead ON (saleitem_salehead_id=salehead_id) JOIN
+       xtpos.terminal ON (salehead_terminal_id=terminal_id) JOIN
+             whsinfo  ON (salehead_warehous_id=warehous_id) JOIN
+             salesrep ON (salehead_salesrep_id=salesrep_id) LEFT OUTER JOIN
+             ccpay    ON (salehead_ccpay_id=ccpay_id) LEFT OUTER JOIN
+       xtpos.saleitemtax ON (saleitem_id=taxhist_parent_id)
+        GROUP BY salehead_id, terminal_id, warehous_id, warehous_code, terminal_number, salehead_time,
+          item_descrip1, item_descrip2, saleitem_linenumber, item_number, saleitem_unitprice,
+          saleitem_qty
+
+  UNION
+  SELECT salehead_id, terminal_id, <? value("linecount") ?>,
+         warehous_code, terminal_number, salehead_time, NULL,
+         CAST(COUNT(saleitem_linenumber) AS TEXT), <? value("ordertotal") ?>,
+         SUM(saleitem_unitprice * saleitem_qty) + xtpos.saletax(salehead_id) AS tendered,
+         xtpos.saletax(salehead_id) AS linetax,
+         NULL, NULL AS checkunit_qtdisplayrole,
+         SUM(saleitem_qty), NULL AS ccard_type,
+         NULL, NULL, NULL,
+         1 AS xtindentrole, 2 + MAX(saleitem_linenumber) AS seq,
+         warehous_id
+  FROM xtpos.saleitem JOIN
+             itemsite ON (saleitem_itemsite_id=itemsite_id) JOIN
+             item     ON (itemsite_item_id=item_id)         JOIN
+       xtpos.salehead ON (saleitem_salehead_id=salehead_id) JOIN
+       xtpos.terminal ON (salehead_terminal_id=terminal_id) JOIN
+             whsinfo  ON (salehead_warehous_id=warehous_id) JOIN
+             salesrep ON (salehead_salesrep_id=salesrep_id) LEFT OUTER JOIN
+             ccpay    ON (salehead_ccpay_id=ccpay_id)
+  GROUP BY warehous_id, salehead_id, salehead_time, warehous_code,
+           terminal_number, terminal_id
+  UNION
+  SELECT regdetail_id, terminal_id, <? value("register") ?>,
+         warehous_code, terminal_number, regdetail_time, regdetail_notes,
+         CASE regdetail_type WHEN 'A' THEN <? value("adjust") ?>
+                             WHEN 'C' THEN <? value("close") ?>
+                             WHEN 'O' THEN <? value("open") ?>
+                             ELSE regdetail_type
+         END, regdetail_username,
+         NULL AS tendered,
+         NULL AS linetax,
+         NULL, NULL AS checkunit_qtdisplayrole,
+         NULL, NULL AS ccard_type,
+         regdetail_cashslsamt, regdetail_transferamt, regdetail_adjustamt,
+         0 AS xtindentrole, 0 AS seq,
+         warehous_id
+  FROM xtpos.regdetail JOIN
+       xtpos.reghist  ON (regdetail_reghist_id=reghist_id) JOIN
+       xtpos.terminal ON (reghist_terminal_id=terminal_id) JOIN
+             whsinfo  ON (reghist_warehous_id=warehous_id)
+) AS dummy
+WHERE ((CAST(timestamp AS DATE) BETWEEN <? value("startDate") ?>
+                                    AND <? value("endDate") ?>)
+        <? if exists("terminal_id") ?>
+           AND (terminal_id=<? value("terminal_id") ?>)
+        <? endif ?>
+        <? if exists("site_id") ?>
+           AND (warehous_id=<? value("site_id") ?>)
+        <? endif ?>
+      )
+ORDER BY warehous_code, terminal_number,
+         timestamp, xtindentrole, seq;

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<appendix>
+  <title>Screen Reference</title>
+  <para>This screen reference is designed to offer field-level help for all
+  the screens used by xTuple POS. If you want to learn more about the purpose
+  behind a particular field or screen, then look for answers in this screen
+  reference appendix.</para>
+  <note>
+    <para>For field-level questions related to xTuple ERP, please consult the
+    xTuple ERP <ulink
+    url="http://www.xtuple.org/docs/reference-guide">Reference
+    Guide</ulink>.</para>
+  </note>
+  <xi:include href="reference/cashRegisters.xml" xpointer="element(/1)"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+  <xi:include href="reference/dspRegisterHistory.xml" xpointer="element(/1)"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+  <xi:include href="reference/configureRetail.xml" xpointer="element(/1)"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+  <xi:include href="reference/retailSaleSearch.xml" xpointer="element(/1)"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+  <xi:include href="reference/retailSites.xml" xpointer="element(/1)"
+              xmlns:xi="http://www.w3.org/2001/XInclude" />
+</appendix>

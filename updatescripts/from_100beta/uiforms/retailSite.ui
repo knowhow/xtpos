@@ -1,0 +1,869 @@
+<ui version="4.0" >
+ <class>retailSite</class>
+ <widget class="QDialog" name="retailSite" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>591</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Retail Site</string>
+  </property>
+  <property name="schemaName" stdset="0" >
+   <string>xtpos</string>
+  </property>
+  <property name="tableName" stdset="0" >
+   <string>api_retailsite</string>
+  </property>
+  <property name="primaryKeyColumns" stdset="0" >
+   <number>1</number>
+  </property>
+  <property name="screenTitle" stdset="0" >
+   <string/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4" >
+   <item row="0" column="0" >
+    <widget class="Screen" name="_retailSite" >
+     <property name="schemaName" >
+      <string>xtpos</string>
+     </property>
+     <property name="tableName" >
+      <string>api_retailsite</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" >
+      <item row="0" column="0" >
+       <layout class="QGridLayout" >
+        <property name="margin" >
+         <number>12</number>
+        </property>
+        <property name="spacing" >
+         <number>12</number>
+        </property>
+        <item row="0" column="0" >
+         <layout class="QHBoxLayout" >
+          <item>
+           <layout class="QVBoxLayout" >
+            <item>
+             <layout class="QHBoxLayout" >
+              <item>
+               <widget class="QLabel" name="_siteLit" >
+                <property name="text" >
+                 <string>Site:</string>
+                </property>
+                <property name="alignment" >
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="WComboBox" name="_site" >
+                <property name="allowNull" >
+                 <bool>true</bool>
+                </property>
+                <property name="fieldName" >
+                 <string>site</string>
+                </property>
+                <property name="type" >
+                 <enum>WComboBox::Sold</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer>
+                <property name="orientation" >
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0" >
+                 <size>
+                  <width>39</width>
+                  <height>27</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="_expireLit" >
+                <property name="text" >
+                 <string>Quotes Expire in</string>
+                </property>
+                <property name="alignment" >
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="XSpinBox" name="_expire" >
+                <property name="fieldName" >
+                 <string>quote_days</string>
+                </property>
+                <property name="defaultValue" >
+                 <string>30</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="_daysLit" >
+                <property name="text" >
+                 <string>days</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>20</width>
+                <height>21</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer>
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0" >
+             <size>
+              <width>39</width>
+              <height>27</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" >
+            <property name="spacing" >
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="_cancel" >
+              <property name="text" >
+               <string>&amp;Cancel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="_save" >
+              <property name="text" >
+               <string>&amp;Save</string>
+              </property>
+              <property name="autoDefault" >
+               <bool>true</bool>
+              </property>
+              <property name="default" >
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation" >
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType" >
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>81</width>
+                <height>16</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QGroupBox" name="_accountGroup" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title" >
+           <string>Accounts</string>
+          </property>
+          <layout class="QGridLayout" >
+           <item row="0" column="0" >
+            <widget class="QLabel" name="_assetLit" >
+             <property name="text" >
+              <string>Asset:</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" >
+            <widget class="GLCluster" name="_asset" >
+             <property name="fieldName" >
+              <string>asset</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" >
+            <spacer>
+             <property name="orientation" >
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0" >
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QLabel" name="_adjustLit" >
+             <property name="text" >
+              <string>Adjustment:</string>
+             </property>
+             <property name="alignment" >
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" >
+            <widget class="GLCluster" name="_adjust" >
+             <property name="fieldName" >
+              <string>adjustment</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2" >
+            <spacer>
+             <property name="orientation" >
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0" >
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0" >
+            <widget class="QLabel" name="_checkClearingLit" >
+             <property name="text" >
+              <string>Check Clearing:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" >
+            <widget class="GLCluster" name="_checkClearing" >
+             <property name="fieldName" >
+              <string>check_clearing</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2" >
+            <spacer>
+             <property name="orientation" >
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0" >
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0" colspan="3" >
+            <widget class="QTabWidget" name="_tab" >
+             <property name="currentIndex" >
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="_bnkacctTab" >
+              <attribute name="title" >
+               <string>Bank Accounts</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_5" >
+               <item row="0" column="0" >
+                <widget class="XTreeView" name="_bnkaccts" >
+                 <property name="sizePolicy" >
+                  <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="editTriggers" >
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="alternatingRowColors" >
+                  <bool>false</bool>
+                 </property>
+                 <property name="schemaName" >
+                  <string>xtpos</string>
+                 </property>
+                 <property name="tableName" >
+                  <string>api_retailsitebankaccnt</string>
+                 </property>
+                 <property name="primaryKeyCoulmns" stdset="0" >
+                  <number>2</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" >
+                <layout class="QHBoxLayout" >
+                 <item>
+                  <widget class="QPushButton" name="_insertBankAcct" >
+                   <property name="text" >
+                    <string>Add</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="_removeBankAcct" >
+                   <property name="enabled" >
+                    <bool>false</bool>
+                   </property>
+                   <property name="text" >
+                    <string>Remove</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer>
+                   <property name="orientation" >
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0" >
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="2" column="0" >
+                <widget class="Screen" name="_bnkacct" >
+                 <property name="primaryKeyColumns" >
+                  <number>2</number>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_3" >
+                  <property name="margin" >
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="0" >
+                   <widget class="QGroupBox" name="_bnkacctGroup" >
+                    <property name="enabled" >
+                     <bool>false</bool>
+                    </property>
+                    <property name="title" >
+                     <string/>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_2" >
+                     <item row="0" column="0" >
+                      <widget class="QLabel" name="_bnkacctNameLit" >
+                       <property name="text" >
+                        <string>Bank Account:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1" >
+                      <widget class="XComboBox" name="_bnkacctName" >
+                       <property name="allowNull" >
+                        <bool>true</bool>
+                       </property>
+                       <property name="nullStr" >
+                        <string>[ select a bank account ]</string>
+                       </property>
+                       <property name="type" >
+                        <enum>XComboBox::ARBankAccounts</enum>
+                       </property>
+                       <property name="defaultCode" >
+                        <enum>XComboBox::First</enum>
+                       </property>
+                       <property name="fieldName" >
+                        <string>bank_account</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2" >
+                      <spacer name="horizontalSpacer" >
+                       <property name="orientation" >
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0" >
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="_terminalTab" >
+              <attribute name="title" >
+               <string>Terminals</string>
+              </attribute>
+              <layout class="QGridLayout" >
+               <item row="0" column="0" >
+                <widget class="XTreeView" name="_terminals" >
+                 <property name="editTriggers" >
+                  <set>QAbstractItemView::AllEditTriggers</set>
+                 </property>
+                 <property name="alternatingRowColors" >
+                  <bool>false</bool>
+                 </property>
+                 <property name="selectionBehavior" >
+                  <enum>QAbstractItemView::SelectRows</enum>
+                 </property>
+                 <property name="schemaName" >
+                  <string>xtpos</string>
+                 </property>
+                 <property name="tableName" >
+                  <string>api_retailsiteterminal</string>
+                 </property>
+                 <property name="primaryKeyCoulmns" stdset="0" >
+                  <number>2</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" >
+                <layout class="QHBoxLayout" >
+                 <item>
+                  <widget class="QPushButton" name="_insertTerminal" >
+                   <property name="text" >
+                    <string>Add</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="_removeTerminal" >
+                   <property name="enabled" >
+                    <bool>false</bool>
+                   </property>
+                   <property name="text" >
+                    <string>Remove</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer>
+                   <property name="orientation" >
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0" >
+                    <size>
+                     <width>421</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GLCluster</class>
+   <extends></extends>
+   <header>glcluster.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Screen</class>
+   <extends></extends>
+   <header>screen.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WComboBox</class>
+   <extends></extends>
+   <header>wcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>XComboBox</class>
+   <extends></extends>
+   <header>xcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>XSpinBox</class>
+   <extends></extends>
+   <header>xspinbox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>XTreeView</class>
+   <extends></extends>
+   <header>xtreeview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_site</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>155</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_asset</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>367</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_adjust</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>318</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_checkClearing</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>235</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_terminals</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>429</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_bnkaccts</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>485</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_expire</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>384</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_terminals</sender>
+   <signal>valid(bool)</signal>
+   <receiver>_removeTerminal</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>104</x>
+     <y>514</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_insertTerminal</sender>
+   <signal>clicked()</signal>
+   <receiver>_terminals</receiver>
+   <slot>insert()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>443</x>
+     <y>893</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>773</x>
+     <y>725</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_removeTerminal</sender>
+   <signal>clicked()</signal>
+   <receiver>_terminals</receiver>
+   <slot>removeSelected()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>104</x>
+     <y>468</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>318</x>
+     <y>377</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>reverted(int)</signal>
+   <receiver>_bnkaccts</receiver>
+   <slot>revertAll()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>731</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_retailSite</sender>
+   <signal>reverted(int)</signal>
+   <receiver>_terminals</receiver>
+   <slot>revertAll()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>731</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_bnkacct</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_bnkacctName</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>299</x>
+     <y>500</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>240</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_bnkaccts</sender>
+   <signal>rowSelected(int)</signal>
+   <receiver>_bnkacct</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>299</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_bnkaccts</sender>
+   <signal>newModel(XSqlTableModel*)</signal>
+   <receiver>_bnkacct</receiver>
+   <slot>setModel(XSqlTableModel*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>299</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_insertBankAcct</sender>
+   <signal>clicked()</signal>
+   <receiver>_bnkaccts</receiver>
+   <slot>insert()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>107</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_removeBankAcct</sender>
+   <signal>clicked()</signal>
+   <receiver>_bnkaccts</receiver>
+   <slot>removeSelected()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>186</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_bnkaccts</sender>
+   <signal>valid(bool)</signal>
+   <receiver>_removeBankAcct</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>299</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>186</x>
+     <y>448</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_bnkaccts</sender>
+   <signal>valid(bool)</signal>
+   <receiver>_bnkacctGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>299</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_insertBankAcct</sender>
+   <signal>clicked()</signal>
+   <receiver>_bnkacct</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>107</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_removeBankAcct</sender>
+   <signal>clicked()</signal>
+   <receiver>_bnkacct</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>186</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>299</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

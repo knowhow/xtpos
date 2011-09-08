@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter>
+  <title>Installation</title>
+  <section>
+    <title>Overview</title>
+    <para>xTuple POS&mdash;otherwise known as
+    <literal>xtpos</literal>&mdash;is an xTuple extension package which may be
+    applied to any xTuple ERP edition. The package is easy to install. And
+    once installed, it seamlessly integrates point of sale functionality with
+    your ERP.</para>
+    <para>To install xTuple POS, you will need the following items:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Updater tool</term>
+        <listitem>
+          <para>This is the package installer. It is a cross-platform
+          application which connects to your xTuple ERP database and installs
+          the xTuple POS package (<literal>xtpos</literal>). The Updater is
+          the same tool that is used for upgrading xTuple ERP databases from
+          one version to the next. It also converts xTuple ERP from one
+          edition to the next (e.g., PostBooks to Standard).</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>xTuple POS package (xtpos)</term>
+        <listitem>
+          <para>This is the xTuple extension package which integrates point of
+          sale features with your xTuple ERP. The file is loaded into the
+          Updater, which in turn applies the package to your xTuple database.
+          And like all xTuple database upgrade scripts, the file ends with a
+          <filename><literal>.gz</literal></filename> extension.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </section>
+  <section>
+    <title>Getting the Required Files</title>
+    <para>If you purchased xTuple POS on the xTuple xChange, then you should
+    already have the files you need&mdash;that is, the Updater tool and the
+    <literal>xtpos</literal> package. We will explain how to install the
+    package in the next section.</para>
+    <note>
+      <para>Depending on which edition of xTuple ERP you are running, it may
+      be possible to download the required files from the "Commercial
+      Software" section of the <ulink url="www.xtuple.org">xtuple.org</ulink>
+      website.</para>
+    </note>
+    <para>The Updater tool can also be downloaded from the PostBooks project
+    page on SourceForge.net. To reach the PostBooks project, follow these
+    steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Point your web browser to <ulink
+        url="http://sourceforge.net/">http://sourceforge.net/</ulink></para>
+      </listitem>
+      <listitem>
+        <para>Search for the PostBooks project</para>
+      </listitem>
+      <listitem>
+        <para>Or use the direct URL: <ulink
+        url="???">http://sourceforge.net/projects/postbooks/</ulink></para>
+      </listitem>
+      <listitem>
+        <para>The following project page will appear. The details may vary
+        slightly, depending on the version you are downloading:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/sourceforge.png" />
+      </imageobject>
+      <caption>PostBooks Project Home Page</caption>
+    </mediaobject>
+    <para>Next, select the "View All Files" button. Once you select this
+    button, you will see the full list of all files available for download.
+    The following screenshot shows several of the file folders used to
+    organize the file downloads. Simply click on one of the folders to reveal
+    the available files inside the folder.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/sourceforge2.png" />
+      </imageobject>
+      <caption>PostBooks Packages Download Page</caption>
+    </mediaobject>
+    <tip>
+      <para>If at first you don't see the Updater folder on the Downloads
+      page, make sure to scroll all the way down the web page until you find
+      it.</para>
+    </tip>
+    <para>Finally, select the Updater folder and click on it to reveal the
+    files contained in the folder. Be sure to choose the file which
+    corresponds to your operating system. The Updater is available for
+    Windows, Mac, and Linux, as shown in the following screen:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/sourceforge3.png" />
+      </imageobject>
+      <caption>Download Updater</caption>
+    </mediaobject>
+    <para>Once you've downloaded the Updater and the <literal>xtpos</literal>
+    package, you are ready to begin the installation!</para>
+  </section>
+  <section>
+    <title>Installing the Package</title>
+    <para>Having xTuple ERP installed and running is a prerequisite for
+    installing xTuple POS. Assuming this is the case, then you are ready to
+    begin.</para>
+    <note>
+      <para>Before you install the xTuple POS package, you should first make a
+      backup copy of your xTuple ERP database. This way you can always restore
+      the backup copy should you encounter problems during the installation
+      process.</para>
+    </note>
+    <para>To begin installing the xTuple POS package, the first step is to
+    connect the Updater to your xTuple ERP database. The process for
+    connecting is identical to the process used when logging in using your
+    xTuple ERP client software.</para>
+    <para>The following screen shows the log in screen you are presented with
+    when launch the Updater application:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/updaterLogin.png" />
+      </imageobject>
+      <caption>Connect to xTuple Database Using Updater</caption>
+    </mediaobject>
+    <tip>
+      <para>If you are having trouble connecting to your xTuple ERP database
+      with the Updater, select the OPTIONS button on the Log In screen to
+      ensure your connection information is correct.</para>
+    </tip>
+    <para>Once you successfully connect to the database, you are ready to load
+    the <literal>xtpos</literal> package. To begin loading the
+    <literal>xtpos</literal> package, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the "File" menu option</para>
+      </listitem>
+      <listitem>
+        <para>Select the "Open" option, as shown in the following
+        screen:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/loadUpdater.png" />
+      </imageobject>
+      <caption>Load Package into Updater</caption>
+    </mediaobject>
+    <para>Once you locate the <literal>xtpos</literal> package on your file
+    system (e.g., <filename><filename>xtpos-3.5.0.gz</filename></filename>), a
+    short series of prerequisite checks will be performed. The following
+    screen shows the results of a successful prerequisite check:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/updatemanage.png" />
+      </imageobject>
+      <caption>Update Manager and Package</caption>
+    </mediaobject>
+    <para>If the prerequisite check was successful, simply select the START
+    UPDATE button to complete installation. Depending on the quality of your
+    network connection, this final step of the installation process should
+    complete quickly.</para>
+    <note>
+      <para>Contact your system administrator if you encounter errors or
+      extreme slowness after selecting the START UPDATE button.</para>
+    </note>
+    <para>To verify the xTuple POS package has been successfully installed,
+    log into xTuple ERP. Finally, navigate to the installed packages
+    directory, using the following path: <guimenuitem>System &gt; Design &gt;
+    Packages</guimenuitem>. If xTuple POS was installed correctly, the package
+    should appear as shown in the following screen:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/listpackages.png" />
+      </imageobject>
+      <caption>Package Installed in xTuple ERP</caption>
+    </mediaobject>
+  </section>
+</chapter>

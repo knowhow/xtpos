@@ -1,0 +1,9 @@
+-- Group: configureretail
+-- Name:  nextsalenumber
+-- Notes: Get the number that will be assigned to the next sale created.
+--        We cannot use the fetch function here because that increments the
+--        number, while the purpose of this query is simply to see what that
+--        next number will be.
+
+SELECT last_value + 1 AS sale_number
+FROM xtpos.sale_number_seq;

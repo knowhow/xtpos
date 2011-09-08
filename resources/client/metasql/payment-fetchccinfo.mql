@@ -1,0 +1,37 @@
+-- Group: payment
+-- Name: fetchccinfo
+-- Notes: fetch information about a previously-used credit card
+
+SELECT ccard_id, ccard_seq, ccard_active,
+       formatbytea(decrypt(setbytea(ccard_name),
+                           setbytea(<? value("key") ?>), 'bf')) AS ccard_name,
+       decrypt(setbytea(ccard_address1),
+               setbytea(<? value("key") ?>), 'bf') AS ccard_address1,
+       decrypt(setbytea(ccard_address2),
+               setbytea(<? value("key") ?>), 'bf') AS ccard_address2,
+       decrypt(setbytea(ccard_city),
+               setbytea(<? value("key") ?>), 'bf') AS ccard_city,
+       decrypt(setbytea(ccard_state),
+               setbytea(<? value("key") ?>), 'bf') AS ccard_state,
+       decrypt(setbytea(ccard_zip),
+               setbytea(<? value("key") ?>), 'bf') AS ccard_zip,
+       decrypt(setbytea(ccard_country),
+               setbytea(<? value("key") ?>), 'bf') AS ccard_country,
+       decrypt(setbytea(ccard_number),
+                              setbytea(<? value("key") ?>),
+                              'bf') AS ccard_number,
+       CASE WHEN (ccard_type='M') THEN <? value("masterCard") ?>
+            WHEN (ccard_type='V') THEN <? value("visa") ?>
+            WHEN (ccard_type='A') THEN <? value("americanExpress") ?>
+            WHEN (ccard_type='D') THEN <? value("discover") ?>
+            ELSE <? value("other") ?>
+       END AS cardtype,
+       formatbytea(decrypt(setbytea(ccard_month_expired),
+                           setbytea(<? value("key") ?>),
+                           'bf')) AS ccard_month_expired,
+       formatbytea(decrypt(setbytea(ccard_year_expired),
+                           setbytea(<? value("key") ?>),
+                           'bf')) AS ccard_year_expired,
+       ccpay_amount
+FROM ccpay JOIN ccard ON (ccpay_ccard_id=ccard_id)
+WHERE (ccpay_id=<? value("ccpayid") ?>);

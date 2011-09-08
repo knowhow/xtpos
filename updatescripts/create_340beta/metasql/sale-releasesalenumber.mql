@@ -1,0 +1,5 @@
+-- Group: sale
+-- Name: releasesalenumber
+-- Notes:
+
+SELECT setval('sale_number_seq',CAST(<? value("sale_number") ?> AS integer)-1);

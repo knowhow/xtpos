@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter>
+  <title>Processing Returns</title>
+  <para>It's always good customer service to have a returns policy. Because of
+  this, most retailers provide their Customers with the ability to return
+  unused or defective products. Processing Returns in xTuple POS is as easy as
+  processing Sales.</para>
+  <section>
+    <title>Creating a Return</title>
+    <para>To create a Return, begin on the Cash Register screen. The rest of
+    the steps are described below:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the NEW button&mdash;this will open the Retail Sale
+        screen</para>
+      </listitem>
+      <listitem>
+        <para>In the "Number" field, the next retail Sale number is entered
+        automatically</para>
+      </listitem>
+      <listitem>
+        <para>From the "Type" field, select the "Return" option</para>
+      </listitem>
+      <listitem>
+        <para>Locate the Customer information using the lookup button
+        [...]</para>
+        <note>
+          <para>Returns are made by Customers who purchased products from you
+          in the past. This means the information on these Customers should
+          already be in the database.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>The Customer portion of the Return in now completed, as shown in
+        the following screen:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtposreturn.png" />
+      </imageobject>
+      <caption>Retail Sale Return</caption>
+    </mediaobject>
+    <para>Next we have to specify which Items are being returned. To specify
+    the Items being returned, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the "Items" tab</para>
+      </listitem>
+      <listitem>
+        <para>Select the ADD button</para>
+      </listitem>
+      <listitem>
+        <para>Specify the Item being returned in the "Item Number"
+        field</para>
+      </listitem>
+      <listitem>
+        <para>Then enter the quantity being returned</para>
+      </listitem>
+      <listitem>
+        <para>The results are shown in the following screen:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtposreturn2.png" />
+      </imageobject>
+      <caption>Retail Sale Return Items</caption>
+    </mediaobject>
+    <para>Finally, navigate to the "Detail" tab and finalize the Return using
+    these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the Sales Rep who is handling the Return</para>
+        <note>
+          <para>A Sales Rep is required to process a Return. If your system is
+          configured to insert the name of the logged-in user as the Sales
+          Rep, then this will be done automatically.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>Enter any notes related to the Return</para>
+      </listitem>
+      <listitem>
+        <para>Once you are done, you're ready to select the REFUND
+        button</para>
+      </listitem>
+      <listitem>
+        <para>The next screen shows a Return ready for final
+        processing:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtposreturn3.png" />
+      </imageobject>
+      <caption>Retail Sale Return Detail</caption>
+    </mediaobject>
+    <para>The following screen will appear when you select the REFUND
+    button:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtposreturn4.png" />
+      </imageobject>
+      <caption>Retail Sale Return Refund</caption>
+    </mediaobject>
+    <para>As you can see in the screenshot, we are assuming for this scenario
+    that we are giving the Customer a cash refund. However, Credit Card
+    refunds can also be issued. Keep in mind that when issuing a Credit Card
+    refund, the amount in the Cash amount field must be less than the total
+    due. This will ensure the "Credit Card" option is enabled so you can use
+    it.</para>
+    <para>To print a refund receipt, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the "Print Receipt" option</para>
+      </listitem>
+      <listitem>
+        <para>Select the OK button</para>
+      </listitem>
+      <listitem>
+        <para>A sample Return receipt is shown below:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtposreturn5.png" />
+      </imageobject>
+      <caption>Retail Sale Return Receipt</caption>
+    </mediaobject>
+  </section>
+</chapter>

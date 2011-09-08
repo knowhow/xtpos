@@ -1,0 +1,48 @@
+Release Notes
+xTuple Point of Sale (xtPOS)
+Version 3.5.0
+May 18, 2010
+==================================
+
+This is the 3.5.0 final release of the xTuple Point of Sale (xtPOS)
+package, a free and open source extension package for xTuple
+ERP (PostBooks, Standard, and Manufacturing Editions). This is
+primarily a bug fix release. Please Note: The xtPOS documentation 
+has been updated for this release, with a .pdf version available for
+purchase on the xTuple xChange: http://www.xtuple.com/xchange
+
+xtPOS is available under the same Common Public Attribution License 
+(CPAL) as the PostBooks Edition of xTuple ERP (www.xtuple.com/CPAL). 
+For more information on xTuple's extension package architecture, 
+please see www.xtuple.org/developer-zone.
+
+==================================
+
+The following features and bug fixes have been added to the
+package since 3.4.0. Additional detail for each item listed below
+may be found on our community website (www.xtuple.org). Simply go
+to the xtPOS project on the Issue Tracker and select the 
+"Changelog" option.
+
+
+New Features:
+
+* [Sales] Allow a default printer to be selected for cash register 
+and sales
+
+
+Bug Fixes:
+
+* [Accounting] Sales multiplying tax by number of rows in the 
+total 
+* [Documentation] Unclear dependency for disable customer 
+* [Sales] Unable to create customer from cash register screen 
+* [Sales] Selecting to view the sale doesn't display the order 
+details 
+* [Sales] Changing qty doesn't refresh Total sales value 
+* [Sales] Hitting Enter key does not advance to next line 
+* [Sales] Search result opens behind cash register 
+* [Sales] Auto-complete does not complete partially entered items 
+on Retail Sales 
+* [Sales] Cannot record payment and close sale in xTuple 3.5
+* [Sales] Payment screen will not open in xTuple 3.5  

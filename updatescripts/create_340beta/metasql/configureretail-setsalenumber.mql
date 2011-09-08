@@ -1,0 +1,5 @@
+-- Group: configureretail
+-- Name: setsalenumber
+-- Notes: Set next sale number.
+
+SELECT setval('sale_number_seq', <? value("sale_number") ?>-1);

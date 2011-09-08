@@ -1,0 +1,62 @@
+-- Group: salereceipt
+-- Name: payments
+-- Notes:
+
+SELECT 0 AS seq, 'Cash:' AS type, '' AS document,
+  formatmoney(salehead_cashamt * -1) AS f_amount
+FROM xtpos.salehead
+WHERE ((salehead_number=CAST(<? value("sale_number") ?> AS text))
+AND (salehead_cashamt > 0))
+
+UNION
+SELECT 0 AS seq, 'Cash Refund:' AS type, '' AS document,
+  formatmoney(salehead_cashamt) AS f_amount
+FROM xtpos.salehead
+WHERE ((salehead_number=CAST(<? value("sale_number") ?> AS text))
+AND (salehead_cashamt < 0))
+
+UNION
+SELECT 2 AS seq,
+       CASE WHEN (<? value("type") ?> = 'Return') THEN 'Credit Card Refund'
+            ELSE 'Credit Card'
+       END || ' (' || <? value("cclast4") ?> || '):' AS type,
+       '' AS document,
+       formatmoney(ccpay_amount * -1) AS f_amount
+FROM xtpos.salehead
+  JOIN ccpay ON (salehead_ccpay_id=ccpay_id)
+  JOIN ccard ON (ccpay_ccard_id=ccard_id)
+WHERE ((salehead_number=CAST(<? value("sale_number") ?> AS text))
+AND (ccpay_amount > 0))
+
+UNION
+SELECT 3 AS seq, 'Check:' AS type, salehead_checknumber AS document,
+  formatmoney(salehead_checkamt * -1) AS f_amount
+FROM xtpos.salehead
+WHERE (salehead_number=CAST(<? value("sale_number") ?> AS text)
+AND (salehead_checkamt > 0))
+
+UNION
+SELECT 4 AS seq, '' AS type, '' AS document,
+  '--------' AS f_total
+FROM xtpos.salehead
+WHERE ((salehead_number=CAST(<? value("sale_number") ?> AS text))
+AND (salehead_closed))
+
+UNION
+SELECT seq, type, document, f_amount
+FROM (SELECT 5 AS seq, 'Change:'::text AS type, ''::text AS document,
+      formatmoney(MAX(salehead_cashamt) + MAX(salehead_checkamt) + 
+      (MAX(COALESCE(ccpay_amount,0)) *
+                        CASE WHEN (<? value("type") ?> = 'Return') THEN -1
+                        ELSE 1
+                        END) -
+      sum(round(saleitem_unitprice * saleitem_qty,2)) -
+      (xtpos.saletax(salehead_id))) AS f_amount,
+      salehead_closed
+      FROM xtpos.salehead
+        JOIN xtpos.saleitem ON (salehead_id=saleitem_salehead_id)
+        LEFT OUTER JOIN ccpay ON (salehead_ccpay_id=ccpay_id)
+      WHERE (salehead_number=CAST(<? value("sale_number") ?> AS text))
+      GROUP BY salehead_id, salehead_closed) AS data
+WHERE (salehead_closed)
+ORDER BY seq;

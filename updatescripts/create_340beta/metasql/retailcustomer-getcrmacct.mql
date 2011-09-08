@@ -1,0 +1,7 @@
+-- Group: retailcustomer
+-- Name: getcrmacct
+-- Notes:
+
+SELECT *
+FROM crmacct
+WHERE (crmacct_number=<? value("number") ?>);

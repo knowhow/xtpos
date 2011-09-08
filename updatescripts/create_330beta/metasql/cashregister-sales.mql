@@ -1,0 +1,53 @@
+-- Group: cashregister
+-- Name: sales
+-- Notes: List of sales
+
+SELECT salehead_number, warehous_code, terminal_number, 
+  CASE 
+    WHEN (salehead_closed OR salehead_type IN ('S','R')) THEN
+      salehead_closed
+    ELSE
+      xtpos.checkStatus(salehead_id)
+  END AS salehead_closed, salehead_time,
+  CASE WHEN salehead_type='S' THEN <? value("Sale") ?>
+       WHEN salehead_type='Q' THEN <? value("Quote") ?>
+       WHEN salehead_type='R' THEN <? value("Return") ?>
+  END AS type,
+  cust_number,
+  cntct_first_name || ' ' || cntct_last_name AS contact_name,
+  cntct_phone
+FROM xtpos.salehead
+  JOIN xtpos.terminal ON (salehead_terminal_id=terminal_id)
+  JOIN whsinfo ON (salehead_warehous_id=warehous_id)
+  LEFT OUTER JOIN custinfo ON (salehead_cust_id=cust_id)
+  LEFT OUTER JOIN cntct ON (cust_cntct_id=cntct_id)
+WHERE ((true)
+<? if exists("terminal") ?>
+  AND (terminal_number=<? value("terminal") ?>)
+<? endif ?>
+<? if exists("noQuotes") ?>
+  AND (salehead_type != 'Q')
+<? endif ?>
+<? if exists("noReturns") ?>
+  AND (salehead_type != 'R')
+<? endif ?>
+<? if exists("noSales") ?>
+  AND (salehead_type != 'S')
+<? endif ?>
+<? if exists("open") ?>
+  AND (NOT salehead_closed)
+<? endif ?>
+<? if exists("start_date") ?>
+  AND (cast(salehead_time AS date) >= cast(<? value("start_date") ?> AS DATE))
+<? endif ?>
+<? if exists("end_date") ?>
+  AND (cast(salehead_time AS date) <= cast(<? value("end_date") ?> AS DATE) + 1)
+<? endif ?>
+<? if exists("search") ?>
+  AND ((cust_number ~* <? value("search") ?>)
+  OR (salehead_number ~* <? value("search") ?>)
+  OR (cntct_first_name || ' ' || cntct_last_name ~* <? value("search") ?>)
+  OR (cntct_phone ~* <? value("search") ?>))
+<? endif ?>
+)
+ORDER BY salehead_number DESC;

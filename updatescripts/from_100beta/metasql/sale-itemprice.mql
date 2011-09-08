@@ -1,0 +1,7 @@
+-- Group: sale
+-- Name: itemprice
+-- Notes:
+
+SELECT itemprice(<? value("item_id") ?>,
+                 <? value("cust_id") ?>,
+                 CAST(<? value("qty") ?> AS numeric));

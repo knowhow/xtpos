@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter>
+  <title>Customer Service Tools</title>
+  <para>To provide the best possible customer service, your sales associates
+  need to be able to answer all kinds of Customer questions. Fortunately,
+  xTuple POS runs on a powerful database platform which stores transaction
+  history and manages inventory. This means that answers to even the most
+  complicated sales and inventory questions are all available at your
+  fingertips!</para>
+  <section>
+    <title>Sales History</title>
+    <para>It's common for Customers to have questions about their Sales
+    history. Perhaps you quoted prices to them in the past&mdash;or maybe they
+    want to be reminded of their recent purchases. In the best case scenario,
+    Customers will have their original receipt. But often they will
+    not.</para>
+    <para>Either way, xTuple POS provides tools for looking up any type of
+    Customer transaction. And, depending on your permission level and xTuple
+    ERP edition, you may be able to uncover detailed information across
+    multiple stores (i.e., Sites). Let's say, for example, you want to find
+    all recent Sales activity for a particular Customer. To do so, follow
+    these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Open the search screen using the following path:
+        <guimenuitem>Sales &gt; Retail &gt; Retail Sale
+        Search</guimenuitem></para>
+      </listitem>
+      <listitem>
+        <para>Under the "Show" section, select "Sales," "Quotes," and
+        "Returns"</para>
+      </listitem>
+      <listitem>
+        <para>Specify a date range</para>
+      </listitem>
+      <listitem>
+        <para>In the "Search" field, enter the Customer's last name (e.g.,
+        "Smith")</para>
+      </listitem>
+      <listitem>
+        <para>The following screen shows the results we get:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalesearchsmith.png" />
+      </imageobject>
+      <caption>Retail Sale Search</caption>
+    </mediaobject>
+    <tip>
+      <para>If you have a copy of an original Sales receipt, simply enter the
+      receipt number in the "Search" field to quickly locate the Sales
+      transaction.</para>
+    </tip>
+  </section>
+  <section>
+    <title>Item Availability</title>
+    <para>Another common question Customers ask is whether you have a specific
+    Item available in stock. With xTuple POS, you can quickly research an Item
+    using the Inventory Availability by Item screen. To access the Inventory
+    Availability screen, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Follow this path: <guimenuitem>Inventory &gt; Reports &gt;
+        Inventory Availability &gt; by Item</guimenuitem></para>
+      </listitem>
+      <listitem>
+        <para>In the "Item Number" field, enter the Item Number</para>
+      </listitem>
+      <listitem>
+        <para>Specify the Site you are researching</para>
+        <note>
+          <para>If you are using one of the commercial editions of xTuple ERP,
+          you can search for Inventory across multiple Sites.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>Select the QUERY button</para>
+      </listitem>
+      <listitem>
+        <para>The following screen shows sample results:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/Invavail.png" />
+      </imageobject>
+      <caption>Inventory Availability</caption>
+    </mediaobject>
+    <para>As you can see in our example, we learned there are 30 units of Item
+    YTRUCK1 currently available at our Site ST1. If we had chosen to view
+    availability at All Sites, we could have gotten an even wider view of Item
+    availability.</para>
+    <tip>
+      <para>You can also can identify Items that are currently on order by
+      right-clicking on the Item. In this way, you can find out further
+      details regarding estimated delivery of order.</para>
+    </tip>
+  </section>
+</chapter>

@@ -1,0 +1,38 @@
+Release Notes
+xTuple Point of Sale (xtPOS)
+Version 3.4.0RC
+December 23, 2009
+==================================
+
+This is the Release Candidate for the xTuple Point of Sale
+package, a free and open source extension package for xTuple
+ERP (PostBooks, Standard, and Manufacturing Editions). 
+Starting with version 3.4.0, xtPOS is available under the same
+Common Public Attribution License (CPAL) as the PostBooks
+Edition of xTuple ERP (www.xtuple.com/CPAL). For more 
+information on xTuple's extension package architecture, please 
+see www.xtuple.org/developer-zone.
+
+==================================
+
+The following features and bug fixes have been added to the
+package since 3.2.2. Additional detail for each item listed below 
+may be found on our community website (www.xtuple.org). Simply go 
+to the Issue Tracker and select the "Changelog" option.
+
+
+Bug Fixes:
+
+* POS return/refund to credit card creates incorrect close numbers
+* Retail order detail tab notes field displays input backwards
+* Add tax zone source to sales config
+* Bank transfers not hitting GL
+* POS posting return posts to the G/L Series Discrepancy
+account
+* Retail Sale window is not accepting UPC barcodes
+* Fixed several scenarios that could lead to a crash
+* Cancel sale gives error, but sale saves
+* Customer new and edit buttons are misaligned on the Retail 
+Sale window in MS Windows
+* Retail sales gets site from user's prefs. not terminal's site
+* Error when attempting to process payment on a Quote

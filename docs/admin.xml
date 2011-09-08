@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter>
+  <title>System Administration</title>
+  <para>Before you can begin processing retail sales, you must first set up
+  xTuple POS to reflect your retail operation&mdash;and give users the
+  required permissions to use the retail package. These activities should be
+  completed by a retail operations manager or dedicated information technology
+  professional. In this chapter we'll cover the following topics:</para>
+  <itemizedlist>
+    <listitem>
+      <para>Configuring User Permissions</para>
+    </listitem>
+    <listitem>
+      <para>Configuring the Sales module</para>
+    </listitem>
+    <listitem>
+      <para>Creating Retail Sites</para>
+    </listitem>
+  </itemizedlist>
+  <para>Once these configurations are complete, you can begin selling
+  products!</para>
+  <section>
+    <title>Configuring User Permissions</title>
+    <para>xTuple ERP has the powerful ability to manage user permissions,
+    enabling you to allow or disallow access to various functional areas of
+    the system. For example, a sales associate may only have privileges to
+    process sales, while the store manager may have the ability to maintain
+    registers, view inventory, and process sales.</para>
+    <para>There are several options available to you when managing system
+    users. You can either A) assign individual permissions to users B) create
+    preconfigured groups of permissions and assign individuals to these groups
+    or C) a combination of A and B.</para>
+    <para>The following path will get you to the screen for maintaining system
+    users: <guimenuitem>System &gt; Maintain Users</guimenuitem>.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtpospermissions.png" />
+      </imageobject>
+      <caption>List Users</caption>
+    </mediaobject>
+    <para>In this scenario, let's say we have a new sales associate whose
+    permissions we want to review. To begin, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Highlight the user whose permissions we want to review</para>
+      </listitem>
+      <listitem>
+        <para>Select the EDIT button (or double-click on the user)</para>
+      </listitem>
+      <listitem>
+        <para>The following screen will appear:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtpospermissions2.png" />
+      </imageobject>
+      <caption>User Privileges</caption>
+    </mediaobject>
+    <para>As you can see, the basic user information&mdash;such as name and
+    email address&mdash;has already been entered. The user also has several
+    Sales module privileges, which you can see under the "Granted Privileges"
+    section. We can add or remove privileges (by module) simply by selecting a
+    specific privilege, and then choosing either the ADD or REVOKE
+    button.</para>
+    <tip>
+      <para>Use the ADD ALL and REVOKE ALL buttons to move all the privileges
+      at once for the specified module</para>
+    </tip>
+    <para>To learn which groups our sample user belongs to, we select the
+    "Groups" tab. The following screen appears:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtpospermissions3.png" />
+      </imageobject>
+      <caption>User Groups</caption>
+    </mediaobject>
+    <para>In this case, the following user groups have been defined:</para>
+    <itemizedlist>
+      <listitem>
+        <para>ADMIN</para>
+      </listitem>
+      <listitem>
+        <para>OPS MANAGER</para>
+      </listitem>
+      <listitem>
+        <para>STORE MANAGER</para>
+      </listitem>
+      <listitem>
+        <para>SALES ASSOCIATE</para>
+      </listitem>
+    </itemizedlist>
+    <para>As you can see, our user has been granted the privileges for the
+    SALES ASSOCIATE group. If we wanted to change the group the user belonged
+    to, we could simply use the ADD or REVOKE buttons. We could also add
+    individual privileges to the user's existing group privileges by using the
+    same buttons on the "Privileges" tab.</para>
+    <tip>
+      <para>The user group feature makes it easy to define logical sets of
+      privileges defined according to standard job roles. The following path
+      takes you to the screen for defining group privileges:
+      <guimenuitem>System &gt; Maintain Groups</guimenuitem>.</para>
+    </tip>
+    <para>To review the Sites our sample user has access to, select the
+    "Sites" tab. The following screen will appear:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/xtpospermissions4.png" />
+      </imageobject>
+      <caption>User Information Sites</caption>
+    </mediaobject>
+    <para>Since our user is a sales associate at the ST1 Site, he only has
+    permission to access this one Site. If, on the other hand, he were an
+    operations manager, he might have permissions to access every Site. This
+    would enable him to review inventory levels or sales reports across the
+    entire operation.</para>
+  </section>
+  <section>
+    <title>Configuring the Sales Module</title>
+    <para>The first step in configuring xTuple POS is to enter some basic
+    global information. To do this, navigate to the Sales Configuration screen
+    in the System module, using the following steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Follow this path: <guimenuitem>System &gt; Configure Modules
+        &gt; Sales</guimenuitem></para>
+      </listitem>
+      <listitem>
+        <para>Select the "Retail" tab</para>
+      </listitem>
+      <listitem>
+        <para>The following screen will appear:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/configureSO_configureRetail.png" />
+      </imageobject>
+      <caption>Retail Configuration Options</caption>
+    </mediaobject>
+    <para>All retail transactions automatically receive a unique ID number. On
+    the Sales Configuration screen you define which number you want to use as
+    the starting point for these unique identifiers. You can choose any
+    initial number you wish.</para>
+    <tip>
+      <para>To ensure you are collecting customer information at the point of
+      sale, be sure <emphasis>not</emphasis> to select the "Use internal
+      customer for all Retail Sales" option.</para>
+    </tip>
+    <para>In addition, you have the option on this screen to decide if you
+    want to collect customer data at the point of sale&mdash;such as customer
+    name, address, and phone number&mdash;or not. If you prefer not to collect
+    this information, then select the "Disable choosing Customer at Cash
+    Register" option. This will cause the customer tab on the Cash Register
+    screen to be hidden from view. To learn more about the system-wide options
+    for configuring the Retail package, please see the xTuple Reference
+    Guide.</para>
+    <para>Finally, you will need to determine whether the Tax Zone for your
+    Retail sales is drawn from the Site record or from the Customer record. If
+    you are not collecting Customer information at the point of sale, then the
+    Site option would be your choice.</para>
+  </section>
+  <section>
+    <title>Creating Retail Sites</title>
+    <para>In xTuple ERP, we define "Sites" as physical locations where you
+    operate your business. For example, in the PostBooks Edition&mdash;our
+    free ERP offering&mdash;we provide you with the ability to manage a single
+    Site. A Site can be a store front, warehouse, or corporate office. One of
+    the benefits of the commercial editions of xTuple ERP is that you gain the
+    ability to manage multiple Sites, including any combination of Site types.
+    Depending on your level of permissions, the multi-Site capability gives
+    you the ability to track sales remotely at multiple stores and also
+    monitor inventory levels at each Site.</para>
+    <note>
+      <para>The examples used in this product guide are based on having xTuple
+      POS loaded into the Manufacturing Edition of xTuple ERP.</para>
+    </note>
+    <para>Sites are added (or edited) in the Inventory module. The following
+    path will get you there: <guimenuitem>Inventory &gt; Site &gt;
+    List</guimenuitem>. The following screen shows a list of the two store
+    front operations we will be using throughout this product guide: ST1 and
+    ST2. We will later assign Cash Register terminals to these Sites.</para>
+    <note>
+      <para>Keep in mind, Sites are not necessarily limited to store fronts
+      only. Warehouses, factories, and business offices may also be identified
+      as Sites.</para>
+    </note>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/listsites.png" />
+      </imageobject>
+      <caption>List Sites</caption>
+    </mediaobject>
+    <tip>
+      <para>Make sure when creating a new Site that you enter a Tax Authority
+      on the General tab for each Site that will have a store front. Sales
+      taxes will be calculated by the Cash Register windows based on the Tax
+      Authority defined at the Site level.</para>
+    </tip>
+    <para>Once you enter your list of Sites, the next step is to define Retail
+    Sites. The difference between "Sites" and "Retail Sites" is that Retails
+    Sites hold additional information specific to the xTuple POS package. For
+    example, default cost accounts and Cash Register terminals are defined at
+    the Retail Site level. The following path will get you to the Retail Sites
+    screen: <guimenuitem>Sales &gt; Master Information &gt; Retail
+    Sites</guimenuitem>.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsitesST1.png" />
+      </imageobject>
+      <caption>List of Retail Sites</caption>
+    </mediaobject>
+    <para>As you can see in our example, we have already created the Retail
+    Site for the ST1 Site. We will now demonstrate how this was done by
+    creating a Retail Site for the ST2 Site. To begin creating a new Retail
+    Site, select the NEW button. The following screen will appear:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsiteST2a.png" />
+      </imageobject>
+      <caption>Create Retail Site</caption>
+    </mediaobject>
+    <para>On this screen complete the following steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Choose the Site you want to define as a Retail Site</para>
+      </listitem>
+      <listitem>
+        <para>Specify how long you want Quotes to remain active for this
+        Retail Site</para>
+      </listitem>
+      <listitem>
+        <para>Assign default cost accounts assigned to the Retail Site</para>
+      </listitem>
+      <listitem>
+        <para>Indicate the Bank Account(s) used by this Retail Site for
+        depositing and transferring funds</para>
+      </listitem>
+    </orderedlist>
+    <para>The next step is to define Terminals to associate with the Retail
+    Site. Terminals are required when using a Cash Register, as will be
+    discussed in later chapters. To define a Terminal, select the "Terminals"
+    tab and complete the following steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the ADD button</para>
+      </listitem>
+      <listitem>
+        <para>Type in the name of the Terminal in the line provided (e.g.,
+        Terminal 2a)</para>
+      </listitem>
+      <listitem>
+        <para>Again select the ADD button if more Terminals are needed</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsiteST2b.png" />
+      </imageobject>
+      <caption>Add Cash Register Terminals</caption>
+    </mediaobject>
+    <para>Now that our Retail Sites have been created, we can begin managing
+    the Cash Registers and processing sales!</para>
+  </section>
+</chapter>

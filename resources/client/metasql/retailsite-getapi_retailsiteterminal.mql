@@ -1,0 +1,8 @@
+-- Group: retailsite
+-- Name: getapi_retailsiteterminal
+-- Notes:
+
+SELECT *
+FROM xtpos.api_retailsiteterminal
+WHERE (site!=<? value("site") ?>)
+AND (terminal=<? value("terminal") ?>);

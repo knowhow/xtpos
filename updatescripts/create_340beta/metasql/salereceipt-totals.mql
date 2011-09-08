@@ -1,0 +1,22 @@
+-- Group: salereceipt
+-- Name: totals
+-- Notes:
+
+SELECT 0 AS seq, 'Subtotal:' AS type,
+  formatmoney(sum(round(saleitem_unitprice * abs(saleitem_qty),2))) AS f_amount
+FROM xtpos.salehead
+  JOIN xtpos.saleitem ON (salehead_id=saleitem_salehead_id)
+WHERE salehead_number=CAST(<? value("sale_number") ?> AS text)
+UNION
+SELECT 1 AS seq, 'Tax:' AS type,
+  formatmoney(abs(xtpos.saletax(salehead_id))) AS f_amount
+FROM xtpos.salehead
+WHERE salehead_number=CAST(<? value("sale_number") ?> AS text)
+UNION
+SELECT 2 AS seq, 'Total:' AS type,
+  formatmoney(sum(round(saleitem_unitprice * abs(saleitem_qty),2) +
+  (abs(xtpos.saletax(salehead_id))))) AS f_amount
+FROM xtpos.salehead
+  JOIN xtpos.saleitem ON (salehead_id=saleitem_salehead_id)
+WHERE (salehead_number=CAST(<? value("sale_number") ?> AS text))
+ORDER BY seq

@@ -1,0 +1,301 @@
+<ui version="4.0" >
+ <class>retailCustomer</class>
+ <widget class="QDialog" name="retailCustomer" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>368</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>Cash Register</string>
+  </property>
+  <property name="schemaName" stdset="0" >
+   <string>xtpos</string>
+  </property>
+  <property name="tableName" stdset="0" >
+   <string>api_cashregister</string>
+  </property>
+  <property name="primaryKeyColumns" stdset="0" >
+   <number>2</number>
+  </property>
+  <property name="screenTitle" stdset="0" >
+   <string/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3" >
+   <item row="0" column="0" >
+    <widget class="Screen" name="_customer" >
+     <property name="schemaName" >
+      <string>api</string>
+     </property>
+     <property name="tableName" >
+      <string>customer</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="_numberLit" >
+        <property name="text" >
+         <string>Customer #:</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="XLineEdit" name="_number" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="fieldName" >
+         <string>customer_number</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" >
+       <spacer name="horizontalSpacer" >
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>325</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="_nameLit" >
+        <property name="text" >
+         <string>Customer Name:</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2" >
+       <widget class="XLineEdit" name="_name" >
+        <property name="fieldName" >
+         <string>customer_name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="3" >
+       <widget class="QTabWidget" name="_tab" >
+        <property name="currentIndex" >
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="_contactPage" >
+         <attribute name="title" >
+          <string>Billing Contact</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout" >
+          <item row="0" column="0" >
+           <widget class="ContactWidget" name="_billingContact" >
+            <property name="accountVisible" >
+             <bool>false</bool>
+            </property>
+            <property name="ownerEnabled" >
+             <bool>false</bool>
+            </property>
+            <property name="activeVisible" >
+             <bool>false</bool>
+            </property>
+            <property name="initialsVisible" >
+             <bool>false</bool>
+            </property>
+            <property name="fieldNameChange" >
+             <string>billing_contact_change</string>
+            </property>
+            <property name="fieldNameNumber" >
+             <string>billing_contact_number</string>
+            </property>
+            <property name="fieldNameFirst" >
+             <string>billing_contact_first</string>
+            </property>
+            <property name="fieldNameMiddle" >
+             <string>billing_contact_middle</string>
+            </property>
+            <property name="fieldNameLast" >
+             <string>billing_contact_last</string>
+            </property>
+            <property name="fieldNameSuffix" >
+             <string>billing_contact_suffix</string>
+            </property>
+            <property name="fieldNameTitle" >
+             <string>billing_contact_job_title</string>
+            </property>
+            <property name="fieldNamePhone" >
+             <string>billing_contact_voice</string>
+            </property>
+            <property name="fieldNamePhone2" >
+             <string>billing_contact_alternate</string>
+            </property>
+            <property name="fieldNameFax" >
+             <string>billing_contact_fax</string>
+            </property>
+            <property name="fieldNameEmailAddress" >
+             <string>billing_contact_email</string>
+            </property>
+            <property name="fieldNameWebAddress" >
+             <string>billing_contact_web</string>
+            </property>
+            <property name="fieldNameAddressChange" stdset="0" >
+             <string>billing_contact_address_change</string>
+            </property>
+            <property name="fieldNameAddressNumber" stdset="0" >
+             <string>billing_contact_address_number</string>
+            </property>
+            <property name="fieldNameLine1" >
+             <string>billing_contact_address1</string>
+            </property>
+            <property name="fieldNameLine2" >
+             <string>billing_contact_address2</string>
+            </property>
+            <property name="fieldNameLine3" >
+             <string>billing_contact_address3</string>
+            </property>
+            <property name="fieldNameCity" >
+             <string>billing_contact_city</string>
+            </property>
+            <property name="fieldNameState" >
+             <string>billing_contact_state</string>
+            </property>
+            <property name="fieldNamePostalCode" >
+             <string>billing_contact_postalcode</string>
+            </property>
+            <property name="fieldNameCountry" >
+             <string>billing_contact_country</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <layout class="QVBoxLayout" >
+     <item>
+      <layout class="QVBoxLayout" >
+       <property name="spacing" >
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="_cancel" >
+         <property name="text" >
+          <string>Cancel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="_ok" >
+         <property name="text" >
+          <string>OK</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ContactWidget</class>
+   <extends></extends>
+   <header>contactwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Screen</class>
+   <extends></extends>
+   <header>screen.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>XLineEdit</class>
+   <extends></extends>
+   <header>xlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>_customer</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_billingContact</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>594</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>420</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_customer</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_number</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>344</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>243</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_customer</sender>
+   <signal>newDataWidgetMapper(XDataWidgetMapper*)</signal>
+   <receiver>_name</receiver>
+   <slot>setDataWidgetMap(XDataWidgetMapper*)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>512</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>434</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

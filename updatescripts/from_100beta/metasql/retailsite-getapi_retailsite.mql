@@ -1,0 +1,10 @@
+-- Group: retailsite
+-- Name: getapi_retailsite
+-- Notes:
+
+SELECT *
+FROM xtpos.api_retailsite
+<? if exists("site") ?>
+WHERE (site=<? value("site") ?>)
+<? endif ?>
+;

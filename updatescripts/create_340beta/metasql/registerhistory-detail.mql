@@ -1,0 +1,45 @@
+-- Group: registerhistory
+-- Name: detail
+-- Notes:
+
+SELECT 
+ regdetail_id,
+<? if exists("warehous_id") ?>
+  warehous_code AS site_param,
+<? else ?>
+  'All' AS site_param,
+<? endif ?>
+  formatdate(<? value("start_date") ?>) AS start_param,
+  formatdate(<? value("start_date") ?>) AS end_param,
+  warehous_code, terminal_number,
+  CASE regdetail_type
+    WHEN 'O' THEN 'Open'
+    WHEN 'A' THEN 'Adjust'
+    WHEN 'C' THEN 'Close'
+  END AS f_type,
+  regdetail_startbal,regdetail_cashslsamt, regdetail_transferamt,
+  regdetail_adjustamt, regdetail_endbal, regdetail_depchks, regdetail_notes,
+  regdetail_username, regdetail_time, bankaccnt_name,
+  CAST(regdetail_journalnumber AS text) AS f_journalnumber,
+  formatmoney(regdetail_startbal) AS f_startbal, 
+  formatmoney(regdetail_cashslsamt) AS f_cashslsamt, 
+  formatmoney(regdetail_transferamt) AS f_transferamt, 
+  formatmoney(regdetail_adjustamt) AS f_adjustment, 
+  formatmoney(regdetail_endbal) AS f_endbal,
+  'money' AS regdetail_startbal_xtnumericrole,
+  'money' AS regdetail_cashslsamt_xtnumericrole,
+  'money' AS regdetail_transferamt_xtnumericrole,
+  'money' AS regdetail_adjustamt_xtnumericrole,
+  'money' AS regdetail_endbal_xtnumericrole
+FROM xtpos.regdetail
+  JOIN xtpos.reghist ON (regdetail_reghist_id = reghist_id)
+  JOIN xtpos.terminal ON (reghist_terminal_id = terminal_id)
+  JOIN site() ON (reghist_warehous_id = warehous_id)
+  LEFT OUTER JOIN bankaccnt ON (regdetail_bankaccnt_id = bankaccnt_id)
+WHERE ((regdetail_time BETWEEN (CAST(<? value("start_date") ?> AS date))
+                        AND (CAST(<? value("end_date") ?> AS date) + 1))
+<? if exists("warehous_id") ?>
+  AND (warehous_id=<? value("warehous_id") ?>)
+<? endif ?>
+)
+ORDER BY warehous_code, terminal_number, regdetail_time;

@@ -1,0 +1,9 @@
+-- Group: sale
+-- Name: fetchcustcontact
+-- Notes:
+
+SELECT cntct_number, addr_number
+FROM custinfo 
+  JOIN cntct ON (cust_cntct_id=cntct_id)
+  LEFT OUTER JOIN addr ON (cntct_addr_id=addr_id)
+WHERE (cust_id=<? value("cust_id") ?>); 

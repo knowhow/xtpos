@@ -1,0 +1,14 @@
+-- Group: payment
+-- Name: closesale
+-- Notes:
+
+<? if exists("cash") ?>
+SELECT xtpos.saleclosecash(salehead_id,<? value("tendered") ?>)
+<? elseif exists("check") ?>
+SELECT xtpos.saleclosecheck(salehead_id,<? value("check_number") ?>,<? value("check_amount") ?>,<? value("tendered") ?>)
+<? elseif exists("credit") ?>
+SELECT xtpos.saleclosecredit(salehead_id,<? value("ccpay_id") ?>,<? value("tendered") ?>)
+<? endif ?>
+AS result
+FROM xtpos.salehead
+WHERE (salehead_number=<? value("sale_number") ?>);

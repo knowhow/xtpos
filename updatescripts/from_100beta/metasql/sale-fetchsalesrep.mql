@@ -1,0 +1,9 @@
+-- Group: sale
+-- Name: fetchsalesrep
+-- Notes:
+
+SELECT salesrep_number 
+FROM salesrep
+  JOIN emp ON (emp_id=salesrep_emp_id)
+  JOIN usr ON (usr_id=emp_usr_id)
+WHERE (usr_username=CURRENT_USER);

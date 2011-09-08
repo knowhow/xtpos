@@ -1,0 +1,5 @@
+-- Group: sale
+-- Name: fetchsalenumber
+-- Notes:
+
+SELECT xtpos.fetchsalenumber() AS sale_number;

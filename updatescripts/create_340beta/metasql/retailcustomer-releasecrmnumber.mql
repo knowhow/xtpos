@@ -1,0 +1,6 @@
+-- Group: retailcustomer
+-- Name: releasecrmnumber
+-- Notes:
+
+UPDATE orderseq SET orderseq_number =<? value("number") ?>
+WHERE orderseq_name = 'CRMAccountNumber';

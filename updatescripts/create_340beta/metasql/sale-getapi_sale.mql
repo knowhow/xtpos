@@ -1,0 +1,7 @@
+-- Group: sale
+-- Name: getapi_sale
+-- Notes: Used for importing list of items from another order
+
+SELECT *
+FROM xtpos.api_sale
+WHERE (sale_number=<? value("sale_number") ?>);

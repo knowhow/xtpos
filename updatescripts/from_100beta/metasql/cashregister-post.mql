@@ -1,0 +1,62 @@
+-- Group: cashregister
+-- Name: post
+-- Notes:
+
+  SELECT
+    CASE
+      WHEN (<? value("action") ?>='Open') THEN
+        xtpos.cashRegOpen(
+        xtpos.getTerminalId(<? value("terminal") ?>),
+        CASE
+          WHEN (<? value("bankaccount") ?>='') THEN NULL
+          ELSE getBankAccntId(<? value("bankaccount") ?>)
+        END,
+        <? value("transfer_amount") ?>,
+        CASE 
+          WHEN (<? value("transfer_direction") ?>='Out') THEN 'O'
+          ELSE 'I'
+        END,
+        <? value("adjustment_amount") ?>,
+        CASE  
+          WHEN (<? value("adjustment_direction") ?>='Out') THEN 'O'
+          ELSE 'I' 
+        END,
+        <? value("notes") ?>)
+      WHEN (<? value("action") ?>='Adjust') THEN
+        xtpos.cashRegAdjust(
+        xtpos.getTerminalId(<? value("terminal") ?>),
+        CASE
+          WHEN (<? value("bankaccount") ?>='') THEN NULL
+          ELSE getBankAccntId(<? value("bankaccount") ?>)
+        END,
+        <? value("transfer_amount") ?>,
+        CASE 
+          WHEN (<? value("transfer_direction") ?>='Out') THEN 'O'
+          ELSE 'I'
+        END,
+        <? value("deposit_checks") ?>,
+        <? value("adjustment_amount") ?>,
+        CASE  
+          WHEN (<? value("adjustment_direction") ?>='Out') THEN 'O'
+          ELSE 'I' 
+        END,
+        <? value("notes") ?>)
+      WHEN (<? value("action") ?>='Close') THEN
+        xtpos.cashRegClose(
+        xtpos.getTerminalId(<? value("terminal") ?>),
+        CASE
+          WHEN (<? value("bankaccount") ?>='') THEN NULL
+          ELSE getBankAccntId(<? value("bankaccount") ?>)
+        END,
+        <? value("transfer_amount") ?>,
+        CASE 
+          WHEN (<? value("transfer_direction") ?>='Out') THEN 'O'
+          ELSE 'I'
+        END,
+        <? value("adjustment_amount") ?>,
+        CASE  
+          WHEN (<? value("adjustment_direction") ?>='Out') THEN 'O'
+          ELSE 'I' 
+        END,
+        <? value("notes") ?>)
+    END AS regdetail_id;

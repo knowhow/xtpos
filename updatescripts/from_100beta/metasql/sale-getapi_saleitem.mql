@@ -1,0 +1,8 @@
+-- Group: sale
+-- Name: getapi_saleitem
+-- Notes: Used for importing list of items from another order
+
+SELECT *
+FROM xtpos.api_saleitem
+WHERE (sale_number=<? value("sale_number") ?>)
+ORDER BY line_number;

@@ -1,0 +1,7 @@
+-- Group: retailcustomer
+-- Name: getcustid
+-- Notes:
+
+SELECT cust_id 
+FROM custinfo 
+WHERE (cust_number=<? value("number") ?>);

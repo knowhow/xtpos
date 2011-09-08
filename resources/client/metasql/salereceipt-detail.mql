@@ -1,0 +1,42 @@
+-- Group: salereceipt
+-- Name: detail
+-- Notes:
+
+SELECT salehead_number, formatdatetime(salehead_time) AS f_time, 
+  salehead_notes, terminal_number, warehous_code, salesrep_number, 
+  cust_number, saleitem_linenumber, item_number, item_upccode,
+  item_descrip1, formatqty(abs(saleitem_qty)) AS f_qty, 
+  formatsalesprice(saleitem_unitprice) AS f_price,
+  formatmoney(round(saleitem_unitprice * abs(saleitem_qty),2)) AS f_extended,
+  cntct_first_name || ' ' || cntct_last_name AS f_name,
+  cntct_phone, formataddr(addr_id) AS f_address,
+  warehous_descrip AS f_company_name,
+  CASE 
+    WHEN (salehead_type = 'S' AND salehead_closed) THEN
+      <? value("sale_receipt") ?>
+    WHEN (salehead_type = 'Q') THEN
+      <? value("quote_receipt") ?>
+    WHEN (salehead_type = 'R' AND salehead_closed) THEN
+      <? value("return_receipt") ?>
+    WHEN (salehead_type = 'S') THEN
+      <? value("sale_proposal") ?>
+    WHEN (salehead_type = 'R') THEN
+      <? value("return_proposal") ?>
+  END AS f_receipt_type,
+  salehead_cashamt,
+  salehead_checkamt,
+  salehead_ccpay_id,
+  ccpay_amount
+FROM xtpos.salehead
+  JOIN xtpos.terminal ON (salehead_terminal_id=terminal_id)
+  JOIN xtpos.saleitem ON (salehead_id=saleitem_salehead_id)
+  JOIN itemsite ON (saleitem_itemsite_id=itemsite_id)
+  JOIN item ON (itemsite_item_id=item_id)
+  JOIN whsinfo ON (salehead_warehous_id=warehous_id)
+  JOIN custinfo ON (salehead_cust_id=cust_id)
+  LEFT OUTER JOIN salesrep ON (salehead_salesrep_id=salesrep_id)
+  LEFT OUTER JOIN cntct ON (cust_cntct_id=cntct_id)
+  LEFT OUTER JOIN addr ON (cntct_addr_id=addr_id)
+  LEFT OUTER JOIN ccpay ON (salehead_ccpay_id=ccpay_id)
+WHERE (salehead_number=CAST(<? value("sale_number") ?> AS text))
+ORDER BY saleitem_linenumber;

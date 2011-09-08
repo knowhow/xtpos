@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter>
+  <title>Generating Quotes</title>
+  <para>Sometimes you will have Customers who come to your store looking for
+  an Item, but for whatever reason they are unable to purchase it at that
+  time. They may be shopping around comparing prices—or your store might be
+  out of stock. Whatever the reason may be, you can still capture the
+  potential Sale and provide the Customer with a price Quote. This Quote can
+  then be converted to a Sale at a later date. The following topics will be
+  discussed in this chapter:</para>
+  <itemizedlist>
+    <listitem>
+      <para>Creating Quotes</para>
+    </listitem>
+    <listitem>
+      <para>Searching for Quotes</para>
+    </listitem>
+    <listitem>
+      <para>Converting Quotes to Sales</para>
+    </listitem>
+    <listitem>
+      <para>Deleting Quotes</para>
+    </listitem>
+  </itemizedlist>
+  <section>
+    <title>Creating Quotes</title>
+    <para>Creating Quotes is very similar to creating Sales. They both use the
+    Retail Sale screen. However, the difference is they use different Sale
+    Types. To create a Quote, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Open the Retail Sale screen using the NEW button on the Cash
+        Register screen</para>
+      </listitem>
+      <listitem>
+        <para>In the "Number" field, the next available number is entered
+        automatically</para>
+        <note>
+          <para>Sales, Quotes, and Returns all share the same numbering
+          system. The number is a unique identifier used to identify the
+          particular transaction.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>From the "Type" field, select the "Quote" option</para>
+      </listitem>
+      <listitem>
+        <para>Select the NEW button to enter Customer information—or, for
+        repeat Customers, use the Customer lookup button [...]</para>
+        <note>
+          <para>Capturing Customer information can be useful for marketing
+          (and other) purposes. However, you can configure xTuple POS to not
+          require Customer information at the point of sale. If no Customer
+          information is required, then the "Customer" tab on the Retail Sale
+          screen will be hidden.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>The following screen shows a sample Quote in progress:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalequote.png" />
+      </imageobject>
+      <caption>Retail Sale Quote</caption>
+    </mediaobject>
+    <para>Quote Items are entered in the same way as Sale Items. To begin
+    entering Quote Items, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the "Items" tab</para>
+      </listitem>
+      <listitem>
+        <para>Select the ADD button</para>
+      </listitem>
+      <listitem>
+        <para>Specify a Quote Item in the "Item Number" field</para>
+      </listitem>
+      <listitem>
+        <para>Then enter the quantity being quoted</para>
+        <note>
+          <para>Item Pricing is configured using xTuple ERP. For more
+          information on Item Pricing, please consult the xTuple ERP Reference
+          Guide.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>The following screen shows a sample Quote in progress:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalequoteitems.png" />
+      </imageobject>
+      <caption>Retail Sale Quote Items</caption>
+    </mediaobject>
+    <tip>
+      <para>You can add Quote Items to a Quote using the following
+      methods:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Scanning Item bar codes</para>
+        </listitem>
+        <listitem>
+          <para>Typing Item Numbers in manually,</para>
+        </listitem>
+        <listitem>
+          <para>Locating products using the Item lookup button [...]</para>
+        </listitem>
+      </itemizedlist>
+    </tip>
+    <para>To enter Quote details, select the "Details" tab. This tab includes
+    additional information you may need to collect regarding the
+    Quote—including the name of the sales associate who processed the Quote
+    and any miscellaneous notes you may want to record.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalequotedetail.png" />
+      </imageobject>
+      <caption>Retail Sale Quote Detail</caption>
+    </mediaobject>
+    <note>
+      <para>A Sales Rep is required to successfully complete a Quote. If you
+      cannot complete a Quote (e.g., cannot select the SAVE button), this may
+      mean you have not specified a Sales Rep on the Quote "Detail"
+      screen.</para>
+    </note>
+    <para>The system can be configured to automatically make the logged-in
+    user the Sales Rep for a Quote. This configuration is discussed in more
+    detail in the xTuple ERP Reference Guide. However, the following points
+    provide an overview of the process:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Locate Employee records following this path: <guimenuitem>System
+        &gt; Employees</guimenuitem></para>
+      </listitem>
+      <listitem>
+        <para>Create Employee records for your system users</para>
+      </listitem>
+      <listitem>
+        <para>On Employee records, specify Employees are Sales Reps</para>
+      </listitem>
+      <listitem>
+        <para>Create Sales Rep records for Employees</para>
+      </listitem>
+      <listitem>
+        <para>Now when users log in, they will be recognized as a Sales
+        Reps</para>
+      </listitem>
+    </itemizedlist>
+    <para>To complete the Quote and save it for future reference, select the
+    SAVE button. Saving a Quote brings us to the "Sales" tab of the Cash
+    Register screen, as shown below:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregisterquote.png" />
+      </imageobject>
+      <caption>Quote Added to Cash Register</caption>
+    </mediaobject>
+    <para>To print a copy of the Quote for the Customer to take with them,
+    simply follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Highlight the Quote record you want to print</para>
+      </listitem>
+      <listitem>
+        <para>Select the PRINT button</para>
+      </listitem>
+      <listitem>
+        <para>A sample Quote receipt is shown below:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalequotereceipt.png" />
+      </imageobject>
+      <caption>Retail Sale Quote Receipt</caption>
+    </mediaobject>
+  </section>
+  <section>
+    <title>Searching for Quotes</title>
+    <para>If a Customer returns at a later date to purchase an Item based on a
+    Quote you provided earlier, sales associates should have no trouble
+    locating that information using xTuple POS. Follow these steps to search
+    for Quotes:</para>
+    <orderedlist>
+      <listitem>
+        <para>Start on the Cash Register screen</para>
+      </listitem>
+      <listitem>
+        <para>Select the SEARCH button to open the Retail Sale Search
+        screen</para>
+      </listitem>
+      <listitem>
+        <para>From the "Show" section, select the "Quotes" option</para>
+      </listitem>
+      <listitem>
+        <para>Specify a date range to include the Quote's created date</para>
+      </listitem>
+      <listitem>
+        <para>Optionally, enter keywords to limit the search. For example, if
+        you know the Quote number was 100010, you could enter "100010" in the
+        "Search" field.</para>
+      </listitem>
+      <listitem>
+        <para>Select the QUERY button to run the search</para>
+      </listitem>
+      <listitem>
+        <para>View the results, as shown in the following screen:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalesearchquote.png" />
+      </imageobject>
+      <caption>Retail Sale Search</caption>
+    </mediaobject>
+    <note>
+      <para>You can also perform Sales searches from the main Retail menu.
+      However, any results from searches performed from the main menu are
+      view-only. To convert Quotes to Sales, you must use the SEARCH button on
+      the Cash Register screen.</para>
+    </note>
+    <para>Once you have found the Quote you want, simply highlight it and
+    select the EDIT button—or double-click on the Quote to open it.</para>
+  </section>
+  <section>
+    <title>Converting Quotes to Sales</title>
+    <para>The process of converting a Quote to a Sale couldn't be easier. Once
+    you have found the Quote using the Retail Sale Search, simply open the
+    Quote for editing, as shown in the following screen:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalequote.png" />
+      </imageobject>
+      <caption>Convert Quote to Sale</caption>
+    </mediaobject>
+    <para>There are two ways you can convert a Quote to a Sale:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Change the Sale Type from "Quote" to "Sale"</para>
+        <para>OR</para>
+      </listitem>
+    </itemizedlist>
+    <itemizedlist>
+      <listitem>
+        <para>Select the PAYMENT button, which automatically converts Quotes
+        to Sales</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section>
+    <title>Deleting Quotes</title>
+    <para>Many times Customers will change their minds about a purchase. If
+    you ever need to delete a Quote prior to its expiration date, simply open
+    the Cash Register screen and follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Highlight the Quote you want to delete</para>
+      </listitem>
+      <listitem>
+        <para>Select the DELETE button</para>
+      </listitem>
+      <listitem>
+        <para>See the following screen for details:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregisterquote.png" />
+      </imageobject>
+      <caption>Delete Quote</caption>
+    </mediaobject>
+  </section>
+</chapter>

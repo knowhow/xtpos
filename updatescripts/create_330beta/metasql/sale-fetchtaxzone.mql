@@ -1,0 +1,15 @@
+-- Group: sale
+-- Name: fetchtaxzone
+-- Notes:
+
+<? if exists("cust_id") ?>
+  SELECT taxzone_code
+  FROM custinfo 
+   JOIN taxzone ON (cust_taxzone_id=taxzone_id)
+  WHERE (cust_id=<? value("cust_id") ?>); 
+<? else if exists("warehous_id") ?>
+  SELECT taxzone_code
+  FROM xtpos.rtlsite
+   JOIN taxzone ON (rtlsite_taxzone_id=taxzone_id)
+  WHERE (rtlsite_warehous_id=<? value("warehous_id") ?>); 
+<? endif ?>

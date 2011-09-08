@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<preface>
+  <title>Introduction</title>
+  <section>
+    <title>Product Overview</title>
+    <para>xTuple POS adds retail functionality on top of the foundation of
+    xTuple ERP. This means that in addition to the xTuple POS retail features,
+    you also have access to the full range of advanced ERP features&mdash;such
+    as accounting, inventory management, and customer relationship management
+    (CRM). xTuple POS is designed to allow you to track and process sales
+    using a cash register system, providing your operation with historical and
+    real time data from retail sales. However, the system is not limited to
+    sales data. You can also collect data regarding inventory availability,
+    returns, quotes, customer information, commissions and more. Having all
+    this data available at your finger tips improves your ability to serve
+    your customers!</para>
+    <para>Here are just a few real world examples of how xTuple POS can help
+    you:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Visibility Across Multiple Stores</term>
+        <listitem>
+          <para>If you need to track down an item for a customer because it's
+          out of stock in Store A, you can use xTuple POS to learn if the same
+          item is available at Store B.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Detailed Sales History</term>
+        <listitem>
+          <para>When customers have questions about recent purchases, you can
+          quickly access sale and item information to provide excellent
+          customer service. Using either a receipt number or basic customer
+          information&mdash;such as phone number&mdash;you can answer any
+          number of questions regarding date of sale, purchase price,
+          discounts, item description, etc.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Inventory Control</term>
+        <listitem>
+          <para>Because you can track inventory and shopping patterns, the
+          retailer's buying process is made much more effective. Visibility
+          into slow moving inventory enables you to provide your customers
+          with the products they want in a timely fashion&mdash;instead of
+          spending endless hours speculating over what consumers may or may
+          not purchase.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <para>This xTuple POS Product Guide will walk you through the process of
+    installing, configuring, and using xTuple POS system for your retail
+    operation.</para>
+  </section>
+  <section>
+    <title>Choosing an xTuple ERP Edition</title>
+    <para>xTuple POS is available for use by all xTuple ERP editions. This
+    means you will have full-scale ERP functionality underlying your xTuple
+    POS installation.</para>
+    <para>If you are uncertain which xTuple ERP edition is the right one for
+    you, our sales staff would be happy to help you make your decision. To
+    contact us, simply send an email requesting more information to <ulink
+    url="mailto:sales@xtuple.com">sales@xtuple.com</ulink>.</para>
+  </section>
+  <section>
+    <title>Open Source Software: What is it and what does it mean to
+    me?</title>
+    <para>By now you may have heard some buzz about open source
+    software&mdash;and you're not sure what to make of it. It may even sound
+    like a bunch of technical jargon used to impress IT professionals, which
+    may or may not apply to yourself. This is all the more reason why we want
+    to provide you with a little insight into what open source software is and
+    what it means to you.</para>
+    <para>In a nutshell, open source software provides users with access to
+    software source code. By source code, we mean the programming files that
+    form the basis for a software product. Open source software is different
+    from closed source software, in that closed source software locks up its
+    source code and hides it from end users. Traditionally, closed source
+    software has been the more common form of commercial "boxed" software
+    products that you would pick up at your local office store. A result of
+    the open source movement has been several licensing and distribution
+    models:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Community license</term>
+        <listitem>
+          <para>Applications are free to anyone and developed as projects in
+          large groups based on public input.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Dual license</term>
+        <listitem>
+          <para>A combination of free and commercial applications. A company
+          may provide some software tools that are free to the public, while
+          others are sold commercially.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Shared source license</term>
+        <listitem>
+          <para>Commercial software where the source code may be viewed;
+          however, there is no ability to make changes to the code.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <note>
+      <para>xTuple software generally falls under the second category: "dual
+      license." That's because we offer both free and commercial applications,
+      with our source code available for review and change.</para>
+    </note>
+    <para>Still wondering what all this means to you? Well, what it means is
+    that the software we've created has grown based on direct feedback from
+    YOU our user community.</para>
+    <para>At xTuple, we don't hide our work from public scrutiny. Rather, we
+    present our work for all to see. We do this to promote shared insight into
+    how we can continue to improve the software to make your job easier. In
+    fact, on the xTuple community website we encourage you to provide direct
+    feedback regarding bugs you've found or features you may find useful in
+    the future. We also invite you to share your success stories and tips and
+    tricks. In this way, you can reach out and help other xTuple community
+    members.</para>
+    <para>And, If you are an IT professional and a bit of a code jockey, you
+    can even make changes to the source code on your local copy. Many of our
+    greatest enhancements have been sponsored by our customers&mdash;and these
+    changes have been rolled into the final product so that other users can
+    benefit from the improvements. This means our tools and products are not
+    designed solely by xTuple engineers. They are also designed by the people
+    who use them everyday. We at xTuple encourage you to learn more about the
+    community and get involved on the <ulink
+    url="www.xtuple.org">xTuple.org</ulink> website. Rather than quietly
+    grumbling to yourself about things you think could be better, reach out to
+    fellow community members to find out how to make these changes
+    happen!</para>
+  </section>
+  <section>
+    <title>xTuple Application Architecture</title>
+    <para>The xTuple applications are designed on a two-tier system:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Graphical client built using the open source Qt development
+        framework</para>
+      </listitem>
+      <listitem>
+        <para>Database server running on the open source PostgreSQL
+        database</para>
+      </listitem>
+    </itemizedlist>
+    <para>All of the xTuple business logic resides in the database, so there
+    is no middle tier (i.e., Java/application server). And the client is
+    "thin". Since Qt and the PostgreSQL database are cross-platform solutions,
+    the application can be installed on Mac, Windows, or Linux
+    machines&mdash;in any combination you prefer. There is also a wireless
+    client which runs on a hand-held bar code scanner.</para>
+    <para>Installation of xTuple is easy and painless. Once you download the
+    software, you then run the xTuple graphical client out of the directory it
+    resides in. The same xTuple client can connect to a database for any of
+    the xTuple ERP editions. Upgrading from one edition to the next involves
+    little more than running a two-minute script on your database. The
+    simplicity of the upgrade process illustrates the point that xTuple
+    maintains a single code base for all of its ERP editions. Doing so enables
+    our community of open source users to share and work together in one
+    online hub for all the xTuple products.</para>
+    <para>There are several layers of security available with xTuple ERP. You
+    can utilize a Secure Sockets Layer (SSL) connection, and you can also
+    enable an enhanced authentication mechanism which scrambles your users'
+    passwords. In addition, you can also assign individual privileges with the
+    system in as much detail as you see fit for your operation.</para>
+  </section>
+</preface>

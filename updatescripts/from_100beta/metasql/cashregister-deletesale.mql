@@ -1,0 +1,6 @@
+-- Group: cashregister
+-- Name: deletesale
+-- Notes:
+
+DELETE FROM xtpos.api_sale
+WHERE (sale_number=CAST(<? value("sale_number") ?> AS text));

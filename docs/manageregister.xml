@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter>
+  <title>Cash Register Maintenance</title>
+  <para>As the manager of a retail store you are responsible for managing the
+  Cash Register terminals. This responsibility includes the following
+  duties:</para>
+  <itemizedlist>
+    <listitem>
+      <para>Opening and closing registers each business day</para>
+    </listitem>
+    <listitem>
+      <para>Adjusting funds in and out of registers during operation</para>
+    </listitem>
+    <listitem>
+      <para>Monitoring transaction history throughout the day</para>
+    </listitem>
+    <listitem>
+      <para>Reconciling registers at the end of business day</para>
+    </listitem>
+  </itemizedlist>
+  <para>This chapter covers all these topics in detail and highlights tools
+  and functionality that will make your job easier.</para>
+  <section>
+    <title>Opening the Cash Register Terminal</title>
+    <para>The first task at hand each day after turning on the lights and
+    before unlocking the doors of your store is to open your Cash Register
+    terminals for business. For the scenarios described in this chapter, we
+    will assume we have all privileges on all Cash Registers&mdash;and that we
+    are running a multi-Site retail operation. The following path will get you
+    to the list of Cash Register terminals: <guimenuitem>Sales &gt; Retail
+    &gt; Cash Registers</guimenuitem>.</para>
+    <para>As the following screenshot illustrates, our sample retail operation
+    consists of five registers (TERMINALS 1A-2B) spread across two different
+    Sites (ST1 and ST2):</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregistersST1.png" />
+      </imageobject>
+      <caption>Cash Register Terminals</caption>
+    </mediaobject>
+    <para>For this exercise, we will assume we are managing Store Front 1
+    (ST1). We expect it will be a slow shopping day. And at this point all we
+    want to do is open the TERMINAL 1A Cash Register. As you can see, all the
+    Cash Registers are currently closed&mdash;and all have a $0
+    balance.</para>
+    <para>To open TERMINAL 1A, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Highlight TERMINAL 1A</para>
+      </listitem>
+      <listitem>
+        <para>Select the USE button</para>
+      </listitem>
+    </orderedlist>
+    <tip>
+      <para>You can also double-click a register to open it.</para>
+    </tip>
+    <para>Once you open the register, you are presented with the following
+    screen:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregisteropen2.png" />
+      </imageobject>
+      <caption>Cash Register Terminal</caption>
+    </mediaobject>
+    <para>The main register screen provides information about pending Sales
+    for the register&mdash;as well as links to other features will we will
+    explore in other sections.</para>
+    <para>Meanwhile, let's continue our focus on basic Cash Register
+    maintenance. To reach the maintenance area, select the "Maintain" tab. The
+    following screen will appear:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregisteropen.png" />
+      </imageobject>
+      <caption>Maintain Terminal</caption>
+    </mediaobject>
+    <para>Our task this morning is to open TERMINAL 1A with a balance of
+    $250&mdash;and that's exactly what we are going to do. As you can see in
+    the screenshot, the maintenance screen allows for bank transfers and also
+    adjustments. For now, we will focus on bank transfers, because we want to
+    get the register open and ready for business. Later, we will discuss how
+    to handle miscellaneous adjustments.</para>
+    <para>To open the register, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>From the "Action" field, select the "Open" option</para>
+      </listitem>
+      <listitem>
+        <para>Under the "Bank Transfer" section, choose the Bank Account you
+        want to transfer money from</para>
+      </listitem>
+      <listitem>
+        <para>Enter the amount of money you want to transfer into the terminal
+        (i.e., $250 in our example)</para>
+      </listitem>
+      <listitem>
+        <para>Specify "In" next to the "Amount" field to indicate money is
+        going <emphasis>into</emphasis> the terminal</para>
+      </listitem>
+      <listitem>
+        <para>Note the New Balance amount&mdash;and make sure it is
+        correct</para>
+      </listitem>
+      <listitem>
+        <para>Make sure the "Print Receipt" option is selected. (The default
+        print settings can be changed using the OPTIONS button. These settings
+        are particular to this screen&mdash;and to the terminal you are
+        working on.)</para>
+      </listitem>
+      <listitem>
+        <para>Finally, select the POST button</para>
+      </listitem>
+      <listitem>
+        <para>Your register is now ready to begin processing Sales!</para>
+      </listitem>
+    </orderedlist>
+    <tip>
+      <para>If cash for opening balances is maintained on the store premises
+      in a safe, you can create an asset account and a Bank Account for your
+      safe. This will help you closely track all funds transferred between
+      register, safe, and bank.</para>
+    </tip>
+    <para>Returning to the Cash Register list, we now see that TERMINAL 1A is
+    ready for business:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregistersopen.png" />
+      </imageobject>
+      <caption>Open Cash Registers List</caption>
+    </mediaobject>
+    <para>Not only is TERMINAL 1A showing as active, but it also has a time
+    stamp indicating when the register was opened. The current opening balance
+    for the register is also indicated.</para>
+  </section>
+  <section>
+    <title>Adjusting the Cash Register Terminal</title>
+    <para>It's not uncommon for a Cash Register to be thrown out of balance
+    during the course of the business day. Sometimes the balance due is
+    counted out wrong, and sometimes you'll have a customer who wants the
+    store to keep the change. In these instances&mdash;when overages or losses
+    are encountered&mdash;it's important to have a mechanism enabling managers
+    to make minor adjustments. Once again, user permissions define who in the
+    store has the ability to adjust the register balance.</para>
+    <para>If a Cash Register adjustment is required, use the "Adjustment"
+    section of the maintenance window, as shown in the following
+    screen:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregisteradj.png" />
+      </imageobject>
+      <caption>Adjust Cash Register Terminal</caption>
+    </mediaobject>
+    <para>The adjustment process is similar to opening a register. For this
+    example, let's say the Cash Register is over by $0.85&mdash;due to a
+    transaction error. To adjust for an overage, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>From the "Action" field, select the "Adjust" option</para>
+      </listitem>
+      <listitem>
+        <para>Enter $0.85 as the amount to be transferred in or out of the
+        register</para>
+      </listitem>
+      <listitem>
+        <para>Specify "Out" next to the "Amount" field to indicate money is
+        going <emphasis>out of</emphasis> the terminal</para>
+      </listitem>
+      <listitem>
+        <para>Finally, select the POST button</para>
+      </listitem>
+      <listitem>
+        <para>Notice the current balance updates after adjustment is
+        posted</para>
+      </listitem>
+    </orderedlist>
+    <note>
+      <para>Be careful not to confuse the adjustment transaction with the bank
+      transfer transaction. Adjustments should be used for money that is not
+      accounted for by any other type of transaction. For example, if your
+      cash drawer becomes full on a particularly busy shopping day and you
+      need to transfer money out of the drawer and into a safe, use the bank
+      transfer transaction.</para>
+    </note>
+  </section>
+  <section>
+    <title>Closing the Cash Register</title>
+    <para>Once the business day is over, you are ready to close and reconcile
+    the Cash Register. Closing the Cash Register also updates the General
+    Ledger (G/L) with all the sales and cash transaction information generated
+    during the course of the day. This final accounting for sales and cash
+    information only hits the G/L when the Cash Register is closed. By
+    contrast, inventory movement is tracked in the G/L on a sale-by-sale
+    basis.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregisterclose.png" />
+      </imageobject>
+      <caption>Close Cash Register Terminal</caption>
+    </mediaobject>
+    <para>For this example, we will be transferring all the cash out of the
+    TERMINAL 1A Cash Register&mdash;and depositing it into our Bank Account.
+    We will also plan to deposit any Checks we have received during the day.
+    To do this, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>From the "Action" field, select the "Close" option</para>
+      </listitem>
+      <listitem>
+        <para>Under the "Bank Transfer" section, choose the Bank Account you
+        want to transfer money to</para>
+      </listitem>
+      <listitem>
+        <para>Enter the amount of cash you want to transfer to the Bank
+        Account</para>
+        <note>
+          <para>Keep in mind that the current balance in the register includes
+          only cash. Checks are not included in the current balance
+          amount.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>By default, the "Deposit Checks" option should be automatically
+        selected</para>
+        <note>
+          <para>The "Deposit Checks" option ensures that the total amount of
+          Check Sales for the register will be recorded in the General
+          Ledger.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>Verify the "Print Receipt" option is selected in the lower
+        left-hand corner of the screen</para>
+      </listitem>
+      <listitem>
+        <para>Select the POST button</para>
+      </listitem>
+      <listitem>
+        <para>View the Cash Register receipt</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/closereport.png" />
+      </imageobject>
+      <caption>Cash Register Receipt</caption>
+    </mediaobject>
+    <para>If the sum of the physical cash and Checks from the register equal
+    the totals on the Register Posting Receipt, you're ready to make your bank
+    deposit.</para>
+    <para>In the event that your Cash Register terminal does not balance you
+    can review the Detailed Register History screen to research transaction
+    errors. Use the following path to reach the detailed history screen:
+    <guimenuitem>Sales &gt; Reports &gt; Detailed Register
+    History</guimenuitem>.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/dspDetailedRegisterHistory.png" />
+      </imageobject>
+      <caption>Detailed Register History</caption>
+    </mediaobject>
+    <para>You will notice from the screen shot above this screen provides
+    detailed information such as transaction type, user, tender, and items
+    purchased. This screen also gives you the ability to search by a specific
+    terminal on a specific date. While in our example the Cash Register
+    actually balanced we may need to research other information. For example,
+    perhaps customer 102 is a notorious check bouncer and we would like to
+    find out how many purchases they made today. We can see from the report
+    that this customer made two purchases on TERMINAL 1A and wrote two checks
+    3455 and 1990. The store manager could then flag these checks to verify
+    funds.</para>
+  </section>
+  <section>
+    <title>Cash Register Maintenance History</title>
+    <para>You can review register history at any time to determine when a
+    terminal was opened, closed, and adjusted. Use the following path to reach
+    the register history screen: <guimenuitem>Sales &gt; Reports &gt; Register
+    History</guimenuitem>.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/registerhistory.png" />
+      </imageobject>
+      <caption>Cash Register Maintenance History</caption>
+    </mediaobject>
+    <para>In this screen shot we can see on the first line that TERMINAL 1A
+    was opened on 3/12/09 and $250 was transferred in the Cash Register. This
+    screen could be very useful in a multi-site operation where a manager may
+    want to find out how many registers are open at each store or if a manager
+    reports to work mid-day and needs to know which terminals are open at the
+    store.</para>
+  </section>
+</chapter>

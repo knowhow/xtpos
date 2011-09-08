@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 1998-2010 by xTuple. All rights reserved. -->
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter>
+  <title>Point of Sale</title>
+  <para>Now that you've installed and set up xTuple POS, you are ready to
+  begin processing Sales. In this chapter we will review how to process Cash
+  Register Sales. The following topics will be covered:</para>
+  <itemizedlist>
+    <listitem>
+      <para>Customer Information</para>
+    </listitem>
+    <listitem>
+      <para>Sale Items</para>
+    </listitem>
+    <listitem>
+      <para>Sale Details</para>
+    </listitem>
+    <listitem>
+      <para>Payment Processing</para>
+    </listitem>
+  </itemizedlist>
+  <section>
+    <title>Customer Information</title>
+    <para>The processing of retail Sales is handled by the Cash Register. And
+    so for this scenario, we'll need to open a Cash Register to begin. To open
+    a Cash Register, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Follow this path: <guimenuitem>Sales &gt; Retail &gt; Cash
+        Registers</guimenuitem></para>
+      </listitem>
+      <listitem>
+        <para>Highlight the Cash Register you want to use</para>
+      </listitem>
+      <listitem>
+        <para>Select the USE button</para>
+      </listitem>
+      <listitem>
+        <para>The following screen will appear:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregisterpending.png" />
+      </imageobject>
+      <caption>Cash Register Sales</caption>
+    </mediaobject>
+    <note>
+      <para>Any pending Sales or transactions which are incomplete will appear
+      on the Cash Register's "Sales" screen. In the event that a Customer
+      decides to continue shopping, you can save the Sale, service the next
+      Customer, and then reopen the transaction to complete the Sale when the
+      previous Customer returns.</para>
+    </note>
+    <para>Now that our Cash Register is open, let's begin a new Sale and
+    capture the Customer's information. For this example, we'll assume this is
+    a new Customer. To get started, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the NEW button&mdash;this will open the Retail Sale
+        screen</para>
+      </listitem>
+      <listitem>
+        <para>In the "Number" field, the next retail Sale number is entered
+        automatically</para>
+      </listitem>
+      <listitem>
+        <para>From the "Type" field, select the "Sale" option</para>
+      </listitem>
+      <listitem>
+        <para>Select the NEW button to enter Customer information</para>
+        <note>
+          <para>Capturing Customer information can be useful for marketing
+          (and other) purposes. However, you can configure xTuple POS to not
+          require Customer information at the point of sale. If no Customer
+          information is required, then the "Customer" tab on the Retail Sale
+          screen will be hidden.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>Enter a Customer Number</para>
+      </listitem>
+      <listitem>
+        <para>Enter a Customer Name</para>
+      </listitem>
+      <listitem>
+        <para>Enter Customer billing information</para>
+      </listitem>
+      <listitem>
+        <para>Select the OK button</para>
+      </listitem>
+      <listitem>
+        <para>Customer information is now completed, as shown in the following
+        screen:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/cashregistercustomer.png" />
+      </imageobject>
+      <caption>Retail Sale Customer Information</caption>
+    </mediaobject>
+    <para>If you have a repeat Customer, it is not necessary to re-enter the
+    Customer's information. In that scenario, you would follow these
+    steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the Customer lookup button [...]</para>
+      </listitem>
+      <listitem>
+        <para>The following screen will appear:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/searchforcustomer.png" />
+      </imageobject>
+      <caption>Search for Existing Customer</caption>
+    </mediaobject>
+    <para>After you locate the repeat Customer's record, simply select it to
+    associate the Customer information with the new Sale. Using this feature
+    for repeat Customers will save time. You won't have to re-enter Customers'
+    information each time they visit your store.</para>
+  </section>
+  <section>
+    <title>Sale Items</title>
+    <para>Once you've entered Customer information, you are now ready to begin
+    entering Sale Items. To begin entering Sale Items, follow these
+    steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the "Items" tab</para>
+      </listitem>
+      <listitem>
+        <para>Select the ADD button</para>
+      </listitem>
+      <listitem>
+        <para>Specify a Sale Item in the "Item Number" field</para>
+      </listitem>
+      <listitem>
+        <para>Then enter the quantity being sold</para>
+        <note>
+          <para>Item Pricing is configured using xTuple ERP. For more
+          information on Item Pricing, please consult the xTuple ERP Reference
+          Guide.</para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>Select the ADD button again</para>
+      </listitem>
+      <listitem>
+        <para>Specify another Sale Item</para>
+      </listitem>
+      <listitem>
+        <para>Then enter the quantity being sold</para>
+      </listitem>
+      <listitem>
+        <para>The results are shown in the following screen:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsaleitem.png" />
+      </imageobject>
+      <caption>Adding Items to a Retail Sale</caption>
+    </mediaobject>
+    <tip>
+      <para>If you add a Sale Item in error, simply highlight the line item
+      and select the REMOVE button. This will remove the Item from the Sale.
+      You may need to add the replacement item first, if there are no other
+      line items on the Sale.</para>
+    </tip>
+    <para>You have several methods available to you when it comes to entering
+    Sale Items:</para>
+    <itemizedlist>
+      <listitem>
+        <para>You can scan Item bar codes</para>
+      </listitem>
+      <listitem>
+        <para>You can type Item Numbers in manually</para>
+      </listitem>
+      <listitem>
+        <para>Or you can locate products using the Item lookup button
+        [...]</para>
+      </listitem>
+    </itemizedlist>
+    <para>The following screen shows what you will see when using the Item
+    lookup button:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/solditems.png" />
+      </imageobject>
+      <caption>Item Look Up</caption>
+    </mediaobject>
+    <note>
+      <para>At the bottom of the Retail Sale screen you will notice your
+      running total. This total will include Tax (if recorded)&mdash;and the
+      set up for Tax is part of your xTuple ERP accounting configuration.
+      Please consult the xTuple ERP Reference Guide for more information on
+      Tax configuration.</para>
+    </note>
+  </section>
+  <section>
+    <title>Sale Details</title>
+    <para>The final tab on the Retail Sale screen is the "Detail" tab. This
+    tab includes additional information you may need to collect regarding the
+    Sale&mdash;including the name of the sales associate who processed the
+    Sale and any miscellaneous notes you may want to record.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsaledetail.png" />
+      </imageobject>
+      <caption>Retail Sale Detail</caption>
+    </mediaobject>
+    <note>
+      <para>A Sales Rep is required to successfully complete a Sale. If you
+      cannot complete a Sale (e.g., cannot select the SAVE button), this may
+      mean you have not specified a Sales Rep on the Sale "Detail"
+      screen.</para>
+    </note>
+    <para>The system can be configured to automatically make the logged-in
+    user the Sales Rep for a Sale. This configuration is discussed in more
+    detail in the xTuple ERP Reference Guide. However, the following points
+    provide an overview of the process:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Locate Employee records: System &gt; Employees</para>
+      </listitem>
+      <listitem>
+        <para>Create Employee records for your system users</para>
+      </listitem>
+      <listitem>
+        <para>On Employee records, specify Employees are Sales Reps</para>
+      </listitem>
+      <listitem>
+        <para>Create Sales Rep records for Employees</para>
+      </listitem>
+      <listitem>
+        <para>Now when users log in, they will be recognized as a Sales
+        Reps</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section>
+    <title>Payment Processing</title>
+    <para>Now that the Sale is complete, we are ready to process payment. From
+    an accounting perspective, any inventory movement will be tracked in the
+    General Ledger (G/L) as soon as you process the payment. The final
+    accounting&mdash;including sale and cash information&mdash;will not hit
+    the G/L until the point when the Cash Register is closed.</para>
+    <para>To process a payment, follow these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the PAYMENT button</para>
+      </listitem>
+      <listitem>
+        <para>The following screen will appear:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalepayment.png" />
+      </imageobject>
+      <caption>Retail Sale Payment</caption>
+    </mediaobject>
+    <tip>
+      <para>If the PAYMENT button is grayed out this could mean you still have
+      required fields which have not yet been completed. Once all required
+      fields have been completed, the PAYMENT button will activate&mdash;and
+      you can then accept payment.</para>
+    </tip>
+    <para>As you can see in our example, the Customer has chosen to write a
+    Check for the bulk of the Sale. The remaining balance will be paid in
+    cash. This illustrates the ability of xTuple POS to accept split payments.
+    Had the Customer wanted to pay with a Credit Card instead of a Check, we
+    would have selected the "Credit Card" option&mdash;and then entered the
+    required information. Keep in mind that you can only enter Check or Credit
+    Card payments if the amount entered in the Cash amount field is less than
+    the total due.</para>
+    <para>To ensure the Customer gets a receipt as proof of the Sale, follow
+    these steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Select the "Print Receipt" option. (The default print settings
+        can be changed using the OPTIONS button. These settings are particular
+        to this screen&mdash;and to the terminal you are working on.)</para>
+      </listitem>
+      <listitem>
+        <para>Select the OK button</para>
+      </listitem>
+      <listitem>
+        <para>A sample Sales receipt is shown below:</para>
+      </listitem>
+    </orderedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/retailsalereceipt.png" />
+      </imageobject>
+      <caption>Retail Sale Receipt</caption>
+    </mediaobject>
+  </section>
+</chapter>

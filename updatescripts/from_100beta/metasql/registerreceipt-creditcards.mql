@@ -1,0 +1,21 @@
+-- Group: registerreceipt
+-- Name: creditcards
+-- Notes:
+
+SELECT 
+  CASE ccard_type
+    WHEN 'M' THEN <? value("mastercard") ?>
+    WHEN 'V' THEN <? value("visa") ?>
+    WHEN 'A' THEN <? value("amex" ?>
+    WHEN 'D' THEN <? value("discover") ?>
+    ELSE <? value("Other") ?> END AS f_type, 
+  sum(ccpay_amount) AS amount,
+  formatmoney(sum(ccpay_amount)) AS f_amount
+FROM xtpos.salehead
+  JOIN xtpos.reghist ON (salehead_reghist_id=reghist_id)
+  JOIN xtpos.regdetail ON (reghist_id=regdetail_reghist_id)
+  JOIN ccpay ON (salehead_ccpay_id=ccpay_id)
+  JOIN ccard ON (ccpay_ccard_id=ccard_id)
+WHERE (regdetail_id=<? value("regdetail_id") ?>)
+GROUP BY ccard_type
+ORDER BY ccard_type;

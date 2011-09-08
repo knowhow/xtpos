@@ -1,0 +1,40 @@
+-- Group: registerreceipt
+-- Name: detail
+-- Notes:
+
+SELECT warehous_code, terminal_number, taxauth_code,
+  formatglaccountlong(reghist_asset_accnt_id) AS f_asset_account,
+  formatglaccountlong(reghist_adjust_accnt_id) AS f_adjust_account,
+  formatglaccountlong(reghist_chkclr_accnt_id) AS f_chkclr_account,
+  formatdatetime(reghist_open_time) AS f_open_time,
+  formatdatetime(reghist_close_time) AS f_close_time,
+  CASE regdetail_type
+    WHEN 'O' THEN 'Open'
+    WHEN 'A' THEN 'Adjust'
+    WHEN 'C' THEN 'Close'
+  END AS f_type,
+  formatmoney(regdetail_startbal) AS f_startbal, 
+  formatmoney(regdetail_cashslsamt) AS f_cashslsamt, 
+  formatmoney(regdetail_transferamt) AS f_transferamt, 
+  formatmoney(regdetail_adjustamt) AS f_adjustment, 
+  formatmoney(regdetail_endbal) AS f_endbal,
+  regdetail_depchks, regdetail_notes, regdetail_username,
+  formatdatetime(regdetail_time) AS f_post_time,
+  regdetail_journalnumber, bankaccnt_name,
+  formatmoney(coalesce(sum(salehead_checkamt),0)) AS f_checkdep_amount,
+  formatmoney(regdetail_transferamt * -1) AS f_cashdep_amount,
+  formatmoney(coalesce(sum(salehead_checkamt),0)+regdetail_transferamt * -1) AS f_deposit_amount
+FROM xtpos.regdetail
+  JOIN xtpos.reghist ON (regdetail_reghist_id = reghist_id)
+  JOIN xtpos.terminal ON (reghist_terminal_id = terminal_id)
+  JOIN whsinfo ON (reghist_warehous_id = warehous_id)
+  LEFT OUTER JOIN taxauth ON (reghist_taxauth_id = taxauth_id)
+  LEFT OUTER JOIN xtpos.salehead ON (regdetail_id=salehead_regdetail_id)
+  LEFT OUTER JOIN bankaccnt ON (regdetail_bankaccnt_id = bankaccnt_id)
+WHERE (regdetail_id=<? value("regdetail_id") ?>)
+GROUP BY warehous_code, terminal_number, taxauth_code,
+  reghist_asset_accnt_id, reghist_adjust_accnt_id, reghist_chkclr_accnt_id,
+  reghist_open_time, reghist_close_time, regdetail_type,
+  regdetail_startbal,regdetail_cashslsamt, regdetail_transferamt,
+  regdetail_adjustamt, regdetail_endbal, regdetail_depchks, regdetail_notes,
+  regdetail_username, regdetail_time,regdetail_journalnumber, bankaccnt_name;

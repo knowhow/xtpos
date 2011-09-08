@@ -1,0 +1,49 @@
+<package id="from_340rc"
+         name="xtpos"
+         developer="xTuple"
+         descrip="Retail Point of Sale System"
+         version="3.4.0"
+         updater="2.2.0">
+  <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
+
+        This file is part of the xtpos package for xTuple ERP: PostBooks Edition,
+        a free and open source Enterprise Resource Planning software suite,
+        Copyright (c) 1999-2009 by OpenMFG LLC, d/b/a xTuple.
+        It is licensed to you under the Common Public Attribution License
+        version 1.0, the full text of which (including xTuple-specific Exhibits)
+        is available at www.xtuple.com/CPAL.  By using this software, you agree
+        to be bound by its terms.
+  </pkgnotes>
+
+  <prerequisite type="Query"
+                name="Test xTuple ERP version">
+    <query>
+      SELECT (SUBSTRING(fetchMetricText('ServerVersion') FOR 3) = '3.4'
+          AND SUBSTRING(fetchMetricText('ServerVersion') FROM 5 FOR 1) >= '0');
+    </query>
+    <message>
+      This version of the xtpos package only works with xTuple ERP
+      versions 3.4.0 and greater.
+    </message>
+  </prerequisite>
+
+  <prerequisite type="Query" name="Checking Package Version" >
+    <query>SELECT TRUE FROM pkghead WHERE (pkghead_name = 'xtpos') AND (pkghead_version = '3.4.0rc');</query>
+    <message>This package requires that it be applied against the 3.4.0rc version of the xtpos package.</message>
+  </prerequisite>
+
+  <prerequisite type="license" name="xTuple Concise EULA">
+    <message>
+      &lt;p>
+          This file is part of the xtpos package for xTuple ERP: PostBooks Edition,
+          a free and open source Enterprise Resource Planning software suite,
+          Copyright (c) 1999-2009 by OpenMFG LLC, d/b/a xTuple.
+          It is licensed to you under the Common Public Attribution License
+          version 1.0, the full text of which (including xTuple-specific Exhibits)
+          is available at www.xtuple.com/CPAL.  By using this software, you agree
+          to be bound by its terms.
+      &lt;/p>
+    </message>
+  </prerequisite>
+
+</package>

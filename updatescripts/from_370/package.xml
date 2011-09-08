@@ -1,0 +1,64 @@
+<package id="from_370"
+         name="xtpos"
+         developer="xTuple"
+         descrip="Retail Point of Sale System"
+         version="3.7.1"
+         updater="2.2.0">
+  <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
+
+	This file is part of the xtpos Package for xTuple ERP, and
+	is Copyright (c) 1999-2009 by OpenMFG LLC, d/b/a xTuple.
+	It is licensed to you under the xTuple End-User License
+	Agreement ("the EULA"), the full text of which is available
+	at www.xtuple.com/EULA.  While the EULA gives you access
+	to source code and encourages your involvement in the
+	development process, this Package is not free software.  By
+	using this software, you agree to be bound by the terms of
+	the EULA.
+  </pkgnotes>
+
+  <prerequisite type="Query"
+                name="Test xTuple ERP version">
+    <query>
+      SELECT (fetchMetricText('ServerVersion') >= '3.6.0');
+    </query>
+    <message>
+      This version of the xtpos package only works with xTuple ERP
+      versions 3.6.0 and greater. 
+    </message>
+  </prerequisite>
+
+  <prerequisite type="Query"
+                name="Ensure xtpos package exists" >
+    <query>
+      SELECT COUNT(*) = 1
+      FROM (SELECT *
+            FROM pkghead
+            WHERE (pkghead_name = 'xtpos')
+            AND (lower(pkghead_version) = '3.7.0') ) AS dummy;
+    </query>
+    <message>
+      xTuple Point of Sale 3.7.0 must be installed to run this upgrade.
+    </message>
+  </prerequisite>
+
+  <prerequisite type="license" name="xTuple Concise EULA">
+    <message>
+      &lt;p>
+        This file is part of the xtpos Package for xTuple ERP, and is Copyright
+        (c) 1999-2010 by OpenMFG LLC, d/b/a xTuple.  It is licensed to you under
+        the xTuple End-User License Agreement ("the EULA"), the full
+        text of which is available at
+        &lt;a href="http://www.xtuple.com/EULA">http://www.xtuple.com/EULA&lt;/a>.
+        While the EULA gives you access to source code and encourages your
+        involvement in the development process, this Package is not
+        free software.  By using this software, you agree to be bound
+        by the terms of the EULA.
+      &lt;/p>
+    </message>
+  </prerequisite>
+
+  <loadappscript file="client/scripts/retailSites.js"    name="retailSites"    order="0"/>
+  <loadappscript file="client/scripts/setup.js"          name="setup"          order="0"/>
+
+</package>

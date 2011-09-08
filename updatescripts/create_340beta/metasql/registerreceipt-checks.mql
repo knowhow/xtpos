@@ -1,0 +1,8 @@
+-- Group: registerreceipt
+-- Name: checks
+-- Notes:
+
+SELECT salehead_number, salehead_checknumber, salehead_checkamt,
+  formatmoney(salehead_checkamt) AS f_amount
+FROM xtpos.salehead
+WHERE (salehead_regdetail_id=<? value("regdetail_id") ?>);

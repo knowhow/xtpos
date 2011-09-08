@@ -1,0 +1,16 @@
+-- Group: sale
+-- Name: saleitemtax
+-- Notes:
+
+SELECT COALESCE( (
+  SELECT round(calculateTax(getTaxSelection(reghist_taxauth_id, getItemTaxType(<? value("item_id") ?>,reghist_taxauth_id)), 
+               round(<? value("qty") ?> * <? value("unit_price") ?>, 2), 0.0, 'A'),2) +
+         round(calculateTax(getTaxSelection(reghist_taxauth_id, getItemTaxType(<? value("item_id") ?>,reghist_taxauth_id)), 
+               round(<? value("qty") ?> * <? value("unit_price") ?>, 2), 0.0, 'B'),2) +
+         round(calculateTax(getTaxSelection(reghist_taxauth_id, getItemTaxType(<? value("item_id") ?>,reghist_taxauth_id)), 
+               round(<? value("qty") ?> * <? value("unit_price") ?>, 2), 0.0, 'C'),2)
+  FROM xtpos.reghist
+    JOIN xtpos.terminal ON (reghist_terminal_id=terminal_id)
+  WHERE ( (terminal_number=<? value("terminal") ?>)
+  AND (reghist_open) ) )
+,0)  AS item_tax;

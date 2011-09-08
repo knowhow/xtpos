@@ -1,0 +1,79 @@
+<package id="from_100beta2"
+         name="xtpos"
+         developer="xTuple"
+         descrip="Retail Point of Sale System"
+         version="3.2.2"
+         updater="2.1.0">
+  <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
+
+	This file is part of the xtpos Package for xTuple ERP, and
+	is Copyright (c) 1999-2009 by OpenMFG LLC, d/b/a xTuple.
+	It is licensed to you under the xTuple End-User License
+	Agreement ("the EULA"), the full text of which is available
+	at www.xtuple.com/EULA.  While the EULA gives you access
+	to source code and encourages your involvement in the
+	development process, this Package is not free software.  By
+	using this software, you agree to be bound by the terms of
+	the EULA.
+  </pkgnotes>
+
+  <prerequisite type="Query"
+                name="Test xTuple ERP version">
+    <query>
+      SELECT (SUBSTRING(fetchMetricText('OpenMFGServerVersion') FOR 3) = '3.2'
+          AND SUBSTRING(fetchMetricText('OpenMFGServerVersion') FROM 5 FOR 1)
+                                                                        >= '2')
+         OR
+             (LENGTH(COALESCE(fetchMetricText('OpenMFGServerVersion'), '')) = 0
+          AND SUBSTRING(fetchMetricText('ServerVersion') FOR 3) = '3.2'
+          AND SUBSTRING(fetchMetricText('ServerVersion') FROM 5 FOR 1) >= '2')
+         ;
+    </query>
+    <message>
+      This version of the xtpos package only works with xTuple ERP
+      versions 3.2.2 and greater, but not with xTuple ERP 3.3. 
+    </message>
+  </prerequisite>
+
+  <prerequisite type="Query"
+                name="Ensure retail package exists and is at 1.0.0beta2" >
+    <query>
+      SELECT COUNT(*) &lt;= 0
+      FROM (SELECT *
+            FROM pkghead
+            WHERE ((pkghead_version NOT IN ('1.-1', '1.0.0beta2'))
+              AND  (pkghead_name='xtpos'))) AS dummy;
+    </query>
+    <message>
+      This upgrade requires either that version "1.0.0beta2" or
+      "1.-1" of the package named "xtpos" is installed.
+    </message>
+  </prerequisite>
+
+  <prerequisite type="license" name="xTuple Concise EULA">
+    <message>
+      &lt;p>
+        This file is part of the xtpos Package for xTuple ERP, and is Copyright
+        (c) 1999-2009 by OpenMFG LLC, d/b/a xTuple.  It is licensed to you under
+        the xTuple End-User License Agreement ("the EULA"), the full
+        text of which is available at
+        &lt;a href="http://www.xtuple.com/EULA">http://www.xtuple.com/EULA&lt;/a>.
+        While the EULA gives you access to source code and encourages your
+        involvement in the development process, this Package is not
+        free software.  By using this software, you agree to be bound
+        by the terms of the EULA.
+      &lt;/p>
+    </message>
+  </prerequisite>
+  
+  <loadappscript file="scripts/cashRegister.js"       name="cashRegister"       order="0"/>
+  <loadappscript file="scripts/retailSale.js"         name="retailSale"         order="0"/>
+  <loadappscript file="scripts/payment.js"            name="payment"            order="0"/>
+  
+  <loadappui file="uiforms/payment.ui" order="0" />
+  
+  <loadmetasql file="metasql/display-detailedregisterhistory.mql" />
+
+  <loadreport  file="reports/retailsitesreport.xml" />
+  
+</package>

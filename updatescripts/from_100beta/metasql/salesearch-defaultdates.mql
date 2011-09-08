@@ -1,0 +1,6 @@
+-- Group: salesearch
+-- Name: defaultdates
+-- Notes: Default dates for search
+
+SELECT current_date - interval '1 month' AS start_date, 
+  current_date AS end_date;

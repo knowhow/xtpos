@@ -1,0 +1,227 @@
+<package id="resources"
+         name="xtpos"
+         developer="xTuple"
+         descrip="Retail Point of Sale System"
+         version="3.7.0"
+         updater="2.2.0">
+  <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
+
+	This file is part of the xtpos Package for xTuple ERP, and
+	is Copyright (c) 1999-2009 by OpenMFG LLC, d/b/a xTuple.
+	It is licensed to you under the xTuple End-User License
+	Agreement ("the EULA"), the full text of which is available
+	at www.xtuple.com/EULA.  While the EULA gives you access
+	to source code and encourages your involvement in the
+	development process, this Package is not free software.  By
+	using this software, you agree to be bound by the terms of
+	the EULA.
+  </pkgnotes>
+
+  <prerequisite type="Query"
+                name="Test xTuple ERP version">
+    <query>
+      SELECT (fetchMetricText('ServerVersion') >= '3.6.0');
+    </query>
+    <message>
+      This version of the xtpos package only works with xTuple ERP
+      versions 3.6.0 and greater. 
+    </message>
+  </prerequisite>
+
+  <prerequisite type="Query"
+                name="Ensure retail package is at 1.0.0beta or doesn't exist" >
+    <query>
+      SELECT COUNT(*) &lt;= 0
+      FROM (SELECT *
+            FROM pkghead
+            WHERE (pkghead_name IN ('retail','xtpos')) ) AS dummy;
+    </query>
+    <message>
+      xTuple Point of Sale is already installed on this database.
+    </message>
+  </prerequisite>
+
+  <prerequisite type="license" name="xTuple Concise EULA">
+    <message>
+      &lt;p>
+        This file is part of the xtpos Package for xTuple ERP, and is Copyright
+        (c) 1999-2010 by OpenMFG LLC, d/b/a xTuple.  It is licensed to you under
+        the xTuple End-User License Agreement ("the EULA"), the full
+        text of which is available at
+        &lt;a href="http://www.xtuple.com/EULA">http://www.xtuple.com/EULA&lt;/a>.
+        While the EULA gives you access to source code and encourages your
+        involvement in the development process, this Package is not
+        free software.  By using this software, you agree to be bound
+        by the terms of the EULA.
+      &lt;/p>
+    </message>
+  </prerequisite>
+
+ <loadpriv      name="MaintainRetailSales" module="Sales">
+   Can Add/Edit/Delete Retail Sales
+ </loadpriv>
+ <loadpriv      name="ViewRetailSales" module="Sales">
+   Can View Retail Sales
+ </loadpriv>
+ <loadpriv      name="MaintainCashRegisters" module="Sales">
+   Allowed to maintain and use Cash Registers
+ </loadpriv>
+ <loadpriv      name="MaintainRetailSites" module="Sales">
+   Allowed to maintain Retail Sites
+ </loadpriv>
+
+  <loadcmd          name="cashRegisters" 
+                    title="Cash Registers"
+                    module="Sales"
+                    privilege="MaintainCashRegiters"
+                    executable="!customuiform">
+      <arg value="uiform=cashRegisters"/>
+  </loadcmd>
+  <loadcmd          name="dspRegisterHistory" 
+                    title="Cash Register History"
+                    module="Sales"
+                    privilege="MaintainCashRegiters"
+                    executable="!customuiform">
+      <arg value="uiform=dspRegisterHistory"/>
+  </loadcmd>
+  <loadcmd          name="retailSaleSearch" 
+                    title="Retail Sale Search"
+                    module="Sales"
+                    privilege="MaintainRetailSales"
+                    executable="!customuiform">
+      <arg value="uiform=retailSaleSearch"/>
+  </loadcmd>
+  <loadcmd          name="retailSite" 
+                    title="Retail Site" 
+                    module="Sales"
+                    privilege="MaintainRetailSales"
+                    executable="!customuiform">
+      <arg value="uiform=retailSite"/>
+  </loadcmd>
+  <loadcmd          name="retailSites" 
+                    title="Retail Sites" 
+                    module="Sales"
+                    privilege="MaintainRetailSites"
+                    executable="!customuiform">
+      <arg value="uiform=retailSites"/>
+  </loadcmd>
+  <loadcmd          name="dspDetailedRegisterHistory" 
+                    title="Detailed Register History" 
+                    module="Sales"
+                    privilege="ViewRetailSales"
+                    executable="!customuiform">
+      <arg value="uiform=dspDetailedRegisterHistory"/>
+  </loadcmd>
+
+  <createfunction file="database/functions/cashregadjust.sql"    name="cashregadjust" />
+  <createfunction file="database/functions/cashregclose.sql"     name="cashregclose" />
+  <createfunction file="database/functions/cashregopen.sql"      name="cashregopen" />
+  <createfunction file="database/functions/checkstatus.sql"      name="checkstatus" />
+  <createfunction file="database/functions/depositchecks.sql"    name="depositchecks" />
+  <createfunction file="database/functions/fetchsalenumber.sql"  name="fetchsalenumber"/>
+  <createfunction file="database/functions/getrtlsiteid.sql"     name="getrtlsiteid" />
+  <createfunction file="database/functions/getsaleheadid.sql"    name="getsaleheadid" />
+  <createfunction file="database/functions/getterminalid.sql"    name="getterminalid" />
+  <createfunction file="database/functions/itemprice.sql"        name="itemprice" />
+  <createfunction file="database/functions/postsaleinv.sql"      name="postsaleinv" />
+  <createfunction file="database/functions/reghistsales.sql"     name="reghistsales" />
+  <createfunction file="database/functions/saleclosecash.sql"    name="saleclosecash" />
+  <createfunction file="database/functions/saleclosecheck.sql"   name="saleclosecheck" />
+  <createfunction file="database/functions/saleclosecredit.sql"  name="saleclosecredit"/>
+  <createfunction file="database/functions/saletax.sql"          name="saletax" />
+
+  <createtable file="database/tables/createTerminal.sql"        name="terminal" />
+  <createtable file="database/tables/createReghist.sql"         name="reghist" />
+  <createtable file="database/tables/createRegdetail.sql"       name="regdetail" />
+  <createtable file="database/tables/createRtlsite.sql"         name="rtlsite" />
+  <createtable file="database/tables/createRtlsitebnkacct.sql"  name="rtlsitebnkacct" />
+  <createtable file="database/tables/createRtlsiteterm.sql"     name="rtlsiteterm" />
+  <createtable file="database/tables/createSalehead.sql"        name="salehead" />
+  <createtable file="database/tables/createSaleitem.sql"        name="saleitem" />
+  <createtable file="database/tables/createSaleitemtax.sql"     name="saleitemtax" />
+  
+  <finalscript file="database/misc/deprecateFields.sql"  />
+  <finalscript file="database/tables/createSalenumberseq.sql" />
+  <finalscript file="database/misc/schemaComment.sql" />
+
+  <createtrigger file="database/triggers/rtlsitestatuscheck.sql"     name="rtlsitestatuscheck" />
+  <createtrigger file="database/triggers/rtlsitetermstatuscheck.sql" name="rtlsitetermstatuscheck" />
+  <createtrigger file="database/triggers/saleheadprivcheck.sql"      name="saleheadprivcheck" />
+  <createtrigger file="database/triggers/saleitemcalctax.sql"        name="saleitemcalctax" />
+  <createtrigger file="database/triggers/saleitemdefaults.sql"       name="saleitemdefaults" />
+  <createtrigger file="database/triggers/saleitemprivcheck.sql"      name="saleitemprivcheck" />
+  <createtrigger file="database/triggers/saleitemstatuscheck.sql"    name="saleitemstatuscheck" />
+
+  <createview file="database/views/api_cashregister.sql"        name="api_cashregister" />
+  <createview file="database/views/api_retailsite.sql"          name="api_retailsite" />
+  <createview file="database/views/api_retailsitebankaccnt.sql" name="api_retailsitebankaccnt" />
+  <createview file="database/views/api_retailsiteterminal.sql"  name="api_retailsiteterminal" />
+  <createview file="database/views/api_sale.sql"                name="api_sale" />
+  <createview file="database/views/api_saleitem.sql"            name="api_saleitem" />
+
+  <loadappscript file="client/scripts/cashRegister.js"       name="cashRegister"       order="0"/>
+  <loadappscript file="client/scripts/cashRegisters.js"      name="cashRegisters"      order="0"/>
+  <loadappscript file="client/scripts/configureSO.js"        name="configureSO"        order="0"/>
+  <loadappscript file="client/scripts/dspRegisterHistory.js" name="dspRegisterHistory" order="0"/>
+  <loadappscript file="client/scripts/dspDetailedRegisterHistory.js" name="dspDetailedRegisterHistory" order="0"/>
+  <loadappscript file="client/scripts/initMenu.js"           name="initMenu"           order="0"/>
+  <loadappscript file="client/scripts/payment.js"            name="payment"            order="0"/>
+  <loadappscript file="client/scripts/retailCustomer.js"     name="retailCustomer"     order="0"/>
+  <loadappscript file="client/scripts/retailSale.js"         name="retailSale"         order="0"/>
+  <loadappscript file="client/scripts/retailSaleSearch.js"   name="retailSaleSearch"   order="0"/>
+  <loadappscript file="client/scripts/retailSite.js"         name="retailSite"         order="0"/>
+  <loadappscript file="client/scripts/retailSites.js"        name="retailSites"        order="0"/>
+  <loadappscript file="client/scripts/setup.js"              name="setup"        order="0"/>
+
+  <loadappui file="client/uiforms/cashRegister.ui"       order="0" />
+  <loadappui file="client/uiforms/cashRegisters.ui"      order="0" />
+  <loadappui file="client/uiforms/configureRetail.ui"    order="0"/>
+  <loadappui file="client/uiforms/dspRegisterHistory.ui" order="0"/>
+  <loadappui file="client/uiforms/dspDetailedRegisterHistory.ui" order="0"/>
+  <loadappui file="client/uiforms/payment.ui"            order="0" />
+  <loadappui file="client/uiforms/retailCustomer.ui"     order="0" />
+  <loadappui file="client/uiforms/retailSale.ui"         order="0" />
+  <loadappui file="client/uiforms/retailSaleSearch.ui"   order="0" />
+  <loadappui file="client/uiforms/retailSite.ui"         order="0" />
+  <loadappui file="client/uiforms/retailSites.ui"        order="0" />
+
+  <loadmetasql file="client/metasql/cashregister-deletesale.mql" />
+  <loadmetasql file="client/metasql/cashregister-post.mql" />
+  <loadmetasql file="client/metasql/cashregister-sales.mql" />
+  <loadmetasql file="client/metasql/configureretail-nextsalenumber.mql" />
+  <loadmetasql file="client/metasql/configureretail-setsalenumber.mql" />
+  <loadmetasql file="client/metasql/display-detailedregisterhistory.mql" />
+  <loadmetasql file="client/metasql/payment-closesale.mql" />
+  <loadmetasql file="client/metasql/payment-fetchccinfo.mql" />
+  <loadmetasql file="client/metasql/registerhistory-detail.mql" />
+  <loadmetasql file="client/metasql/registerreceipt-checks.mql" />
+  <loadmetasql file="client/metasql/registerreceipt-creditcards.mql" />
+  <loadmetasql file="client/metasql/registerreceipt-detail.mql" />
+  <loadmetasql file="client/metasql/retailcustomer-fetchcustnumber.mql" />
+  <loadmetasql file="client/metasql/retailcustomer-getcrmacct.mql" />
+  <loadmetasql file="client/metasql/retailcustomer-getcustid.mql" />
+  <loadmetasql file="client/metasql/retailcustomer-releasecrmnumber.mql" />
+  <loadmetasql file="client/metasql/retailsite-getapi_retailsite.mql" />
+  <loadmetasql file="client/metasql/retailsite-getapi_retailsiteterminal.mql" />
+  <loadmetasql file="client/metasql/retailsite-getbankaccnt.mql" />
+  <loadmetasql file="client/metasql/sale-fetchcustcontact.mql" />
+  <loadmetasql file="client/metasql/sale-fetchsalenumber.mql" />
+  <loadmetasql file="client/metasql/sale-fetchsalesrep.mql" />
+  <loadmetasql file="client/metasql/sale-fetchtaxzone.mql" />
+  <loadmetasql file="client/metasql/sale-getapi_sale.mql" />
+  <loadmetasql file="client/metasql/sale-getapi_saleitem.mql" />
+  <loadmetasql file="client/metasql/sale-itemprice.mql" />
+  <loadmetasql file="client/metasql/sale-releasesalenumber.mql" />
+  <loadmetasql file="client/metasql/sale-saleitemtax.mql" />
+  <loadmetasql file="client/metasql/salereceipt-detail.mql" />
+  <loadmetasql file="client/metasql/salereceipt-payments.mql" />
+  <loadmetasql file="client/metasql/salereceipt-totals.mql" />
+  <loadmetasql file="client/metasql/salesearch-defaultdates.mql" />
+
+  <loadreport  file="client/reports/detailedregisterhistory.xml" />
+  <loadreport  file="client/reports/retailregisterhistory.xml" />
+  <loadreport  file="client/reports/retailregisterreceipt.xml" />
+  <loadreport  file="client/reports/retailsalereceipt.xml" />
+  <loadreport  file="client/reports/retailsitesreport.xml" />
+
+</package>

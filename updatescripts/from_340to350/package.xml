@@ -1,0 +1,85 @@
+<package id="from_340to350"
+         name="xtpos"
+         developer="xTuple"
+         descrip="Retail Point of Sale System"
+         version="3.5.0"
+         updater="2.2.0">
+  <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
+
+        This file is part of the xtpos package for xTuple ERP: PostBooks Edition,
+        a free and open source Enterprise Resource Planning software suite,
+        Copyright (c) 1999-2010 by OpenMFG LLC, d/b/a xTuple.
+        It is licensed to you under the Common Public Attribution License
+        version 1.0, the full text of which (including xTuple-specific Exhibits)
+        is available at www.xtuple.com/CPAL.  By using this software, you agree
+        to be bound by its terms.
+  </pkgnotes>
+
+  <prerequisite type="Query"
+                name="Test xTuple ERP version">
+    <query>
+      SELECT (SUBSTRING(fetchMetricText('ServerVersion') FOR 3) = '3.5'
+          AND SUBSTRING(fetchMetricText('ServerVersion') FROM 5 FOR 1) >= '0');
+    </query>
+    <message>
+      This version of the xtpos package only works with xTuple ERP
+      versions 3.4.0 and greater.
+    </message>
+  </prerequisite>
+
+  <prerequisite type="Query"
+                name="Ensure Point of Sale package 3.4.0 exists" >
+    <query>
+      SELECT COUNT(*) = 1
+      FROM (SELECT *
+            FROM pkghead
+            WHERE ((pkghead_name = 'xtpos')
+            AND (pkghead_version = '3.4.0' ))) AS dummy;
+    </query>
+    <message>
+      xTuple Point of Sale version 3.4.0 must be installed to run this upgrade package.
+    </message>
+  </prerequisite>
+
+  <prerequisite type="license" name="xTuple Concise EULA">
+    <message>
+      &lt;p>
+          This file is part of the xtpos package for xTuple ERP: PostBooks Edition,
+          a free and open source Enterprise Resource Planning software suite,
+          Copyright (c) 1999-2010 by OpenMFG LLC, d/b/a xTuple.
+          It is licensed to you under the Common Public Attribution License
+          version 1.0, the full text of which (including xTuple-specific Exhibits)
+          is available at www.xtuple.com/CPAL.  By using this software, you agree
+          to be bound by its terms.
+      &lt;/p>
+    </message>
+  </prerequisite>
+
+  <createfunction file="database/functions/postsaleinv.sql"      name="postsaleinv" />
+  <createfunction file="database/functions/saleclosecash.sql"      name="saleclosecash" />
+  
+  <createview file="database/views/api_sale.sql"      name="api_sale" />
+  
+  <loadmetasql file="client/metasql/display-detailedregisterhistory.mql" />
+  <loadmetasql file="client/metasql/salereceipt-totals.mql" />
+  <loadmetasql file="client/metasql/salereceipt-payments.mql" />
+
+  <loadappscript file="client/scripts/cashRegister.js"       name="cashRegister"       order="0"/>
+  <loadappscript file="client/scripts/cashRegisters.js"      name="cashRegisters"      order="0"/>
+  <loadappscript file="client/scripts/configureSO.js"        name="configureSO"        order="0"/>
+  <loadappscript file="client/scripts/dspRegisterHistory.js" name="dspRegisterHistory" order="0"/>
+  <loadappscript file="client/scripts/dspDetailedRegisterHistory.js" name="dspDetailedRegisterHistory" order="0"/>
+  <loadappscript file="client/scripts/initMenu.js"           name="initMenu"           order="0"/>
+  <loadappscript file="client/scripts/payment.js"            name="payment"            order="0"/>
+  <loadappscript file="client/scripts/retailCustomer.js"     name="retailCustomer"     order="0"/>
+  <loadappscript file="client/scripts/retailSale.js"         name="retailSale"         order="0"/>
+  <loadappscript file="client/scripts/retailSaleSearch.js"   name="retailSaleSearch"   order="0"/>
+  <loadappscript file="client/scripts/retailSite.js"         name="retailSite"         order="0"/>
+  <loadappscript file="client/scripts/retailSites.js"        name="retailSites"        order="0"/>
+
+  <loadappui file="client/uiforms/cashRegister.ui"       order="0" />
+  <loadappui file="client/uiforms/payment.ui"            order="0" />
+  <loadappui file="client/uiforms/retailSale.ui"         order="0" />
+  <loadappui file="client/uiforms/retailCustomer.ui"     order="0" />
+
+</package>
