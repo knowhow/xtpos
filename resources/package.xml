@@ -2,12 +2,12 @@
          name="xtpos"
          developer="xTuple"
          descrip="Retail Point of Sale System"
-         version="3.7.0"
+         version="3.7.2"
          updater="2.2.0">
   <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
 
 	This file is part of the xtpos Package for xTuple ERP, and
-	is Copyright (c) 1999-2009 by OpenMFG LLC, d/b/a xTuple.
+	is Copyright (c) 1999-2011 by OpenMFG LLC, d/b/a xTuple.
 	It is licensed to you under the xTuple End-User License
 	Agreement ("the EULA"), the full text of which is available
 	at www.xtuple.com/EULA.  While the EULA gives you access
@@ -45,7 +45,7 @@
     <message>
       &lt;p>
         This file is part of the xtpos Package for xTuple ERP, and is Copyright
-        (c) 1999-2010 by OpenMFG LLC, d/b/a xTuple.  It is licensed to you under
+        (c) 1999-2011 by OpenMFG LLC, d/b/a xTuple.  It is licensed to you under
         the xTuple End-User License Agreement ("the EULA"), the full
         text of which is available at
         &lt;a href="http://www.xtuple.com/EULA">http://www.xtuple.com/EULA&lt;/a>.
