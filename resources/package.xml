@@ -2,7 +2,7 @@
          name="xtpos"
          developer="xTuple"
          descrip="Retail Point of Sale System"
-         version="3.7.2knowhow"
+         version="3.7.3"
          updater="2.2.0">
   <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
 
