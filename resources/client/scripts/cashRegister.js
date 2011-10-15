@@ -98,11 +98,11 @@ with (_sales)
 }
 
 // Check Metrics
-if (metrics.value("MultiWhs") != "t")
-{
-  _site.hide();
-  _siteLit.hide();
-}
+//if (metrics.value("MultiWhs") != "t")
+//{
+//  _site.hide();
+//  _siteLit.hide();
+//}
 
 // Check Privileges
 toolbox.tabSetTabEnabled(_tab, toolbox.tabTabIndex(_tab,_maintainTab)

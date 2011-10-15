@@ -208,17 +208,17 @@ _removeBankAcct.clicked.connect(removeBankAcct);
 _site["newID(int)"].connect(check);
 
 // Hide site and populate if not multi warehouse
-if (metrics.value("MultiWhs") != "t")
-{
-  _site.setVisible(false);
-  _siteLit.setVisible(false);
-  _site.allowNull = false;
-  _save.hide();
-  _cancel.hide();
-  _retailSite["newModel(XSqlTableModel*)"].connect(populate);
-}
-else
-{
+//if (metrics.value("MultiWhs") != "t")
+//{
+//  _site.setVisible(false);
+//  _siteLit.setVisible(false);
+//  _site.allowNull = false;
+//  _save.hide();
+//  _cancel.hide();
+//  _retailSite["newModel(XSqlTableModel*)"].connect(populate);
+//}
+//else
+//{
   _save.clicked.connect(save);
   _cancel.clicked.connect(cancel);
-}
+//}

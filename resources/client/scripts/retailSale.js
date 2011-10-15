@@ -136,11 +136,11 @@ _sale["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_salesrep["setDataWidge
 
 
 // Check Metrics
-if (metrics.value("MultiWhs") != "t")
-{
-  _site.hide();
-  _siteLit.hide();
-}
+// if (metrics.value("MultiWhs") != "t")
+//{
+//  _site.hide();
+//  _siteLit.hide();
+//}
 if (metrics.value("RetailOnlyUseInternalCust") == "t")
   toolbox.tabRemoveTab(_tab, _custTab);
 
