@@ -28,6 +28,7 @@
     </message>
   </prerequisite>
 
+  <!--
   <prerequisite type="Query"
                 name="Ensure retail package is at 1.0.0beta or doesn't exist" >
     <query>
@@ -40,6 +41,7 @@
       xTuple Point of Sale is already installed on this database.
     </message>
   </prerequisite>
+ -->
 
   <prerequisite type="license" name="xTuple Concise EULA">
     <message>
