@@ -50,25 +50,6 @@
     <column>f_company_name</column>
    </data>
   </field>
-  <field>
-   <rect>
-    <x>500</x>
-    <y>10</y>
-    <width>250</width>
-    <height>33</height>
-   </rect>
-   <font>
-    <face>Arial</face>
-    <size>18</size>
-    <weight>bold</weight>
-   </font>
-   <right/>
-   <vcenter/>
-   <data>
-    <query>detail</query>
-    <column>f_receipt_type</column>
-   </data>
-  </field>
  </rpthead>
  <pghead>
   <firstpage/>
@@ -80,17 +61,24 @@
    <name>detailGroup</name>
    <column>salehead_number</column>
    <head>
-    <height>169.333</height>
+    <height>163.062</height>
+    <rect>
+     <x>21.1111</x>
+     <y>11.358</y>
+     <width>354.42</width>
+     <height>119.025</height>
+     <weight>1</weight>
+    </rect>
     <field>
      <rect>
-      <x>75</x>
-      <y>16</y>
+      <x>614.654</x>
+      <y>55.5062</y>
       <width>125</width>
       <height>15</height>
      </rect>
      <font>
       <face>Arial</face>
-      <size>8</size>
+      <size>12</size>
       <weight>bold</weight>
      </font>
      <left/>
@@ -102,24 +90,8 @@
     </field>
     <label>
      <rect>
-      <x>16.2333</x>
-      <y>16</y>
-      <width>52.6667</width>
-      <height>15</height>
-     </rect>
-     <font>
-      <face>Arial</face>
-      <size>8</size>
-      <weight>normal</weight>
-     </font>
-     <right/>
-     <vcenter/>
-     <string>Number:</string>
-    </label>
-    <label>
-     <rect>
-      <x>27</x>
-      <y>31.875</y>
+      <x>569.815</x>
+      <y>75.3318</y>
       <width>38</width>
       <height>15</height>
      </rect>
@@ -134,8 +106,8 @@
     </label>
     <field>
      <rect>
-      <x>75</x>
-      <y>31.875</y>
+      <x>617.815</x>
+      <y>75.3318</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -153,8 +125,8 @@
     </field>
     <label>
      <rect>
-      <x>35.6667</x>
-      <y>46</y>
+      <x>578.482</x>
+      <y>89.4568</y>
       <width>30</width>
       <height>15</height>
      </rect>
@@ -169,8 +141,8 @@
     </label>
     <label>
      <rect>
-      <x>9.66667</x>
-      <y>60</y>
+      <x>552.482</x>
+      <y>103.457</y>
       <width>55.3333</width>
       <height>15</height>
      </rect>
@@ -185,9 +157,9 @@
     </label>
     <label>
      <rect>
-      <x>365</x>
-      <y>16</y>
-      <width>100</width>
+      <x>29.1975</x>
+      <y>19.9506</y>
+      <width>87.358</width>
       <height>15</height>
      </rect>
      <font>
@@ -201,8 +173,8 @@
     </label>
     <field>
      <rect>
-      <x>75</x>
-      <y>60</y>
+      <x>617.815</x>
+      <y>103.457</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -220,8 +192,8 @@
     </field>
     <field>
      <rect>
-      <x>75</x>
-      <y>46</y>
+      <x>617.815</x>
+      <y>89.4568</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -239,8 +211,8 @@
     </field>
     <field>
      <rect>
-      <x>475</x>
-      <y>16</y>
+      <x>121.815</x>
+      <y>19.9506</y>
       <width>200</width>
       <height>15</height>
      </rect>
@@ -258,9 +230,9 @@
     </field>
     <label>
      <rect>
-      <x>365</x>
-      <y>31.875</y>
-      <width>100</width>
+      <x>44.2099</x>
+      <y>33.4552</y>
+      <width>71.5556</width>
       <height>15</height>
      </rect>
      <font>
@@ -274,8 +246,8 @@
     </label>
     <field>
      <rect>
-      <x>475</x>
-      <y>31.875</y>
+      <x>120.235</x>
+      <y>34.2454</y>
       <width>200</width>
       <height>15</height>
      </rect>
@@ -293,8 +265,8 @@
     </field>
     <text>
      <rect>
-      <x>475</x>
-      <y>46</y>
+      <x>117.864</x>
+      <y>49.9506</y>
       <width>200</width>
       <height>15</height>
      </rect>
@@ -416,8 +388,8 @@
     </label>
     <field>
      <rect>
-      <x>451</x>
-      <y>98.6667</y>
+      <x>100.185</x>
+      <y>97.0865</y>
       <width>111.667</width>
       <height>11.6</height>
      </rect>
@@ -435,8 +407,8 @@
     </field>
     <field>
      <rect>
-      <x>634.667</x>
-      <y>98.6667</y>
+      <x>99.7534</x>
+      <y>113.679</y>
       <width>103</width>
       <height>11</height>
      </rect>
@@ -454,10 +426,10 @@
     </field>
     <label>
      <rect>
-      <x>395.667</x>
-      <y>98.6667</y>
-      <width>49.3333</width>
-      <height>10.3333</height>
+      <x>46.4324</x>
+      <y>96.2963</y>
+      <width>48.5432</width>
+      <height>11.1234</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -470,9 +442,9 @@
     </label>
     <label>
      <rect>
-      <x>578</x>
-      <y>98.6</y>
-      <width>52.6333</width>
+      <x>35.1852</x>
+      <y>112.822</y>
+      <width>58.1642</width>
       <height>11</height>
      </rect>
      <font>
@@ -484,13 +456,32 @@
      <vcenter/>
      <string>PDV broj:</string>
     </label>
+    <field>
+     <rect>
+      <x>387.802</x>
+      <y>54.284</y>
+      <width>217.605</width>
+      <height>18.7778</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>12</size>
+      <weight>bold</weight>
+     </font>
+     <right/>
+     <vcenter/>
+     <data>
+      <query>detail</query>
+      <column>f_receipt_type</column>
+     </data>
+    </field>
    </head>
    <foot>
-    <height>30</height>
+    <height>22.8639</height>
     <text>
      <rect>
       <x>75</x>
-      <y>10</y>
+      <y>8.16049</y>
       <width>670</width>
       <height>10</height>
      </rect>
@@ -510,7 +501,7 @@
     <label>
      <rect>
       <x>15</x>
-      <y>10</y>
+      <y>7.37037</y>
       <width>45</width>
       <height>10</height>
      </rect>
@@ -523,17 +514,24 @@
      <vcenter/>
      <string>Notes:</string>
     </label>
+    <line>
+     <xstart>5</xstart>
+     <ystart>2.96263</ystart>
+     <xend>745</xend>
+     <yend>2.96263</yend>
+     <weight>2</weight>
+    </line>
    </foot>
   </group>
   <detail>
    <key>
     <query>detail</query>
    </key>
-   <height>66</height>
+   <height>22.1732</height>
    <field>
     <rect>
      <x>10</x>
-     <y>6</y>
+     <y>1</y>
      <width>50</width>
      <height>15</height>
     </rect>
@@ -552,7 +550,7 @@
    <field>
     <rect>
      <x>90</x>
-     <y>6</y>
+     <y>1</y>
      <width>100</width>
      <height>15</height>
     </rect>
@@ -568,26 +566,10 @@
      <column>item_number</column>
     </data>
    </field>
-   <barcode>
-    <rect>
-     <x>100.405</x>
-     <y>23.4693</y>
-     <width>350</width>
-     <height>32.5</height>
-    </rect>
-    <format>3of9</format>
-    <maxlength>13</maxlength>
-    <left/>
-    <narrowBarWidth>0.01</narrowBarWidth>
-    <data>
-     <query>detail</query>
-     <column>item_number</column>
-    </data>
-   </barcode>
    <field>
     <rect>
      <x>210</x>
-     <y>6</y>
+     <y>1</y>
      <width>300</width>
      <height>15</height>
     </rect>
@@ -606,7 +588,7 @@
    <field>
     <rect>
      <x>520</x>
-     <y>6</y>
+     <y>1</y>
      <width>50</width>
      <height>15</height>
     </rect>
@@ -625,7 +607,7 @@
    <field>
     <rect>
      <x>580</x>
-     <y>6</y>
+     <y>1</y>
      <width>50</width>
      <height>15</height>
     </rect>
@@ -644,7 +626,7 @@
    <field>
     <rect>
      <x>640</x>
-     <y>6</y>
+     <y>1</y>
      <width>100</width>
      <height>15</height>
     </rect>
@@ -668,7 +650,7 @@
    <key>
     <query>totals</query>
    </key>
-   <height>15</height>
+   <height>17.3827</height>
    <field>
     <rect>
      <x>635</x>
