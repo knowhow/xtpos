@@ -10,6 +10,8 @@ SELECT salehead_number, formatdatetime(salehead_time) AS f_time,
   formatmoney(round(saleitem_unitprice * abs(saleitem_qty),2)) AS f_extended,
   cntct_first_name || ' ' || cntct_last_name AS f_name,
   cntct_phone, formataddr(addr_id) AS f_address,
+  'Id broj: ' || c1.value as id_number,
+  'PDV broj: ' || c2.value as pdv_number,
   warehous_descrip AS f_company_name,
   CASE 
     WHEN (salehead_type = 'S' AND salehead_closed) THEN
@@ -34,6 +36,8 @@ FROM xtpos.salehead
   JOIN item ON (itemsite_item_id=item_id)
   JOIN whsinfo ON (salehead_warehous_id=warehous_id)
   JOIN custinfo ON (salehead_cust_id=cust_id)
+  JOIN api.custchar c1 ON cust_number = c1.customer_number AND c1.characteristic = 'Partner ID broj'
+  JOIN api.custchar c2 ON cust_number = c2.customer_number AND c2.characteristic = 'Partner PDV broj'
   LEFT OUTER JOIN salesrep ON (salehead_salesrep_id=salesrep_id)
   LEFT OUTER JOIN cntct ON (cust_cntct_id=cntct_id)
   LEFT OUTER JOIN addr ON (cntct_addr_id=addr_id)

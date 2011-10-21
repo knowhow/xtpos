@@ -3,23 +3,27 @@
  <title>Retail Sale Receipt</title>
  <name>RetailSaleReceipt</name>
  <description></description>
+ <grid>
+  <x>0.05</x>
+  <y>0.05</y>
+ </grid>
  <size>Letter</size>
  <portrait/>
  <topmargin>50</topmargin>
  <bottommargin>50</bottommargin>
  <rightmargin>50</rightmargin>
  <leftmargin>50</leftmargin>
- <querysource loadFromDb="true" >
+ <querysource loadFromDb="true">
   <name>detail</name>
   <mqlgroup>salereceipt</mqlgroup>
   <mqlname>detail</mqlname>
  </querysource>
- <querysource loadFromDb="true" >
+ <querysource loadFromDb="true">
   <name>payments</name>
   <mqlgroup>salereceipt</mqlgroup>
   <mqlname>payments</mqlname>
  </querysource>
- <querysource loadFromDb="true" >
+ <querysource loadFromDb="true">
   <name>totals</name>
   <mqlgroup>salereceipt</mqlgroup>
   <mqlname>totals</mqlname>
@@ -425,6 +429,44 @@
       <column>salehead_number</column>
      </data>
     </barcode>
+    <field>
+     <rect>
+      <x>515</x>
+      <y>57.3333</y>
+      <width>142.667</width>
+      <height>11.6333</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>bold</weight>
+     </font>
+     <left/>
+     <top/>
+     <data>
+      <query>detail</query>
+      <column>id_number</column>
+     </data>
+    </field>
+    <field>
+     <rect>
+      <x>514.667</x>
+      <y>68.7</y>
+      <width>153</width>
+      <height>11</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>bold</weight>
+     </font>
+     <left/>
+     <top/>
+     <data>
+      <query>detail</query>
+      <column>pdv_number</column>
+     </data>
+    </field>
    </head>
    <foot>
     <height>30</height>
