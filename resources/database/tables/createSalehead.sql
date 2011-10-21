@@ -1,3 +1,16 @@
+--
+-- This file is part of the knowhow ERP, a free and open source
+-- Enterprise Resource Planning software suite,
+-- Copyright (c) 2010-2011 by bring.out doo Sarajevo.
+-- It is licensed to you under the Common Public Attribution License
+-- version 1.0, the full text of which (including knowhow-specific Exhibits)
+-- is available in the file LICENSE_CPAL_bring.out_knowhow.md located at the
+-- root directory of this source code archive.
+-- By using this software, you agree to be bound by its terms.
+--
+
+SELECT u2.execute($$
+
 CREATE TABLE xtpos.salehead
 (
   salehead_id serial NOT NULL PRIMARY KEY,
@@ -43,5 +56,7 @@ COMMENT ON COLUMN xtpos.salehead.salehead_checkamt IS 'Amount of this sale paid 
 ALTER TABLE xtpos.salehead ADD COLUMN salehead_taxzone_id integer REFERENCES taxzone (taxzone_id);
 COMMENT ON COLUMN xtpos.salehead.salehead_taxzone_id IS 'Internal id for the tax zone applied';
 
+$$) 
+WHERE (u2.knowhow_package_version('xtpos') < 30703);
 
 

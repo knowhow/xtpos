@@ -2,7 +2,7 @@
          name="xtpos"
          developer="xTuple"
          descrip="Retail Point of Sale System"
-         version="3.7.3"
+         version="3.7.4"
          updater="2.2.0">
   <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
 
@@ -161,6 +161,8 @@
   <createview file="database/views/api_sale.sql"                name="api_sale" />
   <createview file="database/views/api_saleitem.sql"            name="api_saleitem" />
 
+  <finalscript file="database/misc/setVersion.sql" />
+  
   <loadappscript file="client/scripts/cashRegister.js"       name="cashRegister"       order="0"/>
   <loadappscript file="client/scripts/cashRegisters.js"      name="cashRegisters"      order="0"/>
   <loadappscript file="client/scripts/configureSO.js"        name="configureSO"        order="0"/>

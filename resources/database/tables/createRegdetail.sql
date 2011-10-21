@@ -1,3 +1,16 @@
+--
+-- This file is part of the knowhow ERP, a free and open source
+-- Enterprise Resource Planning software suite,
+-- Copyright (c) 2010-2011 by bring.out doo Sarajevo.
+-- It is licensed to you under the Common Public Attribution License
+-- version 1.0, the full text of which (including knowhow-specific Exhibits)
+-- is available in the file LICENSE_CPAL_bring.out_knowhow.md located at the
+-- root directory of this source code archive.
+-- By using this software, you agree to be bound by its terms.
+--
+
+SELECT u2.execute($$
+
 CREATE TABLE xtpos.regdetail
 (
   regdetail_id serial NOT NULL PRIMARY KEY,
@@ -34,3 +47,8 @@ COMMENT ON COLUMN xtpos.regdetail.regdetail_depchks IS 'Flag indicating whether 
 COMMENT ON COLUMN xtpos.regdetail.regdetail_username IS 'The name of the user who performed this transaction';
 COMMENT ON COLUMN xtpos.regdetail.regdetail_notes IS 'Cash register detail notes';
 COMMENT ON COLUMN xtpos.regdetail.regdetail_journalnumber IS 'The journal number used to record changes to the G/L for this transaction';
+
+$$) 
+WHERE (u2.knowhow_package_version('xtpos') < 30703);
+
+

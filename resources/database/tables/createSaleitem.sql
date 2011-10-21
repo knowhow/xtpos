@@ -1,3 +1,16 @@
+--
+-- This file is part of the knowhow ERP, a free and open source
+-- Enterprise Resource Planning software suite,
+-- Copyright (c) 2010-2011 by bring.out doo Sarajevo.
+-- It is licensed to you under the Common Public Attribution License
+-- version 1.0, the full text of which (including knowhow-specific Exhibits)
+-- is available in the file LICENSE_CPAL_bring.out_knowhow.md located at the
+-- root directory of this source code archive.
+-- By using this software, you agree to be bound by its terms.
+--
+
+SELECT u2.execute($$
+
 CREATE TABLE xtpos.saleitem
 (
   saleitem_id serial NOT NULL PRIMARY KEY,
@@ -36,4 +49,8 @@ COMMENT ON COLUMN xtpos.saleitem.saleitem_tax_pcta IS 'The percentage of the lin
 COMMENT ON COLUMN xtpos.saleitem.saleitem_tax_pctb IS 'The percentage of the line item price required by tax B';
 COMMENT ON COLUMN xtpos.saleitem.saleitem_tax_pctc IS 'The percentage of the line item price required by tax C';
 COMMENT ON COLUMN xtpos.saleitem.saleitem_taxtype_id IS 'The type of tax that was charged for this line item (food tax vs. service tax vs. ...)';
-COMMENT ON COLUMN xtpos.saleitem.saleitem_invhist_id IS 'Internal id of the inventory history record recording the sale of this line item';
+COMMENT ON COLUMN xtpos.saleitem.saleitem_invhist_id IS 'Internal id of the inventory history record recording the sale of this line itemi';
+
+$$) 
+WHERE (u2.knowhow_package_version('xtpos') < 30703);
+

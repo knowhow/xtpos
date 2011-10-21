@@ -15,8 +15,8 @@ var uiName;
 
 //if (metrics.value("MultiWhs") == "t")
 //{
-  name = qsTr("Retail Sites");
-  uiName = "retailSites";
+  //name = qsTr("Retail Sites");
+  //uiName = "retailSites";
 //}
 //else
 //{
