@@ -4,6 +4,7 @@
          descrip="Retail Point of Sale System"
          version="3.7.4"
          updater="2.2.0">
+  
   <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
 
 	This file is part of the xtpos Package for xTuple ERP, and
@@ -27,21 +28,6 @@
       versions 3.6.0 and greater. 
     </message>
   </prerequisite>
-
-  <!--
-  <prerequisite type="Query"
-                name="Ensure retail package is at 1.0.0beta or doesn't exist" >
-    <query>
-      SELECT COUNT(*) &lt;= 0
-      FROM (SELECT *
-            FROM pkghead
-            WHERE (pkghead_name IN ('retail','xtpos')) ) AS dummy;
-    </query>
-    <message>
-      xTuple Point of Sale is already installed on this database.
-    </message>
-  </prerequisite>
- -->
 
   <prerequisite type="license" name="xTuple Concise EULA">
     <message>
@@ -229,3 +215,4 @@
   <loadreport  file="client/reports/retailsitesreport.xml" />
 
 </package>
+
