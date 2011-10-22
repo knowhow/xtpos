@@ -5,7 +5,7 @@
 SELECT salehead_number, formatdatetime(salehead_time) AS f_time, 
   salehead_notes, terminal_number, warehous_code, salesrep_number, 
   cust_number, saleitem_linenumber, item_number, item_upccode,
-  item_descrip1, formatqty(abs(saleitem_qty)) AS f_qty, 
+  item_descrip1, uo.uom_name AS item_uom, formatqty(abs(saleitem_qty)) AS f_qty, 
   formatsalesprice(saleitem_unitprice) AS f_price,
   formatmoney(round(saleitem_unitprice * abs(saleitem_qty),2)) AS f_extended,
   cntct_first_name || ' ' || cntct_last_name AS f_name,
@@ -34,6 +34,7 @@ FROM xtpos.salehead
   JOIN xtpos.saleitem ON (salehead_id=saleitem_salehead_id)
   JOIN itemsite ON (saleitem_itemsite_id=itemsite_id)
   JOIN item ON (itemsite_item_id=item_id)
+  JOIN uom uo ON (item_price_uom_id = uo.uom_id)
   JOIN whsinfo ON (salehead_warehous_id=warehous_id)
   JOIN custinfo ON (salehead_cust_id=cust_id)
   JOIN api.custchar c1 ON cust_number = c1.customer_number AND c1.characteristic = 'Partner ID broj'
