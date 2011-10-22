@@ -206,6 +206,7 @@
   <loadmetasql file="client/metasql/salereceipt-detail.mql" />
   <loadmetasql file="client/metasql/salereceipt-payments.mql" />
   <loadmetasql file="client/metasql/salereceipt-totals.mql" />
+  <loadmetasql file="client/metasql/salereceipt-siteinfo.mql" />
   <loadmetasql file="client/metasql/salesearch-defaultdates.mql" />
 
   <loadreport  file="client/reports/detailedregisterhistory.xml" />
