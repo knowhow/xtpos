@@ -150,20 +150,20 @@
    <name>detailGroup</name>
    <column>salehead_number</column>
    <head>
-    <height>162.667</height>
+    <height>178</height>
     <rect>
-     <x>21.1111</x>
+     <x>6.1111</x>
      <y>11.358</y>
-     <width>354.42</width>
+     <width>388.42</width>
      <height>119.025</height>
      <weight>1</weight>
     </rect>
     <field>
      <rect>
-      <x>630.654</x>
-      <y>54.1729</y>
-      <width>116.333</width>
-      <height>15</height>
+      <x>630.667</x>
+      <y>52.2</y>
+      <width>116</width>
+      <height>18.8</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -195,8 +195,8 @@
     </label>
     <field>
      <rect>
-      <x>617.815</x>
-      <y>75.3318</y>
+      <x>618</x>
+      <y>75.3</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -231,7 +231,7 @@
     <label>
      <rect>
       <x>518.482</x>
-      <y>103.457</y>
+      <y>104.79</y>
       <width>89.3333</width>
       <height>15</height>
      </rect>
@@ -246,8 +246,8 @@
     </label>
     <field>
      <rect>
-      <x>617.815</x>
-      <y>103.457</y>
+      <x>618</x>
+      <y>105</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -265,8 +265,8 @@
     </field>
     <field>
      <rect>
-      <x>617.815</x>
-      <y>89.4568</y>
+      <x>618</x>
+      <y>89.5</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -284,9 +284,9 @@
     </field>
     <field>
      <rect>
-      <x>85.1483</x>
-      <y>31.9506</y>
-      <width>122.667</width>
+      <x>56.4816</x>
+      <y>15.9506</y>
+      <width>94.667</width>
       <height>15</height>
      </rect>
      <font>
@@ -303,9 +303,9 @@
     </field>
     <label>
      <rect>
-      <x>28.2</x>
-      <y>17.5</y>
-      <width>49.6</width>
+      <x>6.86667</x>
+      <y>15.5</y>
+      <width>45.6</width>
       <height>15</height>
      </rect>
      <font>
@@ -319,18 +319,19 @@
     </label>
     <field>
      <rect>
-      <x>82.9017</x>
-      <y>18.2454</y>
-      <width>200</width>
-      <height>15</height>
+      <x>18.5667</x>
+      <y>32.9333</y>
+      <width>168.667</width>
+      <height>62.9667</height>
      </rect>
      <font>
       <face>Arial</face>
       <size>8</size>
       <weight>bold</weight>
      </font>
+     <wordwrap/>
      <left/>
-     <vcenter/>
+     <top/>
      <data>
       <query>detail</query>
       <column>f_name</column>
@@ -338,9 +339,9 @@
     </field>
     <text>
      <rect>
-      <x>81.864</x>
-      <y>48.6173</y>
-      <width>200</width>
+      <x>195.667</x>
+      <y>18</y>
+      <width>195</width>
       <height>15</height>
      </rect>
      <bottompad>0</bottompad>
@@ -358,33 +359,33 @@
     </text>
     <line>
      <xstart>5</xstart>
-     <ystart>159</ystart>
+     <ystart>174</ystart>
      <xend>745</xend>
-     <yend>159</yend>
+     <yend>174</yend>
      <weight>2</weight>
     </line>
     <label>
      <rect>
-      <x>7.33333</x>
+      <x>7.33</x>
       <y>145</y>
-      <width>36.6667</width>
-      <height>11.3333</height>
+      <width>36.7</width>
+      <height>10</height>
      </rect>
      <font>
       <face>Arial</face>
       <size>8</size>
       <weight>normal</weight>
      </font>
-     <right/>
+     <left/>
      <vcenter/>
      <string>R.br #</string>
     </label>
     <label>
      <rect>
-      <x>63.3333</x>
-      <y>145.667</y>
+      <x>43.3</x>
+      <y>145</y>
       <width>100</width>
-      <height>10.6667</height>
+      <height>10.7</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -397,10 +398,10 @@
     </label>
     <label>
      <rect>
-      <x>161</x>
-      <y>144.667</y>
-      <width>300</width>
-      <height>11.3333</height>
+      <x>122</x>
+      <y>145</y>
+      <width>161</width>
+      <height>10</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -413,8 +414,8 @@
     </label>
     <label>
      <rect>
-      <x>519.333</x>
-      <y>145.333</y>
+      <x>401.667</x>
+      <y>146</y>
       <width>50</width>
       <height>10</height>
      </rect>
@@ -429,10 +430,10 @@
     </label>
     <label>
      <rect>
-      <x>580</x>
+      <x>470</x>
       <y>145</y>
-      <width>50</width>
-      <height>10</height>
+      <width>48.6</width>
+      <height>12</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -445,10 +446,10 @@
     </label>
     <label>
      <rect>
-      <x>640</x>
+      <x>650.667</x>
       <y>145</y>
-      <width>100</width>
-      <height>10</height>
+      <width>89.3333</width>
+      <height>11.3333</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -457,14 +458,14 @@
      </font>
      <right/>
      <vcenter/>
-     <string>Ukupno</string>
+     <string>Ukupno bez PDV</string>
     </label>
     <field>
      <rect>
-      <x>99.5183</x>
-      <y>95.7532</y>
-      <width>111.667</width>
-      <height>11.6</height>
+      <x>75.8333</x>
+      <y>97.1333</y>
+      <width>112</width>
+      <height>11.1</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -472,7 +473,7 @@
       <weight>bold</weight>
      </font>
      <left/>
-     <top/>
+     <vcenter/>
      <data>
       <query>detail</query>
       <column>id_number</column>
@@ -480,10 +481,10 @@
     </field>
     <field>
      <rect>
-      <x>99.7534</x>
-      <y>112.346</y>
+      <x>74.8</x>
+      <y>114</y>
       <width>103</width>
-      <height>11</height>
+      <height>11.1</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -491,7 +492,7 @@
       <weight>bold</weight>
      </font>
      <left/>
-     <top/>
+     <vcenter/>
      <data>
       <query>detail</query>
       <column>pdv_number</column>
@@ -499,7 +500,7 @@
     </field>
     <label>
      <rect>
-      <x>46.4324</x>
+      <x>18.7657</x>
       <y>96.2963</y>
       <width>48.5432</width>
       <height>11.1234</height>
@@ -515,8 +516,8 @@
     </label>
     <label>
      <rect>
-      <x>35.1852</x>
-      <y>112.822</y>
+      <x>9.51853</x>
+      <y>114.155</y>
       <width>58.1642</width>
       <height>11</height>
      </rect>
@@ -531,10 +532,10 @@
     </label>
     <field>
      <rect>
-      <x>408.469</x>
-      <y>52.9507</y>
-      <width>190.272</width>
-      <height>18.7778</height>
+      <x>408</x>
+      <y>53</y>
+      <width>190</width>
+      <height>18.8</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -550,10 +551,10 @@
     </field>
     <label>
      <rect>
-      <x>603.667</x>
-      <y>52.6667</y>
-      <width>25.3333</width>
-      <height>17.7</height>
+      <x>604</x>
+      <y>52.7</y>
+      <width>24.6333</width>
+      <height>18.8</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -561,8 +562,72 @@
       <weight>bold</weight>
      </font>
      <left/>
-     <top/>
+     <vcenter/>
      <string>br.:</string>
+    </label>
+    <label>
+     <rect>
+      <x>656.667</x>
+      <y>159</y>
+      <width>83.3333</width>
+      <height>11.3333</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>normal</weight>
+     </font>
+     <right/>
+     <vcenter/>
+     <string>Ukupno sa PDV</string>
+    </label>
+    <label>
+     <rect>
+      <x>531.667</x>
+      <y>145</y>
+      <width>25.9333</width>
+      <height>12</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>normal</weight>
+     </font>
+     <hcenter/>
+     <vcenter/>
+     <string>PDV</string>
+    </label>
+    <label>
+     <rect>
+      <x>540</x>
+      <y>158</y>
+      <width>15.3</width>
+      <height>15</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>normal</weight>
+     </font>
+     <left/>
+     <vcenter/>
+     <string>%</string>
+    </label>
+    <label>
+     <rect>
+      <x>567.667</x>
+      <y>145</y>
+      <width>75.9333</width>
+      <height>12</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>normal</weight>
+     </font>
+     <hcenter/>
+     <vcenter/>
+     <string>Cijena sa PDV</string>
     </label>
    </head>
    <foot>
@@ -616,12 +681,12 @@
    <key>
     <query>detail</query>
    </key>
-   <height>22.1732</height>
+   <height>34</height>
    <field>
     <rect>
-     <x>2.66667</x>
+     <x>3.3</x>
      <y>1</y>
-     <width>50</width>
+     <width>32</width>
      <height>15</height>
     </rect>
     <font>
@@ -638,18 +703,19 @@
    </field>
    <field>
     <rect>
-     <x>62.6667</x>
-     <y>1</y>
-     <width>88.6667</width>
-     <height>15</height>
+     <x>42.7</x>
+     <y>3</y>
+     <width>77.3</width>
+     <height>28.3</height>
     </rect>
     <font>
      <face>Arial</face>
      <size>8</size>
      <weight>bold</weight>
     </font>
+    <wordwrap/>
     <left/>
-    <vcenter/>
+    <top/>
     <data>
      <query>detail</query>
      <column>item_number</column>
@@ -657,18 +723,19 @@
    </field>
    <field>
     <rect>
-     <x>160</x>
-     <y>1</y>
-     <width>295.333</width>
-     <height>15</height>
+     <x>122</x>
+     <y>3</y>
+     <width>244</width>
+     <height>28.3</height>
     </rect>
     <font>
      <face>Arial</face>
      <size>8</size>
      <weight>bold</weight>
     </font>
+    <wordwrap/>
     <left/>
-    <vcenter/>
+    <top/>
     <data>
      <query>detail</query>
      <column>item_descrip1</column>
@@ -676,7 +743,7 @@
    </field>
    <field>
     <rect>
-     <x>520</x>
+     <x>405</x>
      <y>1</y>
      <width>50</width>
      <height>15</height>
@@ -695,9 +762,9 @@
    </field>
    <field>
     <rect>
-     <x>580</x>
+     <x>465</x>
      <y>1</y>
-     <width>50</width>
+     <width>57.3</width>
      <height>15</height>
     </rect>
     <font>
@@ -714,7 +781,7 @@
    </field>
    <field>
     <rect>
-     <x>640</x>
+     <x>646.667</x>
      <y>1</y>
      <width>100</width>
      <height>15</height>
@@ -733,10 +800,10 @@
    </field>
    <field>
     <rect>
-     <x>461.333</x>
-     <y>3.33333</y>
-     <width>44</width>
-     <height>13.7</height>
+     <x>369</x>
+     <y>1.33</y>
+     <width>31.3</width>
+     <height>15</height>
     </rect>
     <font>
      <face>Arial</face>
@@ -744,10 +811,102 @@
      <weight>bold</weight>
     </font>
     <left/>
-    <top/>
+    <vcenter/>
     <data>
      <query>detail</query>
      <column>item_uom</column>
+    </data>
+   </field>
+   <field>
+    <rect>
+     <x>646</x>
+     <y>17.7</y>
+     <width>100</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <right/>
+    <vcenter/>
+    <data>
+     <query>detail</query>
+     <column>f_total</column>
+    </data>
+   </field>
+   <field>
+    <rect>
+     <x>525</x>
+     <y>1</y>
+     <width>46</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <right/>
+    <vcenter/>
+    <data>
+     <query>detail</query>
+     <column>f_tax</column>
+    </data>
+   </field>
+   <field>
+    <rect>
+     <x>525.667</x>
+     <y>18</y>
+     <width>35.3333</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <right/>
+    <vcenter/>
+    <data>
+     <query>detail</query>
+     <column>f_tax_percent</column>
+    </data>
+   </field>
+   <label>
+    <rect>
+     <x>563</x>
+     <y>18</y>
+     <width>31.3</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <left/>
+    <vcenter/>
+    <string>%</string>
+   </label>
+   <field>
+    <rect>
+     <x>583.333</x>
+     <y>1</y>
+     <width>64.7</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <right/>
+    <vcenter/>
+    <data>
+     <query>detail</query>
+     <column>f_price_with_tax</column>
     </data>
    </field>
   </detail>
@@ -788,7 +947,7 @@
     <font>
      <face>Arial</face>
      <size>8</size>
-     <weight>normal</weight>
+     <weight>bold</weight>
     </font>
     <right/>
     <vcenter/>
@@ -835,7 +994,7 @@
     <font>
      <face>Arial</face>
      <size>8</size>
-     <weight>normal</weight>
+     <weight>bold</weight>
     </font>
     <right/>
     <vcenter/>
@@ -848,38 +1007,45 @@
  </section>
  <section>
   <name>signature</name>
+  <group>
+   <name>signatureGroup</name>
+   <column></column>
+   <head>
+    <height>45.5685</height>
+    <line>
+     <xstart>28.6666</xstart>
+     <ystart>40.6666</ystart>
+     <xend>192.666</xend>
+     <yend>40.6666</yend>
+     <weight>1</weight>
+    </line>
+    <label>
+     <rect>
+      <x>27.3666</x>
+      <y>11.9818</y>
+      <width>100</width>
+      <height>15.7</height>
+     </rect>
+     <font>
+      <face>Helvetica</face>
+      <size>10</size>
+      <weight>normal</weight>
+     </font>
+     <left/>
+     <top/>
+     <string>Racun odobrio:</string>
+    </label>
+   </head>
+  </group>
   <detail>
    <key>
     <query>detail</query>
    </key>
-   <height>54.6667</height>
-   <label>
-    <rect>
-     <x>32.0333</x>
-     <y>18.6485</y>
-     <width>100</width>
-     <height>15.7</height>
-    </rect>
-    <font>
-     <face>Helvetica</face>
-     <size>10</size>
-     <weight>normal</weight>
-    </font>
-    <left/>
-    <top/>
-    <string>Racun odobrio:</string>
-   </label>
-   <line>
-    <xstart>33.3333</xstart>
-    <ystart>47.3333</ystart>
-    <xend>197.333</xend>
-    <yend>47.3333</yend>
-    <weight>1</weight>
-   </line>
+   <height>7.33333</height>
   </detail>
  </section>
  <pgfoot>
-  <height>25</height>
+  <height>20</height>
   <label>
    <rect>
     <x>615</x>
@@ -918,7 +1084,7 @@
   <label>
    <rect>
     <x>0</x>
-    <y>0</y>
+    <y>1.33333</y>
     <width>85</width>
     <height>15</height>
    </rect>
@@ -934,7 +1100,7 @@
   <field>
    <rect>
     <x>89.3333</x>
-    <y>4</y>
+    <y>2</y>
     <width>119.333</width>
     <height>15</height>
    </rect>
