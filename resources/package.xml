@@ -2,8 +2,9 @@
          name="xtpos"
          developer="xTuple"
          descrip="Retail Point of Sale System"
-         version="3.7.2"
+         version="3.7.6"
          updater="2.2.0">
+  
   <pkgnotes>Retail Point of Sale add-on package for xTuple ERP.
 
 	This file is part of the xtpos Package for xTuple ERP, and
@@ -25,19 +26,6 @@
     <message>
       This version of the xtpos package only works with xTuple ERP
       versions 3.6.0 and greater. 
-    </message>
-  </prerequisite>
-
-  <prerequisite type="Query"
-                name="Ensure retail package is at 1.0.0beta or doesn't exist" >
-    <query>
-      SELECT COUNT(*) &lt;= 0
-      FROM (SELECT *
-            FROM pkghead
-            WHERE (pkghead_name IN ('retail','xtpos')) ) AS dummy;
-    </query>
-    <message>
-      xTuple Point of Sale is already installed on this database.
     </message>
   </prerequisite>
 
@@ -159,6 +147,8 @@
   <createview file="database/views/api_sale.sql"                name="api_sale" />
   <createview file="database/views/api_saleitem.sql"            name="api_saleitem" />
 
+  <finalscript file="database/misc/setVersion.sql" />
+  
   <loadappscript file="client/scripts/cashRegister.js"       name="cashRegister"       order="0"/>
   <loadappscript file="client/scripts/cashRegisters.js"      name="cashRegisters"      order="0"/>
   <loadappscript file="client/scripts/configureSO.js"        name="configureSO"        order="0"/>
@@ -216,6 +206,7 @@
   <loadmetasql file="client/metasql/salereceipt-detail.mql" />
   <loadmetasql file="client/metasql/salereceipt-payments.mql" />
   <loadmetasql file="client/metasql/salereceipt-totals.mql" />
+  <loadmetasql file="client/metasql/salereceipt-siteinfo.mql" />
   <loadmetasql file="client/metasql/salesearch-defaultdates.mql" />
 
   <loadreport  file="client/reports/detailedregisterhistory.xml" />
@@ -225,3 +216,4 @@
   <loadreport  file="client/reports/retailsitesreport.xml" />
 
 </package>
+

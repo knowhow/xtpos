@@ -45,9 +45,9 @@ AS
     warehous_code AS site,
     terminal_number AS terminal,
     taxzone_code AS tax_zone,
-    coalesce((sum(round(abs(saleitem_qty) * saleitem_unitprice,2))),0) AS subtotal,
+    coalesce((sum(round(abs(saleitem_qty) * saleitem_unitprice_discounted,2))),0) AS subtotal,
     xtpos.saletax(salehead_id) AS tax,
-    coalesce((sum(round((abs(saleitem_qty) * saleitem_unitprice), 2)) + abs(xtpos.saletax(salehead_id))),0) AS total
+    coalesce((sum(round((abs(saleitem_qty) * saleitem_unitprice_discounted), 2)) + abs(xtpos.saletax(salehead_id))),0) AS total
   FROM xtpos.salehead
     JOIN site() ON (salehead_warehous_id=warehous_id)
     JOIN xtpos.terminal ON (salehead_terminal_id=terminal_id)
