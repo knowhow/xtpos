@@ -2,14 +2,14 @@
 -- Name: payments
 -- Notes:
 
-SELECT 0 AS seq, 'Cash:' AS type, '' AS document,
+SELECT 0 AS seq, 'Uplaceno:' AS type, '' AS document,
   formatmoney(salehead_cashamt * -1) AS f_amount
 FROM xtpos.salehead
 WHERE ((salehead_number=CAST(<? value("sale_number") ?> AS text))
 AND (salehead_cashamt > 0))
 
 UNION
-SELECT 0 AS seq, 'Cash Refund:' AS type, '' AS document,
+SELECT 0 AS seq, 'Reklamisano:' AS type, '' AS document,
   formatmoney(salehead_cashamt) AS f_amount
 FROM xtpos.salehead
 WHERE ((salehead_number=CAST(<? value("sale_number") ?> AS text))
@@ -29,7 +29,7 @@ WHERE ((salehead_number=CAST(<? value("sale_number") ?> AS text))
 AND (ccpay_amount > 0))
 
 UNION
-SELECT 3 AS seq, 'Check:' AS type, salehead_checknumber AS document,
+SELECT 3 AS seq, 'Cek:' AS type, salehead_checknumber AS document,
   formatmoney(salehead_checkamt * -1) AS f_amount
 FROM xtpos.salehead
 WHERE (salehead_number=CAST(<? value("sale_number") ?> AS text)
@@ -44,7 +44,7 @@ AND (salehead_closed))
 
 UNION
 SELECT seq, type, document, f_amount
-FROM (SELECT 5 AS seq, 'Change:'::text AS type, ''::text AS document,
+FROM (SELECT 5 AS seq, 'Vraceno:'::text AS type, ''::text AS document,
       formatmoney(MAX(salehead_cashamt) + MAX(salehead_checkamt) + 
       (MAX(COALESCE(ccpay_amount,0)) *
                         CASE WHEN (<? value("type") ?> = 'Return') THEN -1
