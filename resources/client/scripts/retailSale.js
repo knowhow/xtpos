@@ -15,8 +15,9 @@ var _upcCol     = 3;
 var _descripCol = 4;
 var _qtyCol     = 5;
 var _priceCol   = 6;
-var _extendCol  = 7;
-var _taxCol     = 8;
+var _discCol    = 7;
+var _extendCol  = 8;
+var _taxCol     = 9;
 
 var _linenumber = 1;
 var _populating = false;
@@ -85,6 +86,10 @@ with (_saleitems)
 
 _terminal.populate("SELECT terminal_id, terminal_number, terminal_number"
                  + " FROM xtpos.terminal;");
+
+var msg = "poceo sa izvrsenjem retailSale.js";
+toolbox.messageBox("critical", mywindow, mywindow.windowTitle, msg);
+
 
 // Define connections
 _add.clicked.connect(add);
@@ -677,6 +682,7 @@ function receiptSearch()
         setValue(i,_descripCol,data.value("description"));
         setValue(i,_qtyCol,0);
         setValue(i,_priceCol,data.value("price"));
+        setValue(i,_discCol,data.value("discount"));
         setValue(i,_extendCol,data.value("extension"));
         setValue(i,_taxCol,0);
       }
@@ -903,3 +909,10 @@ function notesChanged()
 {
   _notes2.plainText = _notes.plainText;
 }
+
+msg = "zavrsio sa izvrsenjem retailSale.js";
+toolbox.messageBox("critical", mywindow, mywindow.windowTitle, msg);
+
+
+
+

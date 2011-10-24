@@ -69,3 +69,15 @@ COMMENT ON COLUMN xtpos.saleitem.saleitem_invhist_id IS 'Internal id of the inve
 $$) 
 WHERE (u2.knowhow_package_version('xtpos') < 30703);
 
+
+-- if version 3.7.4
+SELECT u2.execute($$
+
+-- add discount to saleitem table
+ALTER TABLE xtpos.saleitem
+            ADD saleitem_discount numeric DEFAULT 0;
+
+$$) 
+WHERE (u2.knowhow_package_version('xtpos') < 30705);
+
+

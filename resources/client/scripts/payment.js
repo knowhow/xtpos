@@ -404,4 +404,8 @@ function set(input)
       _cashAmount.localValue = _total.localValue - _creditAmount.localValue;
     }
   }
-}
+};
+
+
+
+

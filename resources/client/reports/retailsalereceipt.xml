@@ -161,7 +161,7 @@
     <field>
      <rect>
       <x>630.667</x>
-      <y>52.2</y>
+      <y>12.2</y>
       <width>116</width>
       <height>18.8</height>
      </rect>
@@ -180,7 +180,7 @@
     <label>
      <rect>
       <x>550.667</x>
-      <y>75.3</y>
+      <y>35.3</y>
       <width>57.3333</width>
       <height>15</height>
      </rect>
@@ -196,7 +196,7 @@
     <field>
      <rect>
       <x>618</x>
-      <y>75.3</y>
+      <y>35.3</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -215,7 +215,7 @@
     <label>
      <rect>
       <x>564</x>
-      <y>89.5</y>
+      <y>49.5</y>
       <width>44</width>
       <height>15</height>
      </rect>
@@ -231,7 +231,7 @@
     <label>
      <rect>
       <x>518.482</x>
-      <y>104.79</y>
+      <y>64.7903</y>
       <width>89.3333</width>
       <height>15</height>
      </rect>
@@ -247,7 +247,7 @@
     <field>
      <rect>
       <x>618</x>
-      <y>105</y>
+      <y>65</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -266,7 +266,7 @@
     <field>
      <rect>
       <x>618</x>
-      <y>89.5</y>
+      <y>49.5</y>
       <width>125</width>
       <height>15</height>
      </rect>
@@ -533,7 +533,7 @@
     <field>
      <rect>
       <x>408</x>
-      <y>53</y>
+      <y>13</y>
       <width>190</width>
       <height>18.8</height>
      </rect>
@@ -552,7 +552,7 @@
     <label>
      <rect>
       <x>604</x>
-      <y>52.7</y>
+      <y>12.7</y>
       <width>24.6333</width>
       <height>18.8</height>
      </rect>
@@ -628,6 +628,22 @@
      <hcenter/>
      <vcenter/>
      <string>Cijena sa PDV</string>
+    </label>
+    <label>
+     <rect>
+      <x>498.333</x>
+      <y>82.5</y>
+      <width>109.967</width>
+      <height>15</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>normal</weight>
+     </font>
+     <right/>
+     <vcenter/>
+     <string>Broj fiskalnog racuna:</string>
     </label>
    </head>
    <foot>
@@ -939,9 +955,9 @@
    </field>
    <field>
     <rect>
-     <x>535</x>
+     <x>485</x>
      <y>0</y>
-     <width>100</width>
+     <width>150</width>
      <height>15</height>
     </rect>
     <font>
@@ -986,9 +1002,9 @@
    </field>
    <field>
     <rect>
-     <x>535</x>
+     <x>491.667</x>
      <y>0</y>
-     <width>100</width>
+     <width>143.333</width>
      <height>15</height>
     </rect>
     <font>
