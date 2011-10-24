@@ -108,11 +108,11 @@ function printReceipt()
 {
   params = new Object();
   params.sale_number = _sales.id();
-  params.sale_receipt = "Sale Receipt";
-  params.return_receipt = "Return Receipt";
-  params.quote_receipt = "Quotation";
-  params.sale_proposal = "Sale Proposal";
-  params.return_proposal = "Return Proposal";
+  params.sale_receipt = "Racun";
+  params.return_receipt = "Reklamirani racun";
+  params.quote_receipt = "Quote receipt";
+  params.sale_proposal = "Ponuda";
+  params.return_proposal = "Reklamirana ponuda";
   toolbox.printReport("RetailSaleReceipt",params);
 }
 

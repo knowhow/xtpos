@@ -295,8 +295,8 @@ function printReceipt(number)
 
   var params = new Object();
   params.sale_number    = number;
-  params.sale_receipt   = "Sale Receipt";
-  params.return_receipt = "Return Receipt";
+  params.sale_receipt   = "Racun";
+  params.return_receipt = "Reklamirani racun";
   params.type           = _type;
   if (_creditGroup.checked)
     params.cclast4      = _creditCardNumber.text.slice(-4);
@@ -404,4 +404,8 @@ function set(input)
       _cashAmount.localValue = _total.localValue - _creditAmount.localValue;
     }
   }
-}
+};
+
+
+
+
