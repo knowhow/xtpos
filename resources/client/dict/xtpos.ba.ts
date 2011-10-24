@@ -6,27 +6,27 @@
     <message>
         <location filename="../scripts/cashRegister.js" line="53"/>
         <source>Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Broj</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="54"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="55"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatvoren</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="56"/>
         <source>Cust#</source>
-        <translation type="unfinished"></translation>
+        <translation>Kupac#</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="57"/>
         <source>Contact#</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontakt#</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="58"/>
@@ -359,27 +359,27 @@
     <message>
         <location filename="../uiforms/cashRegisters.ui" line="14"/>
         <source>Cash Registers</source>
-        <translation type="unfinished">Maloprodajne kase</translation>
+        <translation>Maloprodajne kase</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegisters.ui" line="38"/>
         <source>&amp;Close</source>
-        <translation type="unfinished">Zatvori</translation>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegisters.ui" line="49"/>
         <source>Cash Register Terminals:</source>
-        <translation type="unfinished">Kase:</translation>
+        <translation>Kase:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegisters.ui" line="78"/>
         <source>&amp;Use</source>
-        <translation type="unfinished">Koristi</translation>
+        <translation>&amp;Koristi</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegisters.ui" line="88"/>
         <source>&amp;View</source>
-        <translation type="unfinished">Pregled</translation>
+        <translation>&amp;Pregled</translation>
     </message>
 </context>
 <context>
@@ -387,7 +387,7 @@
     <message>
         <location filename="../uiforms/configureRetail.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <location filename="../uiforms/configureRetail.ui" line="28"/>
@@ -417,7 +417,7 @@
     <message>
         <location filename="../uiforms/configureRetail.ui" line="125"/>
         <source>Customer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kupac</translation>
     </message>
 </context>
 <context>
@@ -1060,7 +1060,7 @@
     <message>
         <location filename="../scripts/retailSite.js" line="80"/>
         <source>Terminal </source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="80"/>
@@ -1268,12 +1268,13 @@
     <message>
         <location filename="../scripts/setup.js" line="8"/>
         <source>Retail Sites</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A termina  ćemo prevoditi kao prodajno mjesto</translatorcomment>
+        <translation type="unfinished">Prodajni objekti</translation>
     </message>
     <message>
         <location filename="../scripts/setup.js" line="13"/>
         <source>Retail Site</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prodajni objekat</translation>
     </message>
 </context>
 </TS>
