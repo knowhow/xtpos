@@ -13,7 +13,7 @@ to be bound by its terms.</comment>
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>845</width>
+    <width>848</width>
     <height>600</height>
    </rect>
   </property>
@@ -126,7 +126,7 @@ to be bound by its terms.</comment>
       <item row="1" column="0">
        <widget class="QTabWidget" name="_tab">
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="_custTab">
          <attribute name="title">
@@ -463,7 +463,7 @@ to be bound by its terms.</comment>
                     </property>
                    </widget>
                   </item>
-                  <item row="2" column="0">
+                  <item row="3" column="0">
                    <widget class="QLabel" name="_extendedPriceLit">
                     <property name="text">
                      <string>Extended:</string>
@@ -515,7 +515,7 @@ to be bound by its terms.</comment>
                     </item>
                    </layout>
                   </item>
-                  <item row="2" column="1">
+                  <item row="3" column="1">
                    <layout class="QHBoxLayout" name="horizontalLayout_4">
                     <item>
                      <widget class="CurrCluster" name="_extendedPrice">
@@ -544,6 +544,43 @@ to be bound by its terms.</comment>
                     </item>
                     <item>
                      <spacer name="horizontalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="_discLit">
+                    <property name="text">
+                     <string>Discount:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                    <item>
+                     <widget class="XLineEdit" name="_discount">
+                      <property name="fieldName">
+                       <string>discount</string>
+                      </property>
+                      <property name="defaultText">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_7">
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
                       </property>

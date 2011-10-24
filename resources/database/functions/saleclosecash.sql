@@ -7,7 +7,7 @@ DECLARE
   
 BEGIN  
   -- Sum sale and fetch register history record to bind sale to
-  SELECT sum(round(saleitem_qty * saleitem_unitprice, 2)) + xtpos.saletax(salehead_id) AS saleamt,
+  SELECT sum(round(saleitem_qty * saleitem_unitprice_discounted, 2)) + xtpos.saletax(salehead_id) AS saleamt,
     reghist_id, salehead_closed, salehead_type INTO _rec
   FROM xtpos.salehead
    JOIN xtpos.saleitem ON (salehead_id=saleitem_salehead_id)

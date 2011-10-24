@@ -5,11 +5,19 @@
 SELECT salehead_number, formatdatetime(salehead_time) AS f_time, 
   salehead_notes, terminal_number, warehous_code, salesrep_number, 
   cust_number, saleitem_linenumber, item_number, item_upccode,
-  item_descrip1, formatqty(abs(saleitem_qty)) AS f_qty, 
+  item_descrip1, uo.uom_name AS item_uom, formatqty(abs(saleitem_qty)) AS f_qty,
+  saleitem_discount AS f_discount, 
   formatsalesprice(saleitem_unitprice) AS f_price,
-  formatmoney(round(saleitem_unitprice * abs(saleitem_qty),2)) AS f_extended,
+  formatsalesprice(saleitem_unitprice_discounted) AS f_price_discounted,
+  formatmoney(round(saleitem_unitprice_discounted * abs(saleitem_qty),2)) AS f_extended,
+  taxhist_percent * 100 AS f_tax_percent,
+  round(taxhist_tax,2) AS f_tax,
+  formatsalesprice(saleitem_unitprice_discounted + taxhist_tax) AS f_price_with_tax,
+  formatmoney(round((saleitem_unitprice_discounted * abs(saleitem_qty)) + taxhist_tax, 2)) AS f_total,
   cntct_first_name || ' ' || cntct_last_name AS f_name,
   cntct_phone, formataddr(addr_id) AS f_address,
+  c1.value as id_number,
+  c2.value as pdv_number,
   warehous_descrip AS f_company_name,
   CASE 
     WHEN (salehead_type = 'S' AND salehead_closed) THEN
@@ -30,10 +38,14 @@ SELECT salehead_number, formatdatetime(salehead_time) AS f_time,
 FROM xtpos.salehead
   JOIN xtpos.terminal ON (salehead_terminal_id=terminal_id)
   JOIN xtpos.saleitem ON (salehead_id=saleitem_salehead_id)
+  JOIN xtpos.saleitemtax ON (saleitem_id = taxhist_parent_id)
   JOIN itemsite ON (saleitem_itemsite_id=itemsite_id)
   JOIN item ON (itemsite_item_id=item_id)
+  JOIN uom uo ON (item_price_uom_id = uo.uom_id)
   JOIN whsinfo ON (salehead_warehous_id=warehous_id)
   JOIN custinfo ON (salehead_cust_id=cust_id)
+  JOIN api.custchar c1 ON cust_number = c1.customer_number AND c1.characteristic = 'Partner ID broj'
+  JOIN api.custchar c2 ON cust_number = c2.customer_number AND c2.characteristic = 'Partner PDV broj'
   LEFT OUTER JOIN salesrep ON (salehead_salesrep_id=salesrep_id)
   LEFT OUTER JOIN cntct ON (cust_cntct_id=cntct_id)
   LEFT OUTER JOIN addr ON (cntct_addr_id=addr_id)

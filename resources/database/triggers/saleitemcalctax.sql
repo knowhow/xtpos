@@ -6,7 +6,7 @@ BEGIN
                             NEW.saleitem_taxtype_id,
                             COALESCE(salehead_time::date, CURRENT_DATE),
                             basecurrid(),
-                            NEW.saleitem_unitprice * NEW.saleitem_qty)
+                            NEW.saleitem_unitprice_discounted * NEW.saleitem_qty)
   FROM xtpos.salehead 
   WHERE (salehead_id=NEW.saleitem_salehead_id);
 
@@ -16,3 +16,5 @@ $$ LANGUAGE 'plpgsql';
 
 SELECT dropIfExists('TRIGGER', 'saleitemCalcTax','xtpos');
 CREATE TRIGGER saleitemCalcTax AFTER INSERT OR UPDATE ON xtpos.saleitem FOR EACH ROW EXECUTE PROCEDURE xtpos.saleitemCalcTax();
+
+
