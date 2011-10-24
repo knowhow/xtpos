@@ -81,3 +81,13 @@ $$)
 WHERE (u2.knowhow_package_version('xtpos') < 30705);
 
 
+SELECT u2.execute($$
+
+-- add unitprice_discounted to saleitem table
+ALTER TABLE xtpos.saleitem
+            ADD saleitem_unitprice_discounted numeric DEFAULT 0;
+
+$$) 
+WHERE (u2.knowhow_package_version('xtpos') < 30706);
+
+

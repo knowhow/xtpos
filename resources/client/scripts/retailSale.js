@@ -67,6 +67,7 @@ var _type               = mywindow.findChild("_type");
 var _unitPrice          = mywindow.findChild("_unitPrice");
 var _notes              = mywindow.findChild("_notes");
 var _notes2             = mywindow.findChild("_notes2");
+var _discount          = mywindow.findChild("_discount");
 
 _notes.visible = false;
 _notes.textChanged.connect(notesChanged);
@@ -80,15 +81,13 @@ with (_saleitems)
   setColumn("Description"       , -1 , 0, true, "description");
   setColumn("Quantity"          , 80 , 0, true, "qty");
   setColumn("Price"             , 60 , 0, true, "price");
+  setColumn("Discount"          , 60 , 0, true, "discount");
   setColumn("Extended"          , 100, 0, true, "extension");
   setColumn("Tax"       , 60 , 0, true,"tax");
 }
 
 _terminal.populate("SELECT terminal_id, terminal_number, terminal_number"
                  + " FROM xtpos.terminal;");
-
-var msg = "poceo sa izvrsenjem retailSale.js";
-toolbox.messageBox("critical", mywindow, mywindow.windowTitle, msg);
 
 
 // Define connections
@@ -108,6 +107,7 @@ _new.clicked.connect(customerNew);
 _payment.clicked.connect(payment);
 _qty.editingFinished.connect(itemPrice);
 _qty.editingFinished.connect(extension);
+_discount.editingFinished.connect(extension);
 _receiptSearch.clicked.connect(receiptSearch);
 _remove.clicked.connect(remove);
 _saleitems.rowSelected.connect(rowSelected);
@@ -135,6 +135,7 @@ _saleitem["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_extendedPrice["set
 _saleitem["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_item["setDataWidgetMap(XDataWidgetMapper*)"]);
 _saleitem["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_qty["setDataWidgetMap(XDataWidgetMapper*)"]);
 _saleitem["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_unitPrice["setDataWidgetMap(XDataWidgetMapper*)"]);
+_saleitem["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_discount["setDataWidgetMap(XDataWidgetMapper*)"]);
 _saleitems["newModel(XSqlTableModel*)"].connect(_saleitem["setModel(XSqlTableModel*)"]);
 _sale["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_cust["setDataWidgetMap(XDataWidgetMapper*)"]);
 _sale["newDataWidgetMapper(XDataWidgetMapper*)"].connect(_salesrep["setDataWidgetMap(XDataWidgetMapper*)"]);
@@ -283,10 +284,16 @@ function extension()
   {
     // Update item extension
     var ext = _qty.text * _unitPrice.localValue;
+    
+    if ( _discount.text != '' && _discount.text != '0' ) {
+	     var discnt = _unitPrice.localValue * ( _discount.text / 100 );
+         ext = _qty.text * ( _unitPrice.localValue - discnt );
+    };
+
     _extendedPrice.setLocalValue(ext);
 
     // Recalculate Tax
-    var params = new Object;
+    var params = new Object ;
     params.item_number = _item.number;
     params.extension    = ext;
     params.sale_date    = _date.date;
@@ -304,8 +311,8 @@ function extension()
     {
       if (!_saleitems.isRowHidden(row))
       {
-        hsub += _saleitems.value(row, _qtyCol) *                
-                _saleitems.value(row, _priceCol);
+        // subtotal, calculated by the extended value
+        hsub += _saleitems.value(row, _extendCol);                
         htax += _saleitems.value(row, _taxCol) - 0;
       }
       row++;
@@ -481,6 +488,8 @@ function payment()
     _saleitems.selectRow(idx);
   }
 
+  toolbox.messageBox("critical", mywindow, mywindow.windowTitle, _subtotal.localValue);
+  
   var childwnd = toolbox.openWindow("payment", mywindow, Qt.ApplicationModal);
   var params   = new Object;
   params.cust_id        = _cust.id();
@@ -910,8 +919,8 @@ function notesChanged()
   _notes2.plainText = _notes.plainText;
 }
 
-msg = "zavrsio sa izvrsenjem retailSale.js";
-toolbox.messageBox("critical", mywindow, mywindow.windowTitle, msg);
+// debug msg
+//toolbox.messageBox("critical", mywindow, mywindow.windowTitle, "zavrsio retailsale.js");
 
 
 

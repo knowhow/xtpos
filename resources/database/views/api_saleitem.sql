@@ -82,7 +82,7 @@ WHERE (u2.knowhow_package_version('xtpos') < 30703);
 
 
 
--- if version 3.7.5
+-- if version 3.7.6
 
 SELECT u2.execute($$
 
@@ -99,7 +99,7 @@ AS
     abs(saleitem_qty) AS qty,
     round(saleitem_unitprice,2) AS price,
     saleitem_discount AS discount,
-    round(abs(saleitem_qty) * saleitem_unitprice,2) AS extension,
+    round(abs(saleitem_qty) * saleitem_unitprice_discounted,2) AS extension,
     abs(round(coalesce(sum(taxhist_tax),0),2)) AS tax
   FROM xtpos.saleitem 
     JOIN xtpos.salehead ON (salehead_id=saleitem_salehead_id)
@@ -107,7 +107,7 @@ AS
     JOIN item ON (item_id=itemsite_item_id)
     LEFT OUTER JOIN xtpos.saleitemtax ON (saleitem_id=taxhist_parent_id)
   GROUP BY salehead_number,saleitem_linenumber,item_number,
-    item_upccode, item_descrip1,saleitem_qty,saleitem_discount,saleitem_unitprice,
+    item_upccode, item_descrip1,saleitem_qty,saleitem_discount,saleitem_unitprice,saleitem_unitprice_discounted,
     saleitem_qty
   ORDER BY salehead_number, line_number;
 
@@ -125,7 +125,8 @@ CREATE OR REPLACE RULE "_INSERT" AS
     saleitem_itemsite_id,
     saleitem_qty,
     saleitem_unitprice,
-    saleitem_discount )
+    saleitem_discount,
+    saleitem_unitprice_discounted )
   VALUES (
     xtpos.getSaleheadId(NEW.sale_number),
     NEW.line_number,
@@ -138,7 +139,11 @@ CREATE OR REPLACE RULE "_INSERT" AS
       AND (itemsite_warehous_id=salehead_warehous_id))),
     COALESCE(NEW.qty,1),
     NEW.price,
-    NEW.discount);
+    NEW.discount,
+    CASE 
+      WHEN NEW.discount <> 0 THEN NEW.price - (NEW.price * (NEW.discount / 100)) ELSE NEW.price
+    END
+    );
 
 CREATE OR REPLACE RULE "_UPDATE" AS 
     ON UPDATE TO xtpos.api_saleitem DO INSTEAD
@@ -155,7 +160,10 @@ CREATE OR REPLACE RULE "_UPDATE" AS
       AND (itemsite_warehous_id=salehead_warehous_id))),
     saleitem_qty=NEW.qty,
     saleitem_unitprice=NEW.price,
-    saleitem_discount=NEW.discount
+    saleitem_discount=NEW.discount,
+    saleitem_unitprice_discounted=(CASE 
+      WHEN NEW.discount <> 0 THEN NEW.price - (NEW.price * (NEW.discount / 100)) ELSE NEW.price
+    END)
   WHERE ((saleitem_salehead_id=xtpos.getSaleheadId(OLD.sale_number))
   AND (saleitem_linenumber=OLD.line_number));
              
@@ -167,7 +175,7 @@ CREATE OR REPLACE RULE "_DELETE" AS
   AND (saleitem_linenumber=OLD.line_number));
   
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') <= 30705);
+WHERE (u2.knowhow_package_version('xtpos') <= 30706);
 
 
 

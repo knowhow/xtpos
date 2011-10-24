@@ -369,7 +369,7 @@
       <x>7.33</x>
       <y>145</y>
       <width>36.7</width>
-      <height>10</height>
+      <height>12</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -385,7 +385,7 @@
       <x>43.3</x>
       <y>145</y>
       <width>100</width>
-      <height>10.7</height>
+      <height>12.0333</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -401,7 +401,7 @@
       <x>122</x>
       <y>145</y>
       <width>161</width>
-      <height>10</height>
+      <height>12</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -415,9 +415,9 @@
     <label>
      <rect>
       <x>401.667</x>
-      <y>146</y>
+      <y>144.667</y>
       <width>50</width>
-      <height>10</height>
+      <height>11.3333</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -431,9 +431,9 @@
     <label>
      <rect>
       <x>470</x>
-      <y>145</y>
+      <y>143.667</y>
       <width>48.6</width>
-      <height>12</height>
+      <height>13.3333</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -447,9 +447,9 @@
     <label>
      <rect>
       <x>650.667</x>
-      <y>145</y>
+      <y>143</y>
       <width>89.3333</width>
-      <height>11.3333</height>
+      <height>13.3333</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -568,9 +568,9 @@
     <label>
      <rect>
       <x>656.667</x>
-      <y>159</y>
+      <y>157.667</y>
       <width>83.3333</width>
-      <height>11.3333</height>
+      <height>12.6666</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -584,9 +584,9 @@
     <label>
      <rect>
       <x>531.667</x>
-      <y>145</y>
+      <y>143.667</y>
       <width>25.9333</width>
-      <height>12</height>
+      <height>13.3333</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -616,9 +616,9 @@
     <label>
      <rect>
       <x>567.667</x>
-      <y>145</y>
+      <y>143.667</y>
       <width>75.9333</width>
-      <height>12</height>
+      <height>13.3333</height>
      </rect>
      <font>
       <face>Arial</face>
@@ -644,6 +644,38 @@
      <right/>
      <vcenter/>
      <string>Broj fiskalnog racuna:</string>
+    </label>
+    <label>
+     <rect>
+      <x>462</x>
+      <y>157</y>
+      <width>56.6</width>
+      <height>13.3333</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>normal</weight>
+     </font>
+     <right/>
+     <vcenter/>
+     <string>Cj.-popust</string>
+    </label>
+    <label>
+     <rect>
+      <x>390</x>
+      <y>158.667</y>
+      <width>60</width>
+      <height>11.3333</height>
+     </rect>
+     <font>
+      <face>Arial</face>
+      <size>8</size>
+      <weight>normal</weight>
+     </font>
+     <right/>
+     <vcenter/>
+     <string>Popust (%)</string>
     </label>
    </head>
    <foot>
@@ -925,6 +957,60 @@
      <column>f_price_with_tax</column>
     </data>
    </field>
+   <field>
+    <rect>
+     <x>466</x>
+     <y>17.9667</y>
+     <width>57.3</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <right/>
+    <vcenter/>
+    <data>
+     <query>detail</query>
+     <column>f_price_discounted</column>
+    </data>
+   </field>
+   <field>
+    <rect>
+     <x>415.667</x>
+     <y>17.9333</y>
+     <width>33.3</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <right/>
+    <vcenter/>
+    <data>
+     <query>detail</query>
+     <column>f_discount</column>
+    </data>
+   </field>
+   <label>
+    <rect>
+     <x>450.333</x>
+     <y>18</y>
+     <width>16.6333</width>
+     <height>15</height>
+    </rect>
+    <font>
+     <face>Arial</face>
+     <size>8</size>
+     <weight>bold</weight>
+    </font>
+    <left/>
+    <vcenter/>
+    <string>%</string>
+   </label>
   </detail>
  </section>
  <section>
