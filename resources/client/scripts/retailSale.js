@@ -488,8 +488,6 @@ function payment()
     _saleitems.selectRow(idx);
   }
 
-  toolbox.messageBox("critical", mywindow, mywindow.windowTitle, _subtotal.localValue);
-  
   var childwnd = toolbox.openWindow("payment", mywindow, Qt.ApplicationModal);
   var params   = new Object;
   params.cust_id        = _cust.id();
