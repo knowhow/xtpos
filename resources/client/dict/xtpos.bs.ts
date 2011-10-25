@@ -804,178 +804,178 @@
     <message>
         <location filename="../scripts/retailSale.js" line="624"/>
         <source>This action will delete all listed items.  Are you sure you want to do this?</source>
-        <translation>Ova operacija briše sve izlistane artikle, jeste li sigurni</translation>
+        <translation>Ova operacija briše sve izlistane artikle, jeste li sigurni?</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="14"/>
         <source>Retail Sale</source>
-        <translation type="unfinished"></translation>
+        <translation>Maloprodaja</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="34"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Broj:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="54"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="68"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatvoren</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="94"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="97"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="110"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spasi</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="113"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="126"/>
         <source>&amp;Customer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kupac</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="163"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Novi</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="173"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ispravka</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="182"/>
         <source>Billing Contact</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontakt za plaćanje</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="284"/>
         <source>&amp;Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Artikli</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="314"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="317"/>
         <source>Return</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrati</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="330"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukloni</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="350"/>
         <source>Receipt Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Broj računa:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="370"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="409"/>
         <source>Qty:</source>
-        <translation type="unfinished"></translation>
+        <translation>Količina:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="427"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="449"/>
         <source>Unit Price:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cijena:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="462"/>
         <source>Extended:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodatno:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="567"/>
         <source>&amp;Detail</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Detalji</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="601"/>
         <location filename="../uiforms/retailSale.ui" line="714"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="662"/>
         <source>Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="672"/>
         <source>Sales Rep:</source>
-        <translation type="unfinished"></translation>
+        <translation>Agent:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="682"/>
         <source>Terminal:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasa:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="692"/>
         <source>Site:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="704"/>
         <source>Tax Zone:</source>
-        <translation type="unfinished"></translation>
+        <translation>Porezna zona:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="791"/>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilješke</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="832"/>
         <source>Subtotal:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="855"/>
         <source>Tax:</source>
-        <translation type="unfinished"></translation>
+        <translation>Porez:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="878"/>
         <source>Total:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="917"/>
         <source>&amp;Payment...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Plaćanje</translation>
     </message>
 </context>
 <context>
@@ -983,67 +983,67 @@
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="13"/>
         <source>Retail Sale Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretraga maloprodaje</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="33"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="39"/>
         <source>Sales</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodaja</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="52"/>
         <source>Quotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponude</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="65"/>
         <source>Returns</source>
-        <translation type="unfinished"></translation>
+        <translation>Povrati</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="78"/>
         <source>Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Period</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="126"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="133"/>
         <source>Query</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretraži</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="149"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberi</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="176"/>
         <source>Search:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretraži:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="230"/>
         <source>Results:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rezultat:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="250"/>
         <source>Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Štampaj</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSaleSearch.ui" line="260"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogled</translation>
     </message>
 </context>
 <context>
@@ -1051,144 +1051,144 @@
     <message>
         <location filename="../scripts/retailSite.js" line="60"/>
         <source>Bank Account </source>
-        <translation type="unfinished"></translation>
+        <translation>Žiro račun</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="60"/>
         <source> is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>nije ispravan.</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="80"/>
         <source>Terminal </source>
-        <translation>Prodajno mjesto</translation>
+        <translation>Kasa</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="80"/>
         <source> already exists on site </source>
-        <translation type="unfinished"></translation>
+        <translation>već postoji na prodajnom mjestu</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="125"/>
         <source>You must select a site.</source>
-        <translation type="unfinished"></translation>
+        <translation>Morate odabrati prodajno mjesto.</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="128"/>
         <source>You must select a valid Asset account.</source>
-        <translation type="unfinished"></translation>
+        <translation>Morate odabrati ispravan žiro račun</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="131"/>
         <source>You must select a valid Adjustment account.</source>
-        <translation type="unfinished"></translation>
+        <translation>Morate odabrati ispravan žiro račun za prenos.</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="134"/>
         <source>You must select a valid Check Clearing account.</source>
-        <translation type="unfinished"></translation>
+        <translation>Morate odabrati ispravan čekovni žiro račun</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="137"/>
         <source>You must add at least one bank account.</source>
-        <translation type="unfinished"></translation>
+        <translation>Morate dodati najmanje jedan žiro račun</translation>
     </message>
     <message>
         <location filename="../scripts/retailSite.js" line="140"/>
         <source>You must add at least one terminal.</source>
-        <translation type="unfinished"></translation>
+        <translation>Morate dodati najmanje jednu kasu.</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="14"/>
         <source>Retail Site</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="33"/>
         <source>Site:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="75"/>
         <source>Tax Zone:</source>
-        <translation type="unfinished"></translation>
+        <translation>Porezna zona:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="116"/>
         <source>Quotes Expire in</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponude istiću za</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="129"/>
         <source>30</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="136"/>
         <source>days</source>
-        <translation type="unfinished"></translation>
+        <translation>dana</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="165"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Otkaži</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="172"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spasi</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="211"/>
         <source>Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Računi</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="217"/>
         <source>Asset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sredstva:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="247"/>
         <source>Adjustment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagodba:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="277"/>
         <source>Check Clearing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Odobri ček:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="308"/>
         <source>Bank Accounts</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiro računi</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="341"/>
         <location filename="../uiforms/retailSite.ui" line="467"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="351"/>
         <location filename="../uiforms/retailSite.ui" line="477"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukloni</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="391"/>
         <source>Bank Account:</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiro račun:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="401"/>
         <source>[ select a bank account ]</source>
-        <translation type="unfinished"></translation>
+        <translation>[odaberi žiro račun]</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSite.ui" line="437"/>
         <source>Terminals</source>
-        <translation type="unfinished"></translation>
+        <translation>Kase</translation>
     </message>
 </context>
 <context>
