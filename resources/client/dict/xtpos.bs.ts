@@ -1196,72 +1196,72 @@
     <message>
         <location filename="../scripts/retailSites.js" line="22"/>
         <source>Site</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto</translation>
     </message>
     <message>
         <location filename="../scripts/retailSites.js" line="23"/>
         <source>Tax Zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Porezna zona</translation>
     </message>
     <message>
         <location filename="../scripts/retailSites.js" line="24"/>
         <source>Quote Days</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponuda dana</translation>
     </message>
     <message>
         <location filename="../scripts/retailSites.js" line="25"/>
         <source>Asset Acct.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sredstva.</translation>
     </message>
     <message>
         <location filename="../scripts/retailSites.js" line="26"/>
         <source>Adjust Acct.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagodba.</translation>
     </message>
     <message>
         <location filename="../scripts/retailSites.js" line="27"/>
         <source>Clearing Acct.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odobrenje.</translation>
     </message>
     <message>
         <location filename="../scripts/retailSites.js" line="48"/>
         <source>Are you sure you want to delete this retail site?</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeste li sigurni da želite obrisati prodajno mjesto?</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSites.ui" line="14"/>
         <source>Retail Sites</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajna mjesta</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSites.ui" line="54"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSites.ui" line="61"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Štampaj</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSites.ui" line="72"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Novi</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSites.ui" line="82"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ispravka</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSites.ui" line="92"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pregled</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSites.ui" line="102"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Briši</translation>
     </message>
 </context>
 <context>
@@ -1270,12 +1270,12 @@
         <location filename="../scripts/setup.js" line="8"/>
         <source>Retail Sites</source>
         <translatorcomment>A termina  ćemo prevoditi kao prodajno mjesto</translatorcomment>
-        <translation type="unfinished">Prodajni objekti</translation>
+        <translation>Prodajna mjesta</translation>
     </message>
     <message>
         <location filename="../scripts/setup.js" line="13"/>
         <source>Retail Site</source>
-        <translation type="unfinished">Prodajni objekat</translation>
+        <translation>Prodajno mjesto</translation>
     </message>
 </context>
 </TS>
