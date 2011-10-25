@@ -31,327 +31,327 @@
     <message>
         <location filename="../scripts/cashRegister.js" line="58"/>
         <source>Hnfc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nadimak</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="59"/>
         <source>First</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="60"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Srednje ime</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="61"/>
         <source>Last</source>
-        <translation type="unfinished"></translation>
+        <translation>Prezime</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="62"/>
         <source>Suffix</source>
-        <translation type="unfinished"></translation>
+        <translation>Sufiks</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="63"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Titula</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="64"/>
         <source>Voice</source>
-        <translation type="unfinished"></translation>
+        <translation>Telefon</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="65"/>
         <source>Alternate</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternativni</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="66"/>
         <source>Fax</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="67"/>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="68"/>
         <source>Web</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="69"/>
         <source>Cont. Change</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="70"/>
         <source>Address#</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresa#</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="71"/>
         <source>Address1</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresa1</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="72"/>
         <source>Address2</source>
-        <translation type="unfinished"></translation>
+        <translation>Asresa2</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="73"/>
         <source>Address3</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresa3</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="74"/>
         <source>City</source>
-        <translation type="unfinished"></translation>
+        <translation>Grad</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="75"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Država</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="76"/>
         <source>Postal</source>
-        <translation type="unfinished"></translation>
+        <translation>Poštanski broj</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="77"/>
         <source>Country</source>
-        <translation type="unfinished"></translation>
+        <translation>Država</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="78"/>
         <source>Addr. Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Promjeni adresu</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="79"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="80"/>
         <source>Sales Rep.</source>
-        <translation type="unfinished"></translation>
+        <translation>Agent</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="81"/>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilješke</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="82"/>
         <source>Site</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="83"/>
         <source>Terminal</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasa</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="84"/>
         <source>Tax Zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Porezna zona</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="85"/>
         <source>Subtotal</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="86"/>
         <source>Tax</source>
-        <translation type="unfinished"></translation>
+        <translation>Porez</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="87"/>
         <source>Total</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="283"/>
         <source>Database Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška sa bazom</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="284"/>
         <source>Could not initialize printing system for multiple reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Problem sa inicijalizacijom printera</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="14"/>
         <source>Cash Register</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasa</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="34"/>
         <source>Site:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="51"/>
         <source>Terminal:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasa</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="68"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivna</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="97"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="110"/>
         <source>Sales</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodaja</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="133"/>
         <source>Pending Sales:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodaje u toku</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="165"/>
         <source>Print</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="191"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Novi</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="201"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ispravka</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="211"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pregled</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="221"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Briši</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="247"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretraži</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="313"/>
         <source>Maintain</source>
-        <translation type="unfinished"></translation>
+        <translation>Održavanje</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="321"/>
         <source>Opened:</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvoreni:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="354"/>
         <source>Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Opcija:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="386"/>
         <source>&amp;Post</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Postiraj</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="413"/>
         <source>Opening Balance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Početno stanje:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="436"/>
         <source>Cash Sales:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gotovinska prodaja:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="462"/>
         <source>Current Balance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trenutno stanje:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="488"/>
         <source>Credit Card Sales</source>
-        <translation type="unfinished"></translation>
+        <translation>Kartična prodaja</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="514"/>
         <source>Total Sales:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukupna prodaja:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="540"/>
         <source>Check Sales:</source>
-        <translation type="unfinished"></translation>
+        <translation>Čekovna prodaja:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="586"/>
         <source>Bank Transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>Bankovni prenos</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="592"/>
         <source>Account:</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiro račun:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="626"/>
         <source> Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>Iznos:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="664"/>
         <source>Deposit Checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Polog čekova</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="695"/>
         <source>Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagodba</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="704"/>
         <source>Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>Iznos:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="762"/>
         <source>New Balance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Novo stanje:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="802"/>
         <source>Notes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilješke:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="829"/>
         <source>Print Receipt</source>
-        <translation type="unfinished"></translation>
+        <translation>Štampaj račun</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="852"/>
         <source>Options...</source>
-        <translation type="unfinished"></translation>
+        <translation>Opcije...</translation>
     </message>
 </context>
 <context>
@@ -392,27 +392,27 @@
     <message>
         <location filename="../uiforms/configureRetail.ui" line="28"/>
         <source>Next Retail Sale #:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nova prodaja#:</translation>
     </message>
     <message>
         <location filename="../uiforms/configureRetail.ui" line="56"/>
         <source>Default Customer for Retail Sales</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaultni kupac </translation>
     </message>
     <message>
         <location filename="../uiforms/configureRetail.ui" line="94"/>
         <source>Disable Choosing Customer at Cash Register</source>
-        <translation type="unfinished"></translation>
+        <translation>Isključi unos kupca kod prodaje</translation>
     </message>
     <message>
         <location filename="../uiforms/configureRetail.ui" line="104"/>
         <source>Tax Zone Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Porezna zona</translation>
     </message>
     <message>
         <location filename="../uiforms/configureRetail.ui" line="115"/>
         <source>Site</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodajno mjesto</translation>
     </message>
     <message>
         <location filename="../uiforms/configureRetail.ui" line="125"/>
@@ -425,37 +425,37 @@
     <message>
         <location filename="../uiforms/dspDetailedRegisterHistory.ui" line="21"/>
         <source>Detailed Register History</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregled prodaje</translation>
     </message>
     <message>
         <location filename="../uiforms/dspDetailedRegisterHistory.ui" line="46"/>
         <source>All Terminals</source>
-        <translation type="unfinished"></translation>
+        <translation>Sve Kase</translation>
     </message>
     <message>
         <location filename="../uiforms/dspDetailedRegisterHistory.ui" line="56"/>
         <source>Selected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Odabrane:</translation>
     </message>
     <message>
         <location filename="../uiforms/dspDetailedRegisterHistory.ui" line="122"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <location filename="../uiforms/dspDetailedRegisterHistory.ui" line="132"/>
         <source>Query</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretraži</translation>
     </message>
     <message>
         <location filename="../uiforms/dspDetailedRegisterHistory.ui" line="142"/>
         <source>Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Štampaj</translation>
     </message>
     <message>
         <location filename="../uiforms/dspDetailedRegisterHistory.ui" line="192"/>
         <source>Results:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rezultat:</translation>
     </message>
 </context>
 <context>
@@ -463,32 +463,32 @@
     <message>
         <location filename="../uiforms/dspRegisterHistory.ui" line="14"/>
         <source>Register History</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregled prodaje</translation>
     </message>
     <message>
         <location filename="../uiforms/dspRegisterHistory.ui" line="54"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <location filename="../uiforms/dspRegisterHistory.ui" line="61"/>
         <source>&amp;Query</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pretraži</translation>
     </message>
     <message>
         <location filename="../uiforms/dspRegisterHistory.ui" line="68"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Štampaj</translation>
     </message>
     <message>
         <location filename="../uiforms/dspRegisterHistory.ui" line="116"/>
         <source>Register Posting Detail</source>
-        <translation type="unfinished"></translation>
+        <translation>Detalji prodaje</translation>
     </message>
     <message>
         <location filename="../uiforms/dspRegisterHistory.ui" line="146"/>
         <source>Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Štampaj</translation>
     </message>
 </context>
 <context>
@@ -497,17 +497,17 @@
         <location filename="../scripts/initMenu.js" line="5"/>
         <location filename="../scripts/initMenu.js" line="22"/>
         <source>Initialize xtpos failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Incijalizacija POS-a nije uspjela</translation>
     </message>
     <message>
         <location filename="../scripts/initMenu.js" line="6"/>
         <source>Failed to initialize the xtpos package. This functionality may not work correctly. </source>
-        <translation type="unfinished"></translation>
+        <translation>Problem sa inicijalizacijom POS-a.</translation>
     </message>
     <message>
         <location filename="../scripts/initMenu.js" line="23"/>
         <source>Failed to initialize the xtpos package. This functionality may not work correctly. %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Problem sa inicijalizacijom POS-a%1</translation>
     </message>
 </context>
 <context>
@@ -515,254 +515,255 @@
     <message>
         <location filename="../scripts/payment.js" line="281"/>
         <source>Database Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška baze podataka</translation>
     </message>
     <message>
         <location filename="../scripts/payment.js" line="282"/>
         <source>Could not initialize printing system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Problem sa inicijalizacijom printera</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="14"/>
         <source>Payment</source>
-        <translation type="unfinished"></translation>
+        <translation>Plaćanje</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="53"/>
         <source>Subtotal:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="63"/>
         <source>Tax:</source>
-        <translation type="unfinished"></translation>
+        <translation>Porez:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="73"/>
         <source>Total:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="145"/>
         <source>Cash</source>
-        <translation type="unfinished"></translation>
+        <translation>Gotovona</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="151"/>
         <location filename="../uiforms/payment.ui" line="202"/>
         <location filename="../uiforms/payment.ui" line="498"/>
         <source>Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>Iznos:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="190"/>
         <source>Credit Card</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreditna kartica</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="222"/>
         <source>Credit Card Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip kartice:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="236"/>
         <source>Master Card</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="241"/>
         <source>Visa</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="246"/>
         <source>American Express</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="251"/>
         <source>Discover</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="265"/>
         <source>Expiration Month:</source>
-        <translation type="unfinished"></translation>
+        <translation>Važi do:(mjesec):</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="284"/>
         <source>01</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="289"/>
         <source>02</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="294"/>
         <source>03</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="299"/>
         <source>04</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="304"/>
         <source>05</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="309"/>
         <source>06</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="314"/>
         <source>07</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="319"/>
         <source>08</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="324"/>
         <source>09</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="329"/>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="334"/>
         <source>11</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="339"/>
         <source>12</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="347"/>
         <source> Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Broj:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="369"/>
         <source>Expiration Year:</source>
-        <translation type="unfinished"></translation>
+        <translation>Važi do (godina):</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="385"/>
         <source>2009</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="390"/>
         <source>2010</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="395"/>
         <source>2011</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="400"/>
         <source>2012</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="405"/>
         <source>2013</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="410"/>
         <source>2014</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="415"/>
         <source>2015</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="420"/>
         <source>2016</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="425"/>
         <source>2017</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="430"/>
         <source>2018</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="435"/>
         <source>2019</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="440"/>
         <source>2020</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="448"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="461"/>
         <source>CVV:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Credit Card Code</translatorcomment>
+        <translation>CVV broj kartice:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="484"/>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Ček</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="515"/>
         <source>Document #:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument #:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="578"/>
         <source>Change Due:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kusur:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="640"/>
         <source>Balance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stanje:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="647"/>
         <source>Paid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Plaćeno:</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="698"/>
         <source>Print Receipt</source>
-        <translation type="unfinished"></translation>
+        <translation>Štampaj račun</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="724"/>
         <source>Options...</source>
-        <translation type="unfinished"></translation>
+        <translation>Opcije...</translation>
     </message>
 </context>
 <context>
@@ -770,32 +771,32 @@
     <message>
         <location filename="../uiforms/retailCustomer.ui" line="19"/>
         <source>Cash Register</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasa</translation>
     </message>
     <message>
         <location filename="../uiforms/retailCustomer.ui" line="46"/>
         <source>Customer #:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kupac #:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailCustomer.ui" line="82"/>
         <source>Customer Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naziv kupca:</translation>
     </message>
     <message>
         <location filename="../uiforms/retailCustomer.ui" line="103"/>
         <source>Billing Contact</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontakt za plaćanje</translation>
     </message>
     <message>
         <location filename="../uiforms/retailCustomer.ui" line="202"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../uiforms/retailCustomer.ui" line="209"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Uredu</translation>
     </message>
 </context>
 <context>
@@ -803,7 +804,7 @@
     <message>
         <location filename="../scripts/retailSale.js" line="624"/>
         <source>This action will delete all listed items.  Are you sure you want to do this?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ova operacija briše sve izlistane artikle, jeste li sigurni</translation>
     </message>
     <message>
         <location filename="../uiforms/retailSale.ui" line="14"/>
