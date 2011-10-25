@@ -89,6 +89,8 @@ with (_saleitems)
 _terminal.populate("SELECT terminal_id, terminal_number, terminal_number"
                  + " FROM xtpos.terminal;");
 
+// allow discount based on privileges
+_discount.enabled = privileges.value("AllowSalesDiscount");
 
 // Define connections
 _add.clicked.connect(add);
