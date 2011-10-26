@@ -57,7 +57,7 @@
  <loadpriv      name="MaintainRetailSites" module="Sales">
    Allowed to maintain Retail Sites
  </loadpriv>
- <loadpriv      name="AllowSalesDiscount" module="Sales">
+ <loadpriv      name="AllowRetailSalesDiscount" module="Sales">
    Allowed to maintain discount at sales
  </loadpriv>
 
