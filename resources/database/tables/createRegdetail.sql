@@ -64,6 +64,6 @@ COMMENT ON COLUMN xtpos.regdetail.regdetail_notes IS 'Cash register detail notes
 COMMENT ON COLUMN xtpos.regdetail.regdetail_journalnumber IS 'The journal number used to record changes to the G/L for this transaction';
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 
 

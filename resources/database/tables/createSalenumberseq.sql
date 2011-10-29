@@ -36,5 +36,5 @@ CREATE SEQUENCE xtpos.sale_number_seq
 GRANT ALL ON xtpos.sale_number_seq TO xtrole;
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 

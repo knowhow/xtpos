@@ -43,5 +43,5 @@ COMMENT ON COLUMN xtpos.rtlsiteterm.rtlsiteterm_rtlsite_id IS 'Internal id of th
 COMMENT ON COLUMN xtpos.rtlsiteterm.rtlsiteterm_terminal_id IS 'Internal id of the Cash Register Terminal';
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 

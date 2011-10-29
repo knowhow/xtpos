@@ -58,5 +58,5 @@ COMMENT ON COLUMN xtpos.reghist.reghist_close_time IS 'Time this cash register w
 ALTER TABLE xtpos.reghist DROP CONSTRAINT reghist_reghist_taxauth_id_fkey;
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 

@@ -67,10 +67,10 @@ COMMENT ON COLUMN xtpos.saleitem.saleitem_taxtype_id IS 'The type of tax that wa
 COMMENT ON COLUMN xtpos.saleitem.saleitem_invhist_id IS 'Internal id of the inventory history record recording the sale of this line itemi';
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 
 
--- if version 3.7.4
+-- if version 3.7.5
 SELECT u2.execute($$
 
 -- add discount to saleitem table

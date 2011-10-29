@@ -40,5 +40,5 @@ COMMENT ON COLUMN xtpos.terminal.terminal_id IS 'Terminal internal id and primar
 COMMENT ON COLUMN xtpos.terminal.terminal_number IS 'A human-readable short name for this cash register terminal, which must be unique for this database. If one database is shared by multiple stores, terminal numbers could include a prefix or suffix that distinguishes between those different stores.';
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 

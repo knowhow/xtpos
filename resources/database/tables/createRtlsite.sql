@@ -51,5 +51,5 @@ ALTER TABLE xtpos.rtlsite ADD COLUMN rtlsite_taxzone_id INTEGER REFERENCES taxzo
 COMMENT ON COLUMN xtpos.rtlsite.rtlsite_taxzone_id IS 'Internal id of the tax zone applied to this Retail Site';
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 

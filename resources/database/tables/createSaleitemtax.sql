@@ -40,5 +40,5 @@ GRANT ALL ON TABLE xtpos.saleitemtax TO "admin";
 GRANT ALL ON TABLE xtpos.saleitemtax TO xtrole;
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 

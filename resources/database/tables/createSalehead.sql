@@ -72,6 +72,6 @@ ALTER TABLE xtpos.salehead ADD COLUMN salehead_taxzone_id integer REFERENCES tax
 COMMENT ON COLUMN xtpos.salehead.salehead_taxzone_id IS 'Internal id for the tax zone applied';
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 
 

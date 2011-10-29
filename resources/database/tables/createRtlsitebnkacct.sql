@@ -46,5 +46,5 @@ COMMENT ON COLUMN xtpos.rtlsitebnkacct.rtlsitebnkacct_rtlsite_id IS 'Internal id
 COMMENT ON COLUMN xtpos.rtlsitebnkacct.rtlsitebnkacct_bankaccnt_id IS 'Internal id of the Bank Account';
 
 $$) 
-WHERE (u2.knowhow_package_version('xtpos') < 30703);
+WHERE (u2.knowhow_package_version('xtpos') < 30702);
 
