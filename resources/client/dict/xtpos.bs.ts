@@ -141,7 +141,7 @@
     <message>
         <location filename="../scripts/cashRegister.js" line="80"/>
         <source>Sales Rep.</source>
-        <translation>Agent</translation>
+        <translation>Agent.</translation>
     </message>
     <message>
         <location filename="../scripts/cashRegister.js" line="81"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../scripts/cashRegister.js" line="284"/>
         <source>Could not initialize printing system for multiple reports.</source>
-        <translation>Problem sa inicijalizacijom printera</translation>
+        <translation>Problem sa inicijalizacijom printera.</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="14"/>
@@ -196,12 +196,12 @@
     <message>
         <location filename="../uiforms/cashRegister.ui" line="34"/>
         <source>Site:</source>
-        <translation>Prodajno mjesto</translation>
+        <translation>Prodajno mjesto:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="51"/>
         <source>Terminal:</source>
-        <translation>Kasa</translation>
+        <translation>Kasa:</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="68"/>
@@ -251,7 +251,7 @@
     <message>
         <location filename="../uiforms/cashRegister.ui" line="247"/>
         <source>Search...</source>
-        <translation>Pretraži</translation>
+        <translation>Pretraži...</translation>
     </message>
     <message>
         <location filename="../uiforms/cashRegister.ui" line="313"/>
@@ -545,7 +545,7 @@
     <message>
         <location filename="../uiforms/payment.ui" line="145"/>
         <source>Cash</source>
-        <translation>Gotovona</translation>
+        <translation>Gotovina</translation>
     </message>
     <message>
         <location filename="../uiforms/payment.ui" line="151"/>
