@@ -9,7 +9,7 @@ SELECT
   bn.bankaccnt_accntnumber AS f_bank_number
 FROM xtpos.salehead
 JOIN whsinfo wi ON salehead_warehous_id = wi.warehous_id
-JOIN address ad ON wi.warehous_addr_id = ad.addr_id
+JOIN api.address ad ON wi.warehous_addr_id = ad.addr_id
 JOIN xtpos.rtlsite rs ON rs.rtlsite_warehous_id = salehead_warehous_id
 JOIN xtpos.rtlsitebnkacct rb ON rb.rtlsitebnkacct_rtlsite_id = rs.rtlsite_id
 JOIN bankaccnt bn ON rb.rtlsitebnkacct_bankaccnt_id = bn.bankaccnt_id

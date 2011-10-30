@@ -44,8 +44,8 @@ FROM xtpos.salehead
   JOIN uom uo ON (item_price_uom_id = uo.uom_id)
   JOIN whsinfo ON (salehead_warehous_id=warehous_id)
   JOIN custinfo ON (salehead_cust_id=cust_id)
-  JOIN api.custchar c1 ON cust_number = c1.customer_number AND c1.characteristic = 'Partner ID broj'
-  JOIN api.custchar c2 ON cust_number = c2.customer_number AND c2.characteristic = 'Partner PDV broj'
+  LEFT JOIN api.custchar c1 ON cust_number = c1.customer_number AND c1.characteristic = 'Partner ID broj'
+  LEFT JOIN api.custchar c2 ON cust_number = c2.customer_number AND c2.characteristic = 'Partner PDV broj'
   LEFT OUTER JOIN salesrep ON (salehead_salesrep_id=salesrep_id)
   LEFT OUTER JOIN cntct ON (cust_cntct_id=cntct_id)
   LEFT OUTER JOIN addr ON (cntct_addr_id=addr_id)
